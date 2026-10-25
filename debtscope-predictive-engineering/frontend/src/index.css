@@ -1,0 +1,152 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Lumina Purple & Obsidian Palette Tokens */
+  --color-lumina-950: #0b0714;
+  --color-lumina-900: #130e24;
+  --color-lumina-850: #1a1433;
+  --color-lumina-800: #261c47;
+  --color-lumina-700: #3b2c6d;
+  --color-lumina-600: #5b42a5;
+  --color-lumina-500: #7048e8;
+  --color-lumina-400: #8f6ee8;
+  --color-lumina-300: #b39ef2;
+  --color-lumina-200: #d8cdfa;
+  --color-lumina-100: #f0ecfc;
+  --color-lumina-50: #f9f7ff;
+
+  /* Foundation Neutrals */
+  --color-surface-canvas: #f8f9fb;
+  --color-surface-card: #ffffff;
+  --color-surface-subtle: #f3f4f8;
+  --color-surface-muted: #eaecef;
+  --color-surface-dark: #0d0e15;
+
+  --color-border-subtle: #e2e4ea;
+  --color-border-muted: #d0d4de;
+  --color-border-dark: #261c47;
+
+  --color-text-main: #0f1015;
+  --color-text-muted: #525866;
+  --color-text-faint: #88909e;
+
+  /* Semantic Status Tokens (Restrained) */
+  --color-critical: #dc2626;
+  --color-critical-subtle: #fef2f2;
+  --color-warning: #d97706;
+  --color-warning-subtle: #fffbeb;
+  --color-success: #059669;
+  --color-success-subtle: #ecfdf5;
+}
+
+@layer base {
+  body {
+    background-color: #f8f9fb;
+    color: #0f1015;
+    font-family: var(--font-sans);
+    letter-spacing: -0.011em;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Tabular Numerals for Financial and Telemetry Data */
+.font-mono {
+  font-feature-settings: 'tnum' on, 'zero' on;
+}
+
+/* Custom Refined Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(15, 16, 21, 0.12);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(112, 72, 232, 0.4);
+}
+
+/* Lumina Soft Surfaces & Ambient Lighting */
+.lumina-card-dark {
+  background: linear-gradient(145deg, #130e24 0%, #0d081b 100%);
+  border: 1px solid rgba(143, 110, 232, 0.18);
+  box-shadow: 0 4px 20px -2px rgba(11, 7, 20, 0.25);
+}
+
+.lumina-card-light {
+  background: #ffffff;
+  border: 1px solid #e2e4ea;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px 0 rgba(0, 0, 0, 0.02);
+}
+
+.lumina-card-hover {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lumina-card-hover:hover {
+  border-color: #d0d4de;
+  box-shadow: 0 8px 24px -4px rgba(15, 10, 28, 0.06);
+}
+
+/* Subtle Micro-animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes radar-sweep {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Global Recharts Custom Tooltip Styling */
+.recharts-default-tooltip {
+  background-color: rgba(19, 14, 36, 0.96) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(143, 110, 232, 0.3) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.3) !important;
+  padding: 8px 12px !important;
+}
+
+.recharts-tooltip-label {
+  color: #d8cdfa !important;
+  font-family: var(--font-mono) !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  margin-bottom: 4px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 3px;
+}
+
+.recharts-tooltip-item {
+  color: #ffffff !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  padding: 1px 0 !important;
+}

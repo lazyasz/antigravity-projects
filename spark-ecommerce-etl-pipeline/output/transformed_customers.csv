@@ -1,0 +1,4 @@
+customer_id,name,age,city,purchase_amount,purchase_category
+1,Rahul,20,Pune,3000.0,Medium
+2,Amit,21,Mumbai,3150.0,Medium
+3,Sneha,20,Nashik,3000.0,Medium

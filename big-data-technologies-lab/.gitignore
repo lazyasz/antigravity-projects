@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Hadoop & Hive Metastore / Derby
+*derby*
+derby.log
+metastore_db/
+warehouse/
+extracted/
+
+# OS
+.DS_Store
+Thumbs.db

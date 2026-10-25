@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80" width="100%" height="100%">
+  <!-- Lightbulb + Brain + Binary Graphic (SIH Logo) -->
+  <g transform="translate(10, 8)">
+    <!-- Left Orange Brain Half -->
+    <path d="M 28 10 C 20 10 12 18 12 28 C 12 36 18 42 22 48 L 28 48 Z" fill="#f97316" />
+    <path d="M 18 20 Q 24 24 18 30 Q 24 36 20 42" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <circle cx="22" cy="18" r="2" fill="#ffffff"/>
+    <circle cx="16" cy="34" r="2" fill="#ffffff"/>
+
+    <!-- Right Green Binary Half -->
+    <path d="M 28 10 C 36 10 44 18 44 28 C 44 36 38 42 34 48 L 28 48 Z" fill="#10b981" />
+    <text x="31" y="22" font-family="monospace" font-size="7" font-weight="900" fill="#ffffff">1011</text>
+    <text x="30" y="30" font-family="monospace" font-size="7" font-weight="900" fill="#ffffff">01010</text>
+    <text x="31" y="38" font-family="monospace" font-size="7" font-weight="900" fill="#ffffff">10101</text>
+    <text x="32" y="46" font-family="monospace" font-size="7" font-weight="900" fill="#ffffff">010</text>
+
+    <!-- Base & Filament -->
+    <rect x="23" y="49" width="10" height="4" rx="2" fill="#64748b" />
+    <rect x="25" y="54" width="6" height="3" rx="1" fill="#475569" />
+    <text x="28" y="65" font-family="'Inter', sans-serif" font-size="8" font-weight="900" fill="#f8fafc" text-anchor="middle">SIH</text>
+  </g>
+
+  <!-- SIH 2026 Text -->
+  <g transform="translate(68, 22)">
+    <text x="0" y="16" font-family="'Inter', sans-serif" font-size="14" font-weight="900" letter-spacing="1" fill="#f8fafc">
+      SMART INDIA
+    </text>
+    <text x="0" y="32" font-family="'Inter', sans-serif" font-size="13" font-weight="900" letter-spacing="0.8" fill="#38bdf8">
+      HACKATHON 2026
+    </text>
+    <text x="0" y="44" font-family="'Inter', sans-serif" font-size="9.5" font-weight="700" fill="#94a3b8">
+      PS ID: SIH26028
+    </text>
+  </g>
+</svg>

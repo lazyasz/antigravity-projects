@@ -1,0 +1,76 @@
+{
+  "timestamp": "2026-09-15T21:24:16.820271+00:00",
+  "regression_td_dataset": {
+    "dataset": "The-Technical-Debt-Dataset (SZZ Ground Truth)",
+    "samples_trained": 233066,
+    "samples_tested": 58267,
+    "features": [
+      "lines_added",
+      "lines_removed",
+      "churn",
+      "estimated_loc",
+      "is_java",
+      "is_test",
+      "code_smells_count",
+      "total_debt_minutes",
+      "blocker_issues",
+      "critical_issues",
+      "major_issues",
+      "minor_issues",
+      "refactoring_count",
+      "author_experience_commits"
+    ],
+    "dummy_baseline": {
+      "mae": 7.310008122070701,
+      "rmse": 20.476534107815066,
+      "r2": -1.969961764580752e-05
+    },
+    "random_forest": {
+      "mae": 4.738530656847718,
+      "rmse": 15.684522463076997,
+      "r2": 0.4132700492206225,
+      "cv_r2_mean": 0.39789521840238856,
+      "cv_r2_std": 0.01062474334590948,
+      "mae_improvement_pct": 35.18
+    },
+    "feature_importances": {
+      "author_experience_commits": 0.4221,
+      "refactoring_count": 0.2005,
+      "estimated_loc": 0.1068,
+      "is_java": 0.0771,
+      "lines_removed": 0.0542,
+      "churn": 0.0538,
+      "lines_added": 0.0435,
+      "is_test": 0.042,
+      "code_smells_count": 0.0,
+      "total_debt_minutes": 0.0,
+      "blocker_issues": 0.0,
+      "critical_issues": 0.0,
+      "major_issues": 0.0,
+      "minor_issues": 0.0
+    },
+    "model_path": "ml_engine/models\\real_defect_predictor.pkl",
+    "elapsed_sec": 125.27
+  },
+  "classification_nasa_benchmarks": {
+    "NASA-JM1": {
+      "rows": 10885,
+      "features_count": 21,
+      "defect_count": 2106,
+      "dummy_auc": 0.503,
+      "rf_auc": 0.7332,
+      "rf_accuracy": 0.8117,
+      "model_path": "ml_engine/models\\jm1_classifier.pkl"
+    },
+    "NASA-PC1": {
+      "rows": 1109,
+      "features_count": 21,
+      "defect_count": 77,
+      "dummy_auc": 0.471,
+      "rf_auc": 0.8754,
+      "rf_accuracy": 0.9369,
+      "model_path": "ml_engine/models\\pc1_classifier.pkl"
+    }
+  },
+  "total_elapsed_sec": 127.43
+}

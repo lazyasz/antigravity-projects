@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NAVSHAKTI 2026 — Master Question Bank & Host Cue Sheet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Outfit:wght@400;600;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1e0940;
+      --accent: #e11d48;
+      --gold: #b8860b;
+      --gold-light: #fef08a;
+      --text: #1e293b;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      background: #f8fafc;
+      line-height: 1.5;
+      padding: 40px 20px;
+    }
+    .page-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 48px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      border: 1px solid var(--border);
+    }
+    .header {
+      text-align: center;
+      border-bottom: 2px solid #cbd5e1;
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+    }
+    .event-badge {
+      display: inline-block;
+      background: #ffe4e6;
+      color: #be123c;
+      font-weight: 800;
+      font-size: 0.8rem;
+      padding: 4px 16px;
+      border-radius: 999px;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.2rem;
+      color: #1e0940;
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+    }
+    .subhead {
+      font-size: 1rem;
+      color: #64748b;
+      font-weight: 600;
+    }
+    .print-btn-bar {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 24px;
+    }
+    .btn-print {
+      background: #1e0940;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .round-header {
+      background: linear-gradient(135deg, #240d4f, #150630);
+      color: #ffffff;
+      padding: 14px 20px;
+      border-radius: 10px;
+      margin: 36px 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .round-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.25rem;
+      letter-spacing: 1px;
+    }
+    .mult-tag {
+      background: #f5c518;
+      color: #0b031b;
+      font-size: 0.75rem;
+      font-weight: 900;
+      padding: 3px 12px;
+      border-radius: 999px;
+    }
+    .question-block {
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 24px;
+      page-break-inside: avoid;
+    }
+    .question-head {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .q-num {
+      background: #1e0940;
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 0.85rem;
+      padding: 3px 10px;
+      border-radius: 6px;
+    }
+    .q-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .emcee-hook {
+      font-style: italic;
+      font-size: 0.85rem;
+      color: #64748b;
+      margin-bottom: 14px;
+      padding-left: 12px;
+      border-left: 3px solid #f5c518;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+    }
+    th, td {
+      padding: 8px 12px;
+      text-align: left;
+      font-size: 0.88rem;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    th {
+      background: #f8fafc;
+      color: #475569;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .rank-cell {
+      width: 45px;
+      font-weight: 800;
+      color: #94a3b8;
+    }
+    .ans-cell {
+      font-weight: 700;
+      color: #1e293b;
+    }
+    .pts-cell {
+      width: 80px;
+      font-family: 'Share Tech Mono', monospace;
+      font-weight: 700;
+      color: #b8860b;
+      font-size: 1.1rem;
+      text-align: right;
+    }
+    .alias-cell {
+      font-size: 0.75rem;
+      color: #64748b;
+    }
+    @media print {
+      body { background: #ffffff; padding: 0; }
+      .page-container { border: none; box-shadow: none; padding: 0; }
+      .print-btn-bar { display: none; }
+      .question-block { border: 1px solid #cbd5e1; page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-container">
+    <div class="print-btn-bar">
+      <button class="btn-print" onclick="window.print()">🖨️ Print / Save as PDF</button>
+    </div>
+
+    <div class="header">
+      <div class="event-badge">SOC NAVRATRI CELEBRATION 2026 • MIT-ADT UNIVERSITY, PUNE</div>
+      <h1>NAVSHAKTI 2026</h1>
+      <p class="subhead">Master Question Bank & Host Emcee Cue Sheet | 14 October 2026</p>
+      <p style="font-size: 0.85rem; color: #64748b; margin-top: 4px;">Two Teams: Garba Gladiators vs Dandiya Dynamos • 16 Survey Questions</p>
+    </div>
+
+    <!-- ROUND 1 -->
+    <div class="round-header">
+      <span class="round-title">ROUND 1: SHAKTI & TRADITION</span>
+      <span class="mult-tag">1X SINGLE POINTS</span>
+    </div>
+
+    <!-- Q1 -->
+    <div class="question-block">
+      <div class="question-head">
+        <span class="q-num">Q1</span>
+        <h3 class="q-title">If Navratri were a reminder for today's generation, what would it most strongly remind us to do?</h3>
+      </div>
+      <div class="emcee-hook">Host Hook: "We celebrate Navratri with grand lights and outfits, but what is the real message Durga Puja leaves for our campus generation?"</div>
+      <table>
+        <thead><tr><th class="rank-cell">Rank</th><th>Answer on Board</th><th>Match Aliases</th><th class="pts-cell">Points</th></tr></thead>
+        <tbody>
+          <tr><td class="rank-cell">#1</td><td class="ans-cell">STAND UP FOR YOURSELF & OTHERS</td><td class="alias-cell">stand up, courage, speak up, self defense, bravery</td><td class="pts-cell">35</td></tr>
+          <tr><td class="rank-cell">#2</td><td class="ans-cell">RESPECT WOMEN & THEIR CHOICES</td><td class="alias-cell">respect women, equality, consent, respect, choices</td><td class="pts-cell">28</td></tr>
+          <tr><td class="rank-cell">#3</td><td class="ans-cell">FIND COURAGE TO START AGAIN</td><td class="alias-cell">start again, resilience, never give up, restart, hope</td><td class="pts-cell">18</td></tr>
+          <tr><td class="rank-cell">#4</td><td class="ans-cell">CHALLENGE OUTDATED EXPECTATIONS</td><td class="alias-cell">break stereotypes, question rules, challenge expectations</td><td class="pts-cell">11</td></tr>
+          <tr><td class="rank-cell">#5</td><td class="ans-cell">CELEBRATE STRENGTH IN DIVERSE FORMS</td><td class="alias-cell">diversity, inner strength, shakti, celebrate strength</td><td class="pts-cell">8</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Q2 -->
+    <div class="question-block">
+      <div class="question-head">
+        <span class="q-num">Q2</span>
+        <h3 class="q-title">If Goddess Durga were addressing a modern college campus, which problem would she tell us to defeat first?</h3>
+      </div>
+      <div class="emcee-hook">Host Hook: "If Maa Durga walked into an engineering or management lecture hall today, what modern demon would she want us to eliminate first?"</div>
+      <table>
+        <thead><tr><th class="rank-cell">Rank</th><th>Answer on Board</th><th>Match Aliases</th><th class="pts-cell">Points</th></tr></thead>
+        <tbody>
+          <tr><td class="rank-cell">#1</td><td class="ans-cell">HARASSMENT & DISRESPECT</td><td class="alias-cell">harassment, disrespect, bullying, eve teasing, abuse</td><td class="pts-cell">36</td></tr>
+          <tr><td class="rank-cell">#2</td><td class="ans-cell">GENDER DISCRIMINATION</td><td class="alias-cell">gender bias, discrimination, inequality, sexism, patriarchy</td><td class="pts-cell">27</td></tr>
+          <tr><td class="rank-cell">#3</td><td class="ans-cell">FEAR OF SPEAKING UP</td><td class="alias-cell">fear, silence, hesitation, afraid to speak, introversion</td><td class="pts-cell">17</td></tr>
+          <tr><td class="rank-cell">#4</td><td class="ans-cell">PEER PRESSURE & NEED TO FIT IN</td><td class="alias-cell">peer pressure, fit in, validation, fomo, conformity</td><td class="pts-cell">12</td></tr>
+          <tr><td class="rank-cell">#5</td><td class="ans-cell">INEQUALITY OF OPPORTUNITY</td><td class="alias-cell">opportunities, nepotism, unfair chances, bias, privilege</td><td class="pts-cell">8</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Q3 -->
+    <div class="question-block">
+      <div class="question-head">
+        <span class="q-num">Q3</span>
+        <h3 class="q-title">What is one quality that makes a woman genuinely powerful in today's world?</h3>
+      </div>
+      <div class="emcee-hook">Host Hook: "Forget comic-book superpowers. What is real, unshakeable power in a 21st-century woman?"</div>
+      <table>
+        <thead><tr><th class="rank-cell">Rank</th><th>Answer on Board</th><th>Match Aliases</th><th class="pts-cell">Points</th></tr></thead>
+        <tbody>
+          <tr><td class="rank-cell">#1</td><td class="ans-cell">COURAGE TO SPEAK HER MIND</td><td class="alias-cell">courage, speaking up, voice, fearless, vocal</td><td class="pts-cell">34</td></tr>
+          <tr><td class="rank-cell">#2</td><td class="ans-cell">FINANCIAL & PERSONAL INDEPENDENCE</td><td class="alias-cell">independence, financial independence, self reliant</td><td class="pts-cell">29</td></tr>
+          <tr><td class="rank-cell">#3</td><td class="ans-cell">UNSHAKEABLE SELF-CONFIDENCE</td><td class="alias-cell">confidence, self belief, dignity, boldness, poise</td><td class="pts-cell">18</td></tr>
+          <tr><td class="rank-cell">#4</td><td class="ans-cell">KNOWLEDGE, SKILLS & COMPETENCE</td><td class="alias-cell">knowledge, competence, education, intelligence, skills</td><td class="pts-cell">12</td></tr>
+          <tr><td class="rank-cell">#5</td><td class="ans-cell">EMPATHY & RESILIENT LEADERSHIP</td><td class="alias-cell">empathy, leadership, compassion, emotional intelligence</td><td class="pts-cell">7</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Q4 -->
+    <div class="question-block">
+      <div class="question-head">
+        <span class="q-num">Q4</span>
+        <h3 class="q-title">Beyond the dance and celebrations, what makes Navratri meaningful to young people?</h3>
+      </div>
+      <div class="emcee-hook">Host Hook: "Yes, we all love the Garba steps and the colorful Kediyu, but what touches our hearts the deepest?"</div>
+      <table>
+        <thead><tr><th class="rank-cell">Rank</th><th>Answer on Board</th><th>Match Aliases</th><th class="pts-cell">Points</th></tr></thead>
+        <tbody>
+          <tr><td class="rank-cell">#1</td><td class="ans-cell">CULTURAL IDENTITY & HERITAGE</td><td class="alias-cell">culture, cultural identity, roots, heritage, tradition</td><td class="pts-cell">32</td></tr>
+          <tr><td class="rank-cell">#2</td><td class="ans-cell">FRIENDSHIP & SENSE OF BELONGING</td><td class="alias-cell">friends, friendship, community, belonging, togetherness</td><td class="pts-cell">26</td></tr>
+          <tr><td class="rank-cell">#3</td><td class="ans-cell">A CHANCE TO EXPRESS ONESELF</td><td class="alias-cell">expression, dressing up, dance, creativity, garba outfits</td><td class="pts-cell">20</td></tr>
+          <tr><td class="rank-cell">#4</td><td class="ans-cell">FAMILY BONDS & REUNION</td><td class="alias-cell">family, home, reunion, parents, relatives</td><td class="pts-cell">14</td></tr>
+          <tr><td class="rank-cell">#5</td><td class="ans-cell">SPIRITUAL DEVOTION & REFLECTION</td><td class="alias-cell">devotion, faith, spirituality, pooja, inner peace</td><td class="pts-cell">8</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Q5 -->
+    <div class="question-block">
+      <div class="question-head">
+        <span class="q-num">Q5</span>
+        <h3 class="q-title">If you could break one stereotype about women this Navratri, which would it be?</h3>
+      </div>
+      <div class="emcee-hook">Host Hook: "It's 2026. What is the one outdated myth we need to shatter once and for all?"</div>
+      <table>
+        <thead><tr><th class="rank-cell">Rank</th><th>Answer on Board</th><th>Match Aliases</th><th class="pts-cell">Points</th></tr></thead>
+        <tbody>
+          <tr><td class="rank-cell">#1</td><td class="ans-cell">LEADERSHIP IS NOT GENDER-SPECIFIC</td><td class="alias-cell">leadership, women bosses, leaders, management, boss</td><td class="pts-cell">38</td></tr>
+          <tr><td class="rank-cell">#2</td><td class="ans-cell">WOMEN CAN CHOOSE THEIR OWN PATH</td><td class="alias-cell">own path, marriage vs career, free will, autonomy, choices</td><td class="pts-cell">26</td></tr>
+          <tr><td class="rank-cell">#3</td><td class="ans-cell">AMBITION IS NOT SELFISH</td><td class="alias-cell">ambition, career focused, ambitious, goals, success</td><td class="pts-cell">16</td></tr>
+          <tr><td class="rank-cell">#4</td><td class="ans-cell">CAREERS & PASSIONS HAVE NO GENDER</td><td class="alias-cell">careers, engineering, tech, roles, sports</td><td class="pts-cell">12</td></tr>
+          <tr><td class="rank-cell">#5</td><td class="ans-cell">TRUE STRENGTH INCLUDES VULNERABILITY</td><td class="alias-cell">vulnerability, emotional strength, emotions, softness</td><td class="pts-cell">8</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ROUND 2 -->
+    <div class="round-header">
+      <span class="round-title">ROUND 2: CAMPUS REALITY CHECK</span>
+      <span class="mult-tag">2X DOUBLE POINTS</span>
+    </div>
+
+    <!-- Q6 -->
+    <div class="question-block">
+      <div class="question-head">
+        <span class="q-num">Q6</span>
+        <h3 class="q-title">What is the one sentence that instantly changes the mood of an entire classroom?</h3>
+      </div>
+      <div class="emcee-hook">Host Hook: "Everyone is laughing, someone is sleeping in the corner, and then the professor speaks seven magical words..."</div>
+      <table>
+        <thead><tr><th class="rank-cell">Rank</th><th>Answer on Board</th><th>Match Aliases</th><th class="pts-cell">Points</th></tr></thead>
+        <tbody>
+          <tr><td class="rank-cell">#1</td><td class="ans-cell">'ATTENDANCE WILL BE TAKEN NOW'</td><td class="alias-cell">attendance, proxy, roll call, attendance will be checked, erp</td><td class="pts-cell">38</td></tr>
+          <tr><td class="rank-cell">#2</td><td class="ans-cell">'SURPRISE TEST / QUIZ TODAY'</td><td class="alias-cell">surprise test, quiz, surprise quiz, test, pen and paper</td><td class="pts-cell">29</td></tr>
+          <tr><td class="rank-cell">#3</td><td class="ans-cell">'SUBMIT ASSIGNMENT BY MIDNIGHT'</td><td class="alias-cell">assignment, submission, submit tonight, deadline, lms upload</td><td class="pts-cell">18</td></tr>
+          <tr><td class="rank-cell">#4</td><td class="ans-cell">'THIS WILL DEFINITELY BE ON THE EXAM'</td><td class="alias-cell">in the exam, important topic, exam question, finals</td><td class="pts-cell">10</td></tr>
+          <tr><td class="rank-cell">#5</td><td class="ans-cell">'THE DEADLINE HAS BEEN EXTENDED!'</td><td class="alias-cell">extended, extension, relaxed deadline, relief, extra time</td><td class="pts-cell">5</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Q7 -->
+    <div class="question-block">
+      <div class="question-head">
+        <span class="q-num">Q7</span>
+        <h3 class="q-title">If students and faculty could agree on one universal campus rule, what would it be?</h3>
+      </div>
+      <div class="emcee-hook">Host Hook: "A historic peace treaty between professors and students at MIT-ADT. What would Article 1 state?"</div>
+      <table>
+        <thead><tr><th class="rank-cell">Rank</th><th>Answer on Board</th><th>Match Aliases</th><th class="pts-cell">Points</th></tr></thead>
+        <tbody>
+          <tr><td class="rank-cell">#1</td><td class="ans-cell">RESPECT EVERYONE'S TIME & PUNCTUALITY</td><td class="alias-cell">punctuality, respect time, start on time, time management</td><td class="pts-cell">36</td></tr>
+          <tr><td class="rank-cell">#2</td><td class="ans-cell">KEEP DEADLINES REALISTIC & FAIR</td><td class="alias-cell">realistic deadlines, fair deadlines, reasonable submissions</td><td class="pts-cell">28</td></tr>
+          <tr><td class="rank-cell">#3</td><td class="ans-cell">NO LAST-MINUTE TIMETABLE SURPRISES</td><td class="alias-cell">last minute changes, no sudden classes, fixed timetable</td><td class="pts-cell">18</td></tr>
+          <tr><td class="rank-cell">#4</td><td class="ans-cell">CLEAR INSTRUCTIONS & RUBRICS</td><td class="alias-cell">clear instructions, guidelines, clarity, rubric, transparent</td><td class="pts-cell">11</td></tr>
+          <tr><td class="rank-cell">#5</td><td class="ans-cell">GIVE CREDIT WHERE CREDIT IS DUE</td><td class="alias-cell">give credit, acknowledge effort, recognition, appreciation</td><td class="pts-cell">7</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Q8 -->
+    <div class="question-block">
+      <div class="question-head">
+        <span class="q-num">Q8</span>
+        <h3 class="q-title">What is the most universally recognised sign that someone is pretending to understand a lecture?</h3>
+      </div>
+      <div class="emcee-hook">Host Hook: "Your brain is at 0%, but your body is trying to win an Oscar for academic excellence..."</div>
+      <table>
+        <thead><tr><th class="rank-cell">Rank</th><th>Answer on Board</th><th>Match Aliases</th><th class="pts-cell">Points</th></tr></thead>
+        <tbody>
+          <tr><td class="rank-cell">#1</td><td class="ans-cell">AGGRESSIVE RAPID NODDING</td><td class="alias-cell">nodding, head nod, constant nodding, agreeing</td><td class="pts-cell">42</td></tr>
+          <tr><td class="rank-cell">#2</td><td class="ans-cell">FRANTICALLY WRITING WITHOUT LOOKING UP</td><td class="alias-cell">writing notes, scribbling, pretending to write, notes</td><td class="pts-cell">24</td></tr>
+          <tr><td class="rank-cell">#3</td><td class="ans-cell">SAYING 'YES, YES, SIR' TOO QUICKLY</td><td class="alias-cell">yes yes, saying yes, haan sir, agreeing fast</td><td class="pts-cell">16</td></tr>
+          <tr><td class="rank-cell">#4</td><td class="ans-cell">PEEKING CONFUSED AT A FRIEND'S NOTES</td><td class="alias-cell">looking at friend, friend's notes, side eye, what is he teaching</td><td class="pts-cell">11</td></tr>
+          <tr><td class="rank-cell">#5</td><td class="ans-cell">ASKING A QUESTION THAT EXPOSES CONFUSION</td><td class="alias-cell">silly question, asking doubt, wrong question, lost doubt</td><td class="pts-cell">7</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Q9 -->
+    <div class="question-block">
+      <div class="question-head">
+        <span class="q-num">Q9</span>
+        <h3 class="q-title">What is one thing students and faculty both secretly wish the other side understood?</h3>
+      </div>
+      <div class="emcee-hook">Host Hook: "If students and teachers had an honest telepathic conversation, what truth would come out?"</div>
+      <table>
+        <thead><tr><th class="rank-cell">Rank</th><th>Answer on Board</th><th>Match Aliases</th><th class="pts-cell">Points</th></tr></thead>
+        <tbody>
+          <tr><td class="rank-cell">#1</td><td class="ans-cell">WORKLOAD IS NOT ALWAYS VISIBLE</td><td class="alias-cell">hidden workload, grading burden, multiple subjects, burnout</td><td class="pts-cell">37</td></tr>
+          <tr><td class="rank-cell">#2</td><td class="ans-cell">DEADLINES CAN BE OVERWHELMING</td><td class="alias-cell">pressure, overwhelmed, crunch, exhaustion, busy schedule</td><td class="pts-cell">26</td></tr>
+          <tr><td class="rank-cell">#3</td><td class="ans-cell">CLEAR COMMUNICATION MATTERS BOTH WAYS</td><td class="alias-cell">communication, transparency, listening, two way talk</td><td class="pts-cell">18</td></tr>
+          <tr><td class="rank-cell">#4</td><td class="ans-cell">EVERYONE NEEDS OCCASIONAL FLEXIBILITY</td><td class="alias-cell">flexibility, understanding, benefit of doubt, empathy</td><td class="pts-cell">12</td></tr>
+          <tr><td class="rank-cell">#5</td><td class="ans-cell">MUTUAL RESPECT CANNOT BE ONE-SIDED</td><td class="alias-cell">respect, mutual respect, dignity, kindness</td><td class="pts-cell">7</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Q10 -->
+    <div class="question-block">
+      <div class="question-head">
+        <span class="q-num">Q10</span>
+        <h3 class="q-title">If college life had a customer-review section, what would receive the most reviews?</h3>
+      </div>
+      <div class="emcee-hook">Host Hook: "If MIT-ADT campus life was listed on Zomato or Google Reviews, what would have 10,000 comments?"</div>
+      <table>
+        <thead><tr><th class="rank-cell">Rank</th><th>Answer on Board</th><th>Match Aliases</th><th class="pts-cell">Points</th></tr></thead>
+        <tbody>
+          <tr><td class="rank-cell">#1</td><td class="ans-cell">THE 75% ATTENDANCE MANDATE</td><td class="alias-cell">attendance, 75 percent, shortage, biometric, erp</td><td class="pts-cell">44</td></tr>
+          <tr><td class="rank-cell">#2</td><td class="ans-cell">CANTEEN FOOD & COFFEE QUALITY</td><td class="alias-cell">canteen, mess food, campus food, maggi, coffee, cafeteria</td><td class="pts-cell">23</td></tr>
+          <tr><td class="rank-cell">#3</td><td class="ans-cell">ASSIGNMENT DEADLINES & PORTAL SUBMISSIONS</td><td class="alias-cell">submissions, assignment load, lms crash, server down</td><td class="pts-cell">16</td></tr>
+          <tr><td class="rank-cell">#4</td><td class="ans-cell">TIMETABLE & EARLY 8 AM LECTURES</td><td class="alias-cell">8 am classes, timetable, free periods, schedule, long gaps</td><td class="pts-cell">10</td></tr>
+          <tr><td class="rank-cell">#5</td><td class="ans-cell">PLACEMENT STRESS & RESUME CRISIS</td><td class="alias-cell">placements, packages, interviews, jobs, internships</td><td class="pts-cell">7</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ROUND 3 -->
+    <div class="round-header">
+      <span class="round-title">ROUND 3: THE MEME MINDSET</span>
+      <span class="mult-tag">3X TRIPLE POINTS</span>
+    </div>
+
+    <!-- Q11 -->
+    <div class="question-block">
+      <div class="question-head">
+        <span class="q-num">Q11</span>
+        <h3 class="q-title">Which internet phrase best describes the collective mood during exam week?</h3>
+      </div>
+      <div class="emcee-hook">Host Hook: "When the semester end exams are 48 hours away and syllabus covered is 12%..."</div>
+      <table>
+        <thead><tr><th class="rank-cell">Rank</th><th>Answer on Board</th><th>Match Aliases</th><th class="pts-cell">Points</th></tr></thead>
+        <tbody>
+          <tr><td class="rank-cell">#1</td><td class="ans-cell">'WE ARE COOKED'</td><td class="alias-cell">cooked, we are cooked, properly cooked, khatam, it's over</td><td class="pts-cell">42</td></tr>
+          <tr><td class="rank-cell">#2</td><td class="ans-cell">'IT IS WHAT IT IS'</td><td class="alias-cell">it is what it is, jo hoga dekha jayega, acceptance, fate</td><td class="pts-cell">26</td></tr>
+          <tr><td class="rank-cell">#3</td><td class="ans-cell">'ACADEMIC COMEBACK LOADING...'</td><td class="alias-cell">academic comeback, comeback, loading, next semester</td><td class="pts-cell">15</td></tr>
+          <tr><td class="rank-cell">#4</td><td class="ans-cell">'DELULU IS THE ONLY SOLULU'</td><td class="alias-cell">delulu, delusion, solulu, hopium</td><td class="pts-cell">11</td></tr>
+          <tr><td class="rank-cell">#5</td><td class="ans-cell">'TRUST THE PROCESS'</td><td class="alias-cell">trust the process, god plan, bhagwan bharose</td><td class="pts-cell">6</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Q12 -->
+    <div class="question-block">
+      <div class="question-head">
+        <span class="q-num">Q12</span>
+        <h3 class="q-title">What is the most believable reason someone gives for replying to a message six hours late?</h3>
+      </div>
+      <div class="emcee-hook">Host Hook: "We saw the notification in 2 seconds, but replied after a solar eclipse. What was the excuse?"</div>
+      <table>
+        <thead><tr><th class="rank-cell">Rank</th><th>Answer on Board</th><th>Match Aliases</th><th class="pts-cell">Points</th></tr></thead>
+        <tbody>
+          <tr><td class="rank-cell">#1</td><td class="ans-cell">'I SAW IT AND COMPLETELY FORGOT TO HIT SEND'</td><td class="alias-cell">forgot, typed in head, forgot to send, saw and forgot</td><td class="pts-cell">38</td></tr>
+          <tr><td class="rank-cell">#2</td><td class="ans-cell">'I THOUGHT I ALREADY REPLIED IN MY HEAD'</td><td class="alias-cell">replied in head, swore i replied, mental reply</td><td class="pts-cell">28</td></tr>
+          <tr><td class="rank-cell">#3</td><td class="ans-cell">'MY NOTIFICATIONS WERE TOTALLY OFF / DND'</td><td class="alias-cell">notifications off, dnd, silent mode, do not disturb</td><td class="pts-cell">17</td></tr>
+          <tr><td class="rank-cell">#4</td><td class="ans-cell">'I WAS SWAMPED WITH LECTURES & LABS'</td><td class="alias-cell">busy, lab, college, swamped, classes</td><td class="pts-cell">11</td></tr>
+          <tr><td class="rank-cell">#5</td><td class="ans-cell">'I NEEDED TIME TO CRAFT THE PERFECT RESPONSE'</td><td class="alias-cell">overthinking, needed time, drafting, hesitating</td><td class="pts-cell">6</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Q13 -->
+    <div class="question-block">
+      <div class="question-head">
+        <span class="q-num">Q13</span>
+        <h3 class="q-title">What is one thing people confidently say they will do, but rarely do on time?</h3>
+      </div>
+      <div class="emcee-hook">Host Hook: "We swear to ourselves every Sunday night, yet by Wednesday reality catches up..."</div>
+      <table>
+        <thead><tr><th class="rank-cell">Rank</th><th>Answer on Board</th><th>Match Aliases</th><th class="pts-cell">Points</th></tr></thead>
+        <tbody>
+          <tr><td class="rank-cell">#1</td><td class="ans-cell">START STUDYING WEEKS BEFORE EXAMS</td><td class="alias-cell">start studying, study early, read syllabus, prepare early</td><td class="pts-cell">40</td></tr>
+          <tr><td class="rank-cell">#2</td><td class="ans-cell">GO TO SLEEP AT A REASONABLE HOUR</td><td class="alias-cell">sleep on time, sleep early, healthy sleep, no all nighters</td><td class="pts-cell">26</td></tr>
+          <tr><td class="rank-cell">#3</td><td class="ans-cell">STOP DOOMSCROLLING REELS & SHORTS</td><td class="alias-cell">stop scrolling, screen time, quit reels, put phone down</td><td class="pts-cell">16</td></tr>
+          <tr><td class="rank-cell">#4</td><td class="ans-cell">FINISH ASSIGNMENTS AHEAD OF DEADLINE</td><td class="alias-cell">finish early, assignments ahead, no last minute</td><td class="pts-cell">11</td></tr>
+          <tr><td class="rank-cell">#5</td><td class="ans-cell">REPLY PROMPTLY TO IMPORTANT EMAILS</td><td class="alias-cell">reply email, inbox zero, check mail, reply prompt</td><td class="pts-cell">7</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Q14 -->
+    <div class="question-block">
+      <div class="question-head">
+        <span class="q-num">Q14</span>
+        <h3 class="q-title">If campus Wi-Fi could expose one universal truth about its users, what would it reveal?</h3>
+      </div>
+      <div class="emcee-hook">Host Hook: "If the MIT-ADT campus network router held a press conference right now..."</div>
+      <table>
+        <thead><tr><th class="rank-cell">Rank</th><th>Answer on Board</th><th>Match Aliases</th><th class="pts-cell">Points</th></tr></thead>
+        <tbody>
+          <tr><td class="rank-cell">#1</td><td class="ans-cell">EVERYONE IS STREAMING REELS & SOCIAL MEDIA</td><td class="alias-cell">instagram, reels, social media, youtube, scrolling</td><td class="pts-cell">43</td></tr>
+          <tr><td class="rank-cell">#2</td><td class="ans-cell">DESPERATELY DOWNLOADING NOTES AT 11:58 PM</td><td class="alias-cell">downloading notes, last minute slides, drive links, pdf</td><td class="pts-cell">22</td></tr>
+          <tr><td class="rank-cell">#3</td><td class="ans-cell">WATCHING STREAMING SHOWS IN BACK ROWS</td><td class="alias-cell">watching netflix, anime, cricket match, streaming</td><td class="pts-cell">17</td></tr>
+          <tr><td class="rank-cell">#4</td><td class="ans-cell">CHAOTIC GROUP CHATS IN 40 OPEN TABS</td><td class="alias-cell">group chats, tabs, whatsapp web, discord, multitasking</td><td class="pts-cell">11</td></tr>
+          <tr><td class="rank-cell">#5</td><td class="ans-cell">REFRESHING ATTENDANCE PORTAL REPEATEDLY</td><td class="alias-cell">portal refresh, erp, checking attendance, grades refresh</td><td class="pts-cell">7</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Q15 -->
+    <div class="question-block">
+      <div class="question-head">
+        <span class="q-num">Q15</span>
+        <h3 class="q-title">What is the one thing that instantly makes someone look genuinely competent in a group project?</h3>
+      </div>
+      <div class="emcee-hook">Host Hook: "In every group project, there are free riders and there is the legend who saves the day..."</div>
+      <table>
+        <thead><tr><th class="rank-cell">Rank</th><th>Answer on Board</th><th>Match Aliases</th><th class="pts-cell">Points</th></tr></thead>
+        <tbody>
+          <tr><td class="rank-cell">#1</td><td class="ans-cell">ACTUALLY SUBMITTING QUALITY WORK ON TIME</td><td class="alias-cell">delivering on time, meeting deadlines, punctual work</td><td class="pts-cell">41</td></tr>
+          <tr><td class="rank-cell">#2</td><td class="ans-cell">TAKING REAL OWNERSHIP OF THE SLIDES / CODE</td><td class="alias-cell">ownership, making slides, writing code, fixing errors</td><td class="pts-cell">27</td></tr>
+          <tr><td class="rank-cell">#3</td><td class="ans-cell">CLEAR, FAST COMMUNICATION IN GROUP CHAT</td><td class="alias-cell">fast reply, clear communication, updates, responsive</td><td class="pts-cell">16</td></tr>
+          <tr><td class="rank-cell">#4</td><td class="ans-cell">SOLVING BOTTLENECKS INSTEAD OF BLAMING</td><td class="alias-cell">problem solving, no blaming, fixing bugs, collaborative</td><td class="pts-cell">10</td></tr>
+          <tr><td class="rank-cell">#5</td><td class="ans-cell">GIVING HONEST CREDIT TO ALL TEAMMATES</td><td class="alias-cell">giving credit, fairness, appreciating team, unselfish</td><td class="pts-cell">6</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- FINALE -->
+    <div class="round-header" style="background: linear-gradient(135deg, #b8860b, #6e5005);">
+      <span class="round-title">🏆 GRAND FINALE: THE SHOWDOWN</span>
+      <span class="mult-tag" style="background: #ffffff; color: #1e0940;">3X TRIPLE POINTS</span>
+    </div>
+
+    <!-- Q16 -->
+    <div class="question-block">
+      <div class="question-head">
+        <span class="q-num">Q16</span>
+        <h3 class="q-title">Name the ultimate high-energy Dandiya & Garba track that instantly gets the entire campus jumping.</h3>
+      </div>
+      <div class="emcee-hook">Host Hook: "The DJ drops the beat, 500 students raise their Dandiya sticks, and the ground starts shaking..."</div>
+      <table>
+        <thead><tr><th class="rank-cell">Rank</th><th>Answer on Board</th><th>Match Aliases</th><th class="pts-cell">Points</th></tr></thead>
+        <tbody>
+          <tr><td class="rank-cell">#1</td><td class="ans-cell">CHOGADA TARA (LOVEYATRI)</td><td class="alias-cell">chogada, chogada tara, aaye hai, darshan raval</td><td class="pts-cell">38</td></tr>
+          <tr><td class="rank-cell">#2</td><td class="ans-cell">DHOLIDA (GANGUBAI / LOVEYATRI)</td><td class="alias-cell">dholida, gangubai, dholida dhol re vagad</td><td class="pts-cell">26</td></tr>
+          <tr><td class="rank-cell">#3</td><td class="ans-cell">KAMARIYA (MITRON)</td><td class="alias-cell">kamariya, kamariya re, mitron</td><td class="pts-cell">18</td></tr>
+          <tr><td class="rank-cell">#4</td><td class="ans-cell">NAGADA SANG DHOL (RAM-LEELA)</td><td class="alias-cell">nagada sang dhol, nagada, ram leela, shreya ghoshal</td><td class="pts-cell">12</td></tr>
+          <tr><td class="rank-cell">#5</td><td class="ans-cell">KHALASI / GOTILO (COKE STUDIO BHARAT)</td><td class="alias-cell">khalasi, gotilo, aditya gadhvi, aravalli</td><td class="pts-cell">6</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</body>
+</html>

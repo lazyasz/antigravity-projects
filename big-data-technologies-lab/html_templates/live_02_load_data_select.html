@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background: transparent;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 14.5px;
+    line-height: 1.25;
+    color: #ffffff;
+    width: 1050px;
+    height: 480px;
+    display: inline-block;
+    overflow: hidden;
+}
+.main-window {
+    width: 1050px;
+    height: 480px;
+    background: #300a24;
+    border-radius: 6px 6px 0 0;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #1a0513;
+}
+.win-header {
+    height: 36px;
+    background: #242424;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    color: #dfdbd2;
+    border-bottom: 1px solid #1a1a1a;
+    user-select: none;
+}
+.win-header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.term-icon {
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid #888;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: bold;
+    color: #aaa;
+    font-family: monospace;
+}
+.win-header-title {
+    font-weight: 700;
+}
+.win-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 14px;
+    color: #9a9996;
+}
+.tab-bar {
+    height: 32px;
+    background: #1c1c1c;
+    display: flex;
+    align-items: stretch;
+    border-bottom: 1px solid #121212;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 12px;
+}
+.tab {
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #9a9996;
+    background: #242424;
+    border-right: 1px solid #181818;
+    position: relative;
+}
+.tab.active {
+    background: #300a24;
+    color: #ffffff;
+    font-weight: 500;
+}
+.tab.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: #e95420;
+}
+.term-content {
+    flex: 1;
+    background: #300a24;
+    padding: 10px 14px;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 14.5px;
+    line-height: 1.25;
+    color: #ffffff;
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow: hidden;
+}
+.prompt-user { color: #4af626; font-weight: bold; }
+.prompt-colon { color: #ffffff; }
+.prompt-path { color: #729fcf; font-weight: bold; }
+.prompt-dollar { color: #ffffff; }
+.cmd { color: #ffffff; }
+.dir { color: #729fcf; font-weight: bold; }
+.archive { color: #ef2929; font-weight: bold; }
+.exec { color: #8ae234; font-weight: bold; }
+.dim { color: #d3d7cf; }
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    background-color: #ffffff;
+    vertical-align: text-bottom;
+}
+</style>
+</head>
+<body>
+<div class="main-window">
+    <div class="win-header">
+        <div class="win-header-left">
+            <div class="term-icon">&gt;_</div>
+        </div>
+        <div class="win-header-title">dhruv45@dhruv45-VirtualBox: ~</div>
+        <div class="win-controls">
+            <span>&#128269;</span>
+            <span>&#9776;</span>
+            <span>&#8212;</span>
+            <span>&#9633;</span>
+            <span>&times;</span>
+        </div>
+    </div>
+    
+    <div class="tab-bar">
+        <div class="tab active">dhruv45@dhruv45-VirtualBox: ~</div>
+        <div class="tab">dhruv45@dhruv45-VirtualBox: ~/hadoop-3.3.6</div>
+    </div>
+        
+    <div class="term-content">hive (mydb)&gt; -- Loading dataset records into Stud_info table
+hive (mydb)&gt; INSERT INTO TABLE Stud_info VALUES
+           &gt; (101, 'Alan', 'TY', 'Cyber Security'),
+           &gt; (211, 'Sophi', 'FY', 'B.S.C. Nursing'),
+           &gt; (302, 'Neha', 'TY', 'C.S.E.'),
+           &gt; (410, 'Sherin', 'FY', 'Aeronautics'),
+           &gt; (511, 'Alice', 'SY', 'L.L.B.');
+Query ID = dhruv45_20240313131015_a718b932
+Total jobs = 1
+Stage-1: Map: 1  Reduce: 1   Cumulative CPU: 2.85 sec   SUCCESS
+OK
+Time taken: 8.420 seconds
+
+hive (mydb)&gt; SELECT * FROM Stud_info;
++-------+------+----+--------------+
+|Roll_No|  Name|Year|        Course|
++-------+------+----+--------------+
+|    101|  Alan|  TY|Cyber Security|
+|    211| Sophi|  FY|B.S.C. Nursing|
+|    302|  Neha|  TY|        C.S.E.|
+|    410|Sherin|  FY|   Aeronautics|
+|    511| Alice|  SY|        L.L.B.|
++-------+------+----+--------------+
+Time taken: 0.114 seconds, Fetched: 5 row(s)
+hive (mydb)&gt; <span class="cursor"></span></div>
+</div>
+</body>
+</html>

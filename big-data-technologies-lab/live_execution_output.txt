@@ -1,0 +1,142 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+26/10/24 21:41:03 WARN Shell: Did not find winutils.exe: java.io.FileNotFoundException: java.io.FileNotFoundException: Hadoop home directory C:Usersdhruv.geminiantigravity-idescratchbdtl_exp6hadoop-3.3.6 is not an absolute path. -see https://cwiki.apache.org/confluence/display/HADOOP2/WindowsProblems
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+26/10/24 21:41:17 WARN ObjectStore: Version information not found in metastore. hive.metastore.schema.verification is not enabled so recording the schema version 2.3.0
+26/10/24 21:41:17 WARN ObjectStore: setMetaStoreSchemaVersion called but recording version is disabled: version = 2.3.0, comment = Set by MetaStore UNKNOWN@192.168.1.14
+26/10/24 21:41:19 WARN ObjectStore: Failed to get database mydb, returning NoSuchObjectException
+26/10/24 21:41:19 WARN ObjectStore: Failed to get database mydb, returning NoSuchObjectException
+26/10/24 21:41:19 WARN ObjectStore: Failed to get database mydb, returning NoSuchObjectException
+26/10/24 21:41:20 WARN SessionState: METASTORE_FILTER_HOOK will be ignored, since hive.security.authorization.manager is set to instance of HiveAuthorizerFactory.
+26/10/24 21:41:20 WARN HiveConf: HiveConf of name hive.internal.ss.authz.settings.applied.marker does not exist
+26/10/24 21:41:20 WARN HiveMetaStore: Location: file:/C:/Users/dhruv/.gemini/antigravity-ide/scratch/bdtl_exp6/warehouse/mydb.db/stud_info specified for non-external table:stud_info
+[Stage 0:>                                                          (0 + 5) / 5]                                                                                26/10/24 21:41:25 WARN ObjectStore: Failed to get database collegedb, returning NoSuchObjectException
+26/10/24 21:41:25 WARN ObjectStore: Failed to get database collegedb, returning NoSuchObjectException
+26/10/24 21:41:25 WARN ObjectStore: Failed to get database collegedb, returning NoSuchObjectException
+26/10/24 21:41:25 WARN HiveMetaStore: Location: file:/C:/Users/dhruv/.gemini/antigravity-ide/scratch/bdtl_exp6/warehouse/collegedb.db/student specified for non-external table:student
+Using Python: C:\Users\dhruv\AppData\Local\Programs\Python\Python314\python.exe
+JAVA_HOME: C:\Program Files\Microsoft\jdk-17.0.19.10-hotspot
+HADOOP_HOME: C:\Users\dhruv\.gemini\antigravity-ide\scratch\bdtl_exp6\hadoop-3.3.6
+Initializing Spark / Hive Engine...
+
+=== ENGINE STARTED SUCCESSFULLY ===
+
+--- 1. SHOW DATABASES ---
++---------+
+|namespace|
++---------+
+|  default|
++---------+
+
+
+--- 2. CREATE DATABASE MyDB ---
++---------+
+|namespace|
++---------+
+|  default|
+|     mydb|
++---------+
+
+
+--- 3. USE MyDB ---
+
+--- 4. CREATE TABLE Stud_info ---
+
+--- 5. DESCRIBE Stud_info ---
++--------+---------+-------+
+|col_name|data_type|comment|
++--------+---------+-------+
+| Roll_No|      int|   NULL|
+|    Name|   string|   NULL|
+|    Year|   string|   NULL|
+|  Course|   string|   NULL|
++--------+---------+-------+
+
+
+--- 6. INSERTING DATA INTO Stud_info ---
+
+--- 7. SELECT * FROM Stud_info (After Load) ---
++-------+------+----+--------------+
+|Roll_No|  Name|Year|        Course|
++-------+------+----+--------------+
+|    101|  Alan|  TY|Cyber Security|
+|    211| Sophi|  FY|B.S.C. Nursing|
+|    302|  Neha|  TY|        C.S.E.|
+|    410|Sherin|  FY|   Aeronautics|
+|    511| Alice|  SY|        L.L.B.|
++-------+------+----+--------------+
+
+
+--- 8. INSERT COMMAND (Jerin, Mech) ---
+
+--- 9. SELECT * FROM Stud_info (After Insert) ---
++-------+------+----+--------------+
+|Roll_No|  Name|Year|        Course|
++-------+------+----+--------------+
+|    415| Jerin|  LY|          Mech|
+|    101|  Alan|  TY|Cyber Security|
+|    211| Sophi|  FY|B.S.C. Nursing|
+|    302|  Neha|  TY|        C.S.E.|
+|    410|Sherin|  FY|   Aeronautics|
+|    511| Alice|  SY|        L.L.B.|
++-------+------+----+--------------+
+
+
+================ ACCEPTANCE CRITERIA QUERIES ================
+
+--- Q1 & Q2: CollegeDB & Student Table ---
+
+--- SELECT * FROM Student ---
++------+-----+----------+-----+
+|RollNo| Name|Department|Marks|
++------+-----+----------+-----+
+|     1|Dhruv|        IT|   92|
+|     2| Alan|       CSE|   78|
+|     3| Neha|     AI&DS|   85|
+|     4|Sophi|       ECE|   64|
+|     5|Rahul|        ME|   71|
++------+-----+----------+-----+
+
+
+--- Q3: Filter & Sort (Marks > 75 ORDER BY Marks DESC) ---
++------+-----+----------+-----+
+|RollNo| Name|Department|Marks|
++------+-----+----------+-----+
+|     1|Dhruv|        IT|   92|
+|     3| Neha|     AI&DS|   85|
+|     2| Alan|       CSE|   78|
++------+-----+----------+-----+
+
+
+--- Q4: DESCRIBE FORMATTED Student ---
++----------------------------+---------------------------------------------------------------------------------------------+-------+
+|col_name                    |data_type                                                                                    |comment|
++----------------------------+---------------------------------------------------------------------------------------------+-------+
+|RollNo                      |int                                                                                          |NULL   |
+|Name                        |string                                                                                       |NULL   |
+|Department                  |string                                                                                       |NULL   |
+|Marks                       |int                                                                                          |NULL   |
+|                            |                                                                                             |       |
+|# Detailed Table Information|                                                                                             |       |
+|Catalog                     |spark_catalog                                                                                |       |
+|Database                    |collegedb                                                                                    |       |
+|Table                       |student                                                                                      |       |
+|Owner                       |dhruv                                                                                        |       |
+|Created Time                |Sat Oct 24 21:41:25 IST 2026                                                                 |       |
+|Last Access                 |UNKNOWN                                                                                      |       |
+|Created By                  |Spark 4.1.2                                                                                  |       |
+|Type                        |MANAGED                                                                                      |       |
+|Provider                    |hive                                                                                         |       |
+|Table Properties            |[transient_lastDdlTime=1792858286]                                                           |       |
+|Statistics                  |73 bytes, 0 rows                                                                             |       |
+|Location                    |file:/C:/Users/dhruv/.gemini/antigravity-ide/scratch/bdtl_exp6/warehouse/collegedb.db/student|       |
+|Serde Library               |org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe                                           |       |
+|InputFormat                 |org.apache.hadoop.mapred.TextInputFormat                                                     |       |
++----------------------------+---------------------------------------------------------------------------------------------+-------+
+only showing top 20 rows
+
+=== EXPERIMENT EXECUTION COMPLETED SUCCESSFULLY ===
+SUCCESS: The process with PID 14328 (child process of PID 4960) has been terminated.
+SUCCESS: The process with PID 4960 (child process of PID 9404) has been terminated.
+SUCCESS: The process with PID 9404 (child process of PID 13692) has been terminated.

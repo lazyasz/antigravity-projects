@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse and register for upcoming Agate Esports tournaments.">
+  <title>Tournaments — Agate Esports</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>🎮</text></svg>">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">AGATE<span>ESPORTS</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="tournaments.html" class="active">Tournaments</a>
+      <a href="team-registration.html">Register Team</a>
+    </div>
+    <div class="nav-auth"></div>
+    <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <main class="page-content">
+    <div class="container">
+      <h1 class="section-title">Active <span>Tournaments</span></h1>
+      <p class="section-subtitle">Pick your battlefield. Register your team. Dominate.</p>
+
+      <div class="filter-bar">
+        <div class="search-wrapper">
+          <input type="text" class="search-input" id="search-input" placeholder="Search tournaments...">
+        </div>
+        <select class="form-input" id="filter-game" style="max-width:220px;">
+          <option value="">All Games</option>
+          <option value="VALORANT">Valorant</option>
+          <option value="CS2">CS2</option>
+          <option value="APEX LEGENDS">Apex Legends</option>
+          <option value="DOTA 2">Dota 2</option>
+          <option value="LEAGUE OF LEGENDS">League of Legends</option>
+          <option value="PUBG MOBILE">PUBG Mobile</option>
+        </select>
+        <select class="form-input" id="filter-status" style="max-width:180px;">
+          <option value="">All Status</option>
+          <option value="open">Open</option>
+          <option value="closing">Closing Soon</option>
+          <option value="full">Full</option>
+        </select>
+      </div>
+
+      <div class="tournament-grid" id="tournaments-grid"></div>
+      <p id="no-results" style="display:none;text-align:center;color:var(--text-secondary);padding:5rem 0;font-size:1.1rem;font-family:var(--font-heading);">No tournaments found matching your filters.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">© 2026 Agate Esports. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/db.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    const gameEmojis = { 'VALORANT': '🔫', 'CS2': '💣', 'APEX LEGENDS': '🦅', 'DOTA 2': '⚔️', 'LEAGUE OF LEGENDS': '🏰', 'PUBG MOBILE': '🪖' };
+
+    function renderTournaments() {
+      const search = document.getElementById('search-input').value.toLowerCase();
+      const game = document.getElementById('filter-game').value;
+      const status = document.getElementById('filter-status').value;
+      
+      let tournaments = App.DB.getStore('ag_tournaments');
+      if (search) tournaments = tournaments.filter(t => t.title.toLowerCase().includes(search) || t.game.toLowerCase().includes(search));
+      if (game) tournaments = tournaments.filter(t => t.game === game);
+      if (status) tournaments = tournaments.filter(t => t.status === status);
+
+      const grid = document.getElementById('tournaments-grid');
+      const noResults = document.getElementById('no-results');
+
+      if (tournaments.length === 0) {
+        grid.innerHTML = '';
+        noResults.style.display = 'block';
+        return;
+      }
+      noResults.style.display = 'none';
+
+      grid.innerHTML = tournaments.map(t => {
+        const progress = Math.round((t.registered / t.slots) * 100);
+        const statusBadge = t.status === 'open' ? 'open' : t.status === 'closing' ? 'closing' : 'full';
+        const badgeLabel = t.status === 'closing' ? 'Closing Soon' : t.status;
+        
+        return `
+        <div class="card tournament-card slide-up-active">
+          <div class="card-banner" style="background:linear-gradient(135deg, ${t.color}44, ${t.color}11);">
+            <span class="game-icon" style="font-size:3.5rem;">${gameEmojis[t.game] || '🎮'}</span>
+            <span class="game-title">${t.game}</span>
+          </div>
+          <div class="card-body">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem;">
+              <h2 style="font-family:var(--font-heading);font-size:0.95rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;">${t.title}</h2>
+              <span class="badge badge-${statusBadge}">${badgeLabel}</span>
+            </div>
+            <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:1rem;">${t.desc}</p>
+            <div class="card-meta">
+              <span class="card-meta-item">📅 ${App.Main.formatDate(t.date).split(',')[0]}</span>
+              <span class="card-meta-item">👥 ${t.registered}/${t.slots} teams</span>
+            </div>
+            <div class="slots-progress-container">
+              <div class="slots-progress-header">
+                <span>Slots filled</span><span>${progress}%</span>
+              </div>
+              <div class="slots-progress-bar">
+                <div class="slots-progress-fill" style="width:${progress}%; background:linear-gradient(90deg, ${t.color}, #0066ff)"></div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <span class="prize-pool">${t.prize}</span>
+              ${t.status !== 'full' ? `<a href="team-registration.html?t=${t.id}" class="btn btn-sm btn-primary btn-bracket">Register Team</a>` : '<span class="btn btn-sm btn-outline" style="opacity:0.5;pointer-events:none;">Full</span>'}
+            </div>
+          </div>
+        </div>`;
+      }).join('');
+    }
+
+    document.getElementById('search-input').addEventListener('input', renderTournaments);
+    document.getElementById('filter-game').addEventListener('change', renderTournaments);
+    document.getElementById('filter-status').addEventListener('change', renderTournaments);
+    document.addEventListener('DOMContentLoaded', renderTournaments);
+  </script>
+</body>
+</html>

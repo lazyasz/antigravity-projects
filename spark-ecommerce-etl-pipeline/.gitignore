@@ -1,0 +1,26 @@
+# Environment & Secrets
+.env
+*.env
+
+# Python Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Spark & Java
+derby.log
+metastore_db/
+spark-warehouse/
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

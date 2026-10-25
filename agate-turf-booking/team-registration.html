@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Register your team for an Agate Esports tournament.">
+  <title>Team Registration — Agate Esports</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>🎮</text></svg>">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">AGATE<span>ESPORTS</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="tournaments.html">Tournaments</a>
+      <a href="team-registration.html" class="active">Register Team</a>
+    </div>
+    <div class="nav-auth"></div>
+    <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <main class="page-content">
+    <div class="container" style="max-width:850px;">
+      <!-- Auth Message if not logged in -->
+      <div id="auth-warning-banner" class="card fade-in" style="display:none; margin-bottom:2rem; border-left:3px solid var(--danger);">
+        <div class="card-body" style="text-align: center;">
+          <h3 style="font-family:var(--font-heading); font-size:1.1rem; color:var(--danger); margin-bottom: 0.5rem;">Authentication Required</h3>
+          <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom: 1rem;">You must be logged in to register a team for a tournament.</p>
+          <a href="login.html" class="btn btn-sm btn-primary btn-bracket">Login Now</a>
+        </div>
+      </div>
+
+      <!-- Tournament Banner -->
+      <div id="tournament-banner" class="card fade-in" style="margin-bottom:2rem; border-left:3px solid var(--accent); display:none;">
+        <div class="card-body" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; padding: 1.5rem 2rem;">
+          <div>
+            <div style="font-size:0.65rem; color:var(--accent); text-transform:uppercase; letter-spacing:2px; font-family:var(--font-heading); margin-bottom:0.25rem;">Registering For</div>
+            <h2 id="banner-title" style="font-family:var(--font-heading); font-size:1.2rem; font-weight:900; letter-spacing: 0.5px;">Select a Tournament</h2>
+            <p id="banner-desc" style="font-size:0.8rem; color:var(--text-secondary); margin-top:0.25rem;"></p>
+          </div>
+          <div id="banner-prize" class="prize-pool" style="font-size:1.4rem;"></div>
+        </div>
+      </div>
+
+      <div class="card fade-in" id="registration-card">
+        <div class="card-body" style="padding:2.5rem;">
+          <h1 style="font-family:var(--font-heading); font-size:1.5rem; font-weight:900; margin-bottom:1.5rem; text-transform:uppercase; letter-spacing: 1px;">Team <span style="color:var(--accent)">Registration</span></h1>
+
+          <form id="team-form" novalidate>
+            <!-- Tournament Select -->
+            <div class="form-group">
+              <label class="form-label" for="tournament-select">Tournament</label>
+              <select class="form-input" id="tournament-select">
+                <option value="">— Choose a tournament —</option>
+              </select>
+              <div class="form-error" id="tournament-select-error"></div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="team-name">Team Name</label>
+                <input class="form-input" type="text" id="team-name" placeholder="Team Agate">
+                <div class="form-error" id="team-name-error"></div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="team-tag">Team Tag</label>
+                <input class="form-input" type="text" id="team-tag" placeholder="AGT" maxlength="5">
+                <div class="form-error" id="team-tag-error"></div>
+              </div>
+            </div>
+
+            <!-- Players Section -->
+            <div style="display:flex; justify-content:space-between; align-items:center; margin:2rem 0 1rem; border-bottom:1px solid var(--border); padding-bottom: 0.5rem;">
+              <h3 style="font-family:var(--font-heading); font-size:0.9rem; font-weight:700; text-transform:uppercase; letter-spacing:1px;">Player Roster</h3>
+              <button type="button" id="add-player-btn" class="btn btn-sm btn-outline">+ Add Player</button>
+            </div>
+            <div id="players-container"></div>
+            <div class="form-error" id="players-error" style="margin-bottom:1.5rem; text-align: center;"></div>
+
+            <div class="form-group" id="team-global-error" style="display:none; margin-top: 1rem;">
+              <div class="form-error visible" id="global-msg" style="text-align: center;"></div>
+            </div>
+
+            <button type="submit" id="submit-btn" class="btn btn-primary btn-lg btn-bracket" style="width:100%; margin-top:1rem;">Submit Registration</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">© 2026 Agate Esports. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/db.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    let playerCount = 0;
+    const maxPlayers = 7;
+    const minPlayers = 3;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Guard page
+      if (!App.Auth.isLoggedIn()) {
+        document.getElementById('auth-warning-banner').style.display = 'block';
+        document.getElementById('registration-card').style.display = 'none';
+        return;
+      }
+
+      // 2. Populate tournaments select list
+      const tournaments = App.DB.getStore('ag_tournaments').filter(t => t.status !== 'full');
+      const sel = document.getElementById('tournament-select');
+      
+      tournaments.forEach(t => {
+        const opt = document.createElement('option');
+        opt.value = t.id;
+        opt.textContent = `${t.game} — ${t.title}`;
+        sel.appendChild(opt);
+      });
+
+      // 3. Look for pre-selected tournament in URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const preselect = urlParams.get('t');
+      if (preselect) {
+        sel.value = preselect;
+        updateBanner(preselect);
+      }
+
+      sel.addEventListener('change', () => updateBanner(sel.value));
+
+      // 4. Add initial rows
+      for (let i = 0; i < 3; i++) {
+        addPlayerRow();
+      }
+    });
+
+    function addPlayerRow() {
+      if (playerCount >= maxPlayers) {
+        App.Main.toast('Maximum ' + maxPlayers + ' players allowed.', 'error');
+        return;
+      }
+      
+      playerCount++;
+      const container = document.getElementById('players-container');
+      const row = document.createElement('div');
+      row.className = 'player-row';
+      row.id = 'player-row-' + playerCount;
+      const num = playerCount;
+      
+      row.innerHTML = `
+        <div class="player-row-header">
+          <span>PLAYER ${num}</span>
+        </div>
+        <div class="form-group" style="margin:0;">
+          <label class="form-label" for="pname-${num}">Full Name</label>
+          <input class="form-input pname-input" type="text" id="pname-${num}" placeholder="Player name">
+        </div>
+        <div class="form-group" style="margin:0;">
+          <label class="form-label" for="pign-${num}">In-Game ID</label>
+          <input class="form-input pign-input" type="text" id="pign-${num}" placeholder="IGN#TAG">
+        </div>
+        <div class="form-group" style="margin:0;">
+          <label class="form-label" for="prole-${num}">Role</label>
+          <select class="form-input" id="prole-${num}">
+            ${App.DB.ROLES.map(r => `<option value="${r}">${r}</option>`).join('')}
+          </select>
+        </div>
+        <button type="button" class="remove-player-btn" onclick="removePlayer(${num})" title="Remove player">✕</button>
+      `;
+      
+      container.appendChild(row);
+      updateAddBtn();
+    }
+
+    function removePlayer(n) {
+      const row = document.getElementById('player-row-' + n);
+      if (row) {
+        row.style.opacity = '0';
+        row.style.transform = 'translateY(15px)';
+        setTimeout(() => {
+          row.remove();
+          playerCount--;
+          renumberPlayers();
+          updateAddBtn();
+        }, 250);
+      }
+    }
+
+    function renumberPlayers() {
+      const rows = document.querySelectorAll('#players-container .player-row');
+      playerCount = rows.length;
+      rows.forEach((row, i) => {
+        const num = i + 1;
+        row.id = 'player-row-' + num;
+        row.querySelector('.player-row-header span').textContent = 'PLAYER ' + num;
+        
+        // Update input attributes
+        const nameInput = row.querySelector('.pname-input');
+        const ignInput = row.querySelector('.pign-input');
+        const roleSelect = row.querySelector('select');
+        const removeBtn = row.querySelector('.remove-player-btn');
+        
+        if (nameInput) { nameInput.id = 'pname-' + num; }
+        if (ignInput) { ignInput.id = 'pign-' + num; }
+        if (roleSelect) { roleSelect.id = 'prole-' + num; }
+        if (removeBtn) {
+          removeBtn.setAttribute('onclick', `removePlayer(${num})`);
+        }
+      });
+    }
+
+    function updateAddBtn() {
+      const btn = document.getElementById('add-player-btn');
+      if (!btn) return;
+      btn.disabled = playerCount >= maxPlayers;
+      btn.textContent = playerCount >= maxPlayers ? 'Roster Full' : '+ Add Player';
+    }
+
+    function getPlayers() {
+      const rows = document.querySelectorAll('#players-container .player-row');
+      const players = [];
+      rows.forEach(row => {
+        const nameVal = row.querySelector('.pname-input')?.value.trim();
+        const ignVal = row.querySelector('.pign-input')?.value.trim();
+        const roleVal = row.querySelector('select')?.value || '';
+        players.push({ name: nameVal, ign: ignVal, role: roleVal });
+      });
+      return players;
+    }
+
+    function updateBanner(tId) {
+      const t = App.DB.getStore('ag_tournaments').find(x => x.id === tId);
+      const banner = document.getElementById('tournament-banner');
+      if (t) {
+        document.getElementById('banner-title').textContent = t.title;
+        document.getElementById('banner-desc').textContent = `${t.game} • ${t.desc} • ${App.Main.formatDate(t.date).split(',')[0]}`;
+        document.getElementById('banner-prize').textContent = t.prize;
+        banner.style.display = 'block';
+      } else {
+        banner.style.display = 'none';
+      }
+    }
+
+    document.getElementById('add-player-btn').addEventListener('click', addPlayerRow);
+
+    document.getElementById('team-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const submitBtn = document.getElementById('submit-btn');
+      
+      // Client validation for tournament, team details
+      let ok = App.Validation.validate([
+        { input: 'tournament-select', error: 'tournament-select-error', checks: [App.Validation.V.required('Tournament')] },
+        { input: 'team-name', error: 'team-name-error', checks: [App.Validation.V.required('Team Name'), App.Validation.V.minLen(3)] },
+        { input: 'team-tag', error: 'team-tag-error', checks: [App.Validation.V.required('Team Tag'), App.Validation.V.minLen(2)] },
+      ]);
+
+      const players = getPlayers();
+      const errEl = document.getElementById('players-error');
+      
+      // Roster constraint validation
+      if (players.length < minPlayers) {
+        errEl.textContent = `At least ${minPlayers} players are required in the roster.`;
+        errEl.classList.add('visible');
+        ok = false;
+      } else if (players.length > maxPlayers) {
+        errEl.textContent = `A maximum of ${maxPlayers} players are allowed.`;
+        errEl.classList.add('visible');
+        ok = false;
+      } else {
+        // Validate fields for each player
+        let playerError = false;
+        let emptyCheck = false;
+        let duplicateIgnCheck = false;
+        const seenIgns = new Set();
+        
+        for (let i = 0; i < players.length; i++) {
+          const p = players[i];
+          if (!p.name || !p.ign) {
+            emptyCheck = true;
+            playerError = true;
+          } else {
+            // Check In-Game ID format
+            const formatErr = App.Validation.V.ignFormat()(p.ign);
+            if (formatErr) {
+              errEl.textContent = `Player ${i+1} format error: ${formatErr}`;
+              errEl.classList.add('visible');
+              playerError = true;
+              break;
+            }
+            
+            // Check duplicate IGN in same form
+            const lowerIgn = p.ign.toLowerCase();
+            if (seenIgns.has(lowerIgn)) {
+              duplicateIgnCheck = true;
+              errEl.textContent = `Duplicate Player IGN found in roster: "${p.ign}"`;
+              errEl.classList.add('visible');
+              playerError = true;
+              break;
+            }
+            seenIgns.add(lowerIgn);
+          }
+        }
+        
+        if (emptyCheck) {
+          errEl.textContent = 'All player names and In-Game IDs must be filled.';
+          errEl.classList.add('visible');
+        } else if (!playerError) {
+          errEl.classList.remove('visible');
+        } else {
+          ok = false;
+        }
+      }
+
+      if (!ok) return;
+
+      App.Main.setBtnLoading(submitBtn, true, 'Submit Registration');
+      document.getElementById('team-global-error').style.display = 'none';
+
+      // Submit via mock async API
+      App.API.registerTeam(
+        document.getElementById('team-name').value.trim(),
+        document.getElementById('team-tag').value.trim(),
+        document.getElementById('tournament-select').value,
+        players
+      )
+      .then(team => {
+        App.Main.toast('Team registered successfully!', 'success');
+        setTimeout(() => {
+          window.location.href = 'confirmation.html?id=' + team.id;
+        }, 800);
+      })
+      .catch(err => {
+        App.Main.setBtnLoading(submitBtn, false, 'Submit Registration');
+        document.getElementById('team-global-error').style.display = 'block';
+        document.getElementById('global-msg').textContent = err.message;
+        App.Main.toast(err.message, 'error');
+      });
+    });
+  </script>
+</body>
+</html>

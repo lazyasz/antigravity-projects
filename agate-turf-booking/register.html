@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create your Agate Esports account and start competing.">
+  <title>Register — Agate Esports</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>🎮</text></svg>">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">AGATE<span>ESPORTS</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="tournaments.html">Tournaments</a>
+      <a href="team-registration.html">Register Team</a>
+    </div>
+    <div class="nav-auth"></div>
+    <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <main class="auth-page">
+    <div class="auth-card fade-in" style="max-width:560px;">
+      <h1 class="auth-title">Create <span style="color:var(--accent)">Account</span></h1>
+      <p class="auth-subtitle">Join Agate Esports and start competing today.</p>
+      
+      <form id="register-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="username">Username</label>
+            <input class="form-input" type="text" id="username" placeholder="xBlaze" autocomplete="username">
+            <div class="form-error" id="username-error"></div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-input" type="email" id="email" placeholder="you@email.com" autocomplete="email">
+            <div class="form-error" id="email-error"></div>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="password">Password</label>
+            <input class="form-input" type="password" id="password" placeholder="Min 8 characters" autocomplete="new-password">
+            <div class="password-strength-meter">
+              <div id="strength-bar" class="password-strength-fill"></div>
+            </div>
+            <span id="strength-text-label" class="strength-text">Strength: Empty</span>
+            <div class="form-error" id="password-error"></div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="confirm-password">Confirm Password</label>
+            <input class="form-input" type="password" id="confirm-password" placeholder="Re-enter password" autocomplete="new-password">
+            <div class="form-error" id="confirm-password-error"></div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label" for="role">I am a</label>
+          <select class="form-input" id="role">
+            <option value="player">Player</option>
+            <option value="manager">Team Manager</option>
+          </select>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="gamertag">Gamertag / IGN</label>
+            <input class="form-input" type="text" id="gamertag" placeholder="YourName#TAG">
+            <div class="form-error" id="gamertag-error"></div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="preferred-game">Preferred Game</label>
+            <select class="form-input" id="preferred-game">
+              <option value="">Select a game</option>
+              <option value="valorant">Valorant</option>
+              <option value="cs2">CS2</option>
+              <option value="apex">Apex Legends</option>
+              <option value="dota2">Dota 2</option>
+              <option value="lol">League of Legends</option>
+              <option value="pubg">PUBG Mobile</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="form-group" id="reg-global-error" style="display:none; margin-top: 1rem;">
+          <div class="form-error visible" id="global-msg" style="text-align: center;"></div>
+        </div>
+        
+        <button type="submit" id="submit-btn" class="btn btn-primary btn-lg btn-bracket" style="width:100%; margin-top:0.75rem;">Create Account</button>
+      </form>
+      
+      <div class="auth-footer">
+        Already have an account? <a href="login.html">Login</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/db.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    const passwordInput = document.getElementById('password');
+    const strengthBar = document.getElementById('strength-bar');
+    const strengthText = document.getElementById('strength-text-label');
+
+    passwordInput.addEventListener('input', () => {
+      const val = passwordInput.value;
+      if (!val) {
+        strengthBar.style.width = '0%';
+        strengthText.textContent = 'Strength: Empty';
+        strengthText.style.color = 'var(--text-secondary)';
+        return;
+      }
+
+      let score = 0;
+      if (val.length >= 8) score++;
+      if (/[A-Z]/.test(val)) score++;
+      if (/[a-z]/.test(val)) score++;
+      if (/[0-9]/.test(val)) score++;
+      if (/[!@#$%^&*(),.?":{}|<>]/.test(val)) score++;
+
+      let pct = (score / 5) * 100;
+      strengthBar.style.width = `${pct}%`;
+
+      if (score <= 1) {
+        strengthBar.style.backgroundColor = 'var(--danger)';
+        strengthText.textContent = 'Strength: Very Weak';
+        strengthText.style.color = 'var(--danger)';
+      } else if (score === 2) {
+        strengthBar.style.backgroundColor = 'var(--warning)';
+        strengthText.textContent = 'Strength: Weak';
+        strengthText.style.color = 'var(--warning)';
+      } else if (score === 3) {
+        strengthBar.style.backgroundColor = '#ffd60a';
+        strengthText.textContent = 'Strength: Medium';
+        strengthText.style.color = '#ffd60a';
+      } else if (score === 4) {
+        strengthBar.style.backgroundColor = 'var(--accent-blue)';
+        strengthText.textContent = 'Strength: Strong';
+        strengthText.style.color = 'var(--accent-blue)';
+      } else {
+        strengthBar.style.backgroundColor = 'var(--success)';
+        strengthText.textContent = 'Strength: Excellent (Ready)';
+        strengthText.style.color = 'var(--success)';
+      }
+    });
+
+    document.getElementById('register-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const submitBtn = document.getElementById('submit-btn');
+      
+      const ok = App.Validation.validate([
+        { input: 'username', error: 'username-error', checks: [App.Validation.V.required('Username'), App.Validation.V.minLen(3)] },
+        { input: 'email', error: 'email-error', checks: [App.Validation.V.required('Email'), App.Validation.V.email()] },
+        { input: 'password', error: 'password-error', checks: [App.Validation.V.required('Password'), App.Validation.V.passwordStrength()] },
+        { input: 'confirm-password', error: 'confirm-password-error', checks: [App.Validation.V.required('Confirm Password'), App.Validation.V.match('password', 'Passwords')] },
+        { input: 'gamertag', error: 'gamertag-error', checks: [App.Validation.V.required('Gamertag'), App.Validation.V.ignFormat()] },
+      ]);
+      
+      if (!ok) return;
+
+      App.Main.setBtnLoading(submitBtn, true, 'Create Account');
+      document.getElementById('reg-global-error').style.display = 'none';
+
+      App.API.register(
+        document.getElementById('username').value.trim(),
+        document.getElementById('email').value.trim(),
+        document.getElementById('password').value,
+        document.getElementById('role').value,
+        document.getElementById('gamertag').value.trim(),
+        document.getElementById('preferred-game').value
+      )
+      .then(res => {
+        App.Main.toast('Account created! Welcome to Agate Esports.', 'success');
+        setTimeout(() => {
+          window.location.href = 'tournaments.html';
+        }, 800);
+      })
+      .catch(err => {
+        App.Main.setBtnLoading(submitBtn, false, 'Create Account');
+        document.getElementById('reg-global-error').style.display = 'block';
+        document.getElementById('global-msg').textContent = err.message;
+        App.Main.toast(err.message, 'error');
+      });
+    });
+  </script>
+</body>
+</html>

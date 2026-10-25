@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env
+data/mock_db.json
+*.log
+.DS_Store
+coverage/

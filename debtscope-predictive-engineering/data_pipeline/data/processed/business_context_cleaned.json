@@ -1,0 +1,58 @@
+[
+  {
+    "module_name": "payment_service",
+    "criticality": 95.0,
+    "user_facing": true,
+    "revenue_impact": 98.0,
+    "sla_tier": "Tier-1"
+  },
+  {
+    "module_name": "ledger_service",
+    "criticality": 92.0,
+    "user_facing": false,
+    "revenue_impact": 95.0,
+    "sla_tier": "Tier-1"
+  },
+  {
+    "module_name": "auth_service",
+    "criticality": 90.0,
+    "user_facing": true,
+    "revenue_impact": 88.0,
+    "sla_tier": "Tier-1"
+  },
+  {
+    "module_name": "token_service",
+    "criticality": 85.0,
+    "user_facing": false,
+    "revenue_impact": 85.0,
+    "sla_tier": "Tier-1"
+  },
+  {
+    "module_name": "email_dispatcher",
+    "criticality": 60.0,
+    "user_facing": false,
+    "revenue_impact": 50.0,
+    "sla_tier": "Tier-2"
+  },
+  {
+    "module_name": "sms_gateway",
+    "criticality": 65.0,
+    "user_facing": true,
+    "revenue_impact": 60.0,
+    "sla_tier": "Tier-2"
+  },
+  {
+    "module_name": "report_generator",
+    "criticality": 70.0,
+    "user_facing": true,
+    "revenue_impact": 70.0,
+    "sla_tier": "Tier-2"
+  },
+  {
+    "module_name": "data_exporter",
+    "criticality": 55.0,
+    "user_facing": false,
+    "revenue_impact": 45.0,
+    "sla_tier": "Tier-3"
+  }
+]

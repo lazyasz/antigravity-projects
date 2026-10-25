@@ -1,0 +1,123 @@
+[
+  {
+    "id": "f-pay-01",
+    "repo_id": "repo-core-banking",
+    "file_path": "services/payment.py",
+    "module_name": "payment_service",
+    "language": "Python",
+    "loc": 1842,
+    "cyclomatic_complexity": 41.0,
+    "cognitive_complexity": 35.0,
+    "code_smells": 14
+  },
+  {
+    "id": "f-pay-02",
+    "repo_id": "repo-core-banking",
+    "file_path": "services/stripe_adapter.py",
+    "module_name": "payment_service",
+    "language": "Python",
+    "loc": 620,
+    "cyclomatic_complexity": 18.0,
+    "cognitive_complexity": 14.0,
+    "code_smells": 5
+  },
+  {
+    "id": "f-led-01",
+    "repo_id": "repo-core-banking",
+    "file_path": "models/ledger.py",
+    "module_name": "ledger_service",
+    "language": "Python",
+    "loc": 1250,
+    "cyclomatic_complexity": 29.0,
+    "cognitive_complexity": 24.0,
+    "code_smells": 9
+  },
+  {
+    "id": "f-led-02",
+    "repo_id": "repo-core-banking",
+    "file_path": "services/reconciliation.py",
+    "module_name": "ledger_service",
+    "language": "Python",
+    "loc": 980,
+    "cyclomatic_complexity": 26.0,
+    "cognitive_complexity": 22.0,
+    "code_smells": 8
+  },
+  {
+    "id": "f-aut-01",
+    "repo_id": "repo-auth-gateway",
+    "file_path": "handlers/auth.go",
+    "module_name": "auth_service",
+    "language": "Go",
+    "loc": 1420,
+    "cyclomatic_complexity": 34.0,
+    "cognitive_complexity": 28.0,
+    "code_smells": 11
+  },
+  {
+    "id": "f-aut-02",
+    "repo_id": "repo-auth-gateway",
+    "file_path": "tokens/jwt.go",
+    "module_name": "token_service",
+    "language": "Go",
+    "loc": 780,
+    "cyclomatic_complexity": 21.0,
+    "cognitive_complexity": 17.0,
+    "code_smells": 6
+  },
+  {
+    "id": "f-aut-03",
+    "repo_id": "repo-auth-gateway",
+    "file_path": "tokens/refresh.go",
+    "module_name": "token_service",
+    "language": "Go",
+    "loc": 450,
+    "cyclomatic_complexity": 12.0,
+    "cognitive_complexity": 9.0,
+    "code_smells": 3
+  },
+  {
+    "id": "f-not-01",
+    "repo_id": "repo-notification-engine",
+    "file_path": "tasks/email_worker.py",
+    "module_name": "email_dispatcher",
+    "language": "Python",
+    "loc": 540,
+    "cyclomatic_complexity": 15.0,
+    "cognitive_complexity": 12.0,
+    "code_smells": 4
+  },
+  {
+    "id": "f-not-02",
+    "repo_id": "repo-notification-engine",
+    "file_path": "clients/twilio_sms.py",
+    "module_name": "sms_gateway",
+    "language": "Python",
+    "loc": 610,
+    "cyclomatic_complexity": 16.0,
+    "cognitive_complexity": 13.0,
+    "code_smells": 5
+  },
+  {
+    "id": "f-rep-01",
+    "repo_id": "repo-reporting-analytics",
+    "file_path": "pipelines/daily_report.py",
+    "module_name": "report_generator",
+    "language": "Python",
+    "loc": 1120,
+    "cyclomatic_complexity": 31.0,
+    "cognitive_complexity": 25.0,
+    "code_smells": 10
+  },
+  {
+    "id": "f-rep-02",
+    "repo_id": "repo-reporting-analytics",
+    "file_path": "exporters/csv_exporter.py",
+    "module_name": "data_exporter",
+    "language": "Python",
+    "loc": 390,
+    "cyclomatic_complexity": 9.0,
+    "cognitive_complexity": 6.0,
+    "code_smells": 2
+  }
+]

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background: #4a154b url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.03"><rect width="50" height="50" fill="%23fff"/></svg>');
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 14.5px;
+    line-height: 1.28;
+    color: #ffffff;
+    width: 1340px;
+    height: 680px;
+    overflow: hidden;
+    position: relative;
+}
+.top-bar {
+    height: 28px;
+    background: #111111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #dfdbd2;
+    user-select: none;
+}
+.top-left {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.top-activities {
+    cursor: default;
+}
+.top-app {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 700;
+}
+.top-app-icon {
+    width: 16px;
+    height: 16px;
+    background: #300a24;
+    border: 1px solid #777;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-family: monospace;
+}
+.top-center {
+    cursor: default;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.top-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 12px;
+}
+.dock {
+    position: absolute;
+    top: 28px;
+    left: 0;
+    bottom: 0;
+    width: 48px;
+    background: rgba(10, 10, 10, 0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    gap: 12px;
+    z-index: 10;
+}
+.dock-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: default;
+}
+.dock-files { background: #268bd2; }
+.dock-term { background: #2c001e; border: 1.5px solid #e95420; }
+.dock-term::before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 12px;
+    width: 4px;
+    height: 10px;
+    background: #e95420;
+    border-radius: 2px;
+}
+.dock-firefox { background: linear-gradient(135deg, #e66000, #ff9500); }
+.dock-mail { background: #3584e4; }
+.dock-libre { background: #33d17a; }
+.dock-software { background: #e95420; }
+.dock-help { background: #1c71d8; }
+.dock-trash { margin-top: auto; background: #5e5c64; }
+.dock-grid {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 8px;
+    display: grid;
+    grid-template-columns: repeat(3, 6px);
+    grid-gap: 4px;
+    align-content: center;
+    justify-content: center;
+}
+.dock-grid span {
+    width: 6px;
+    height: 6px;
+    background: #deddda;
+    border-radius: 50%;
+}
+.main-window {
+    position: absolute;
+    top: 36px;
+    left: 56px;
+    right: 8px;
+    bottom: 8px;
+    background: #300a24;
+    border-radius: 6px 6px 0 0;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #1a0513;
+}
+.win-header {
+    height: 36px;
+    background: #242424;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    color: #dfdbd2;
+    border-bottom: 1px solid #1a1a1a;
+    user-select: none;
+}
+.win-header-title {
+    font-weight: 700;
+}
+.win-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 14px;
+    color: #9a9996;
+}
+.tab-bar {
+    height: 32px;
+    background: #1c1c1c;
+    display: flex;
+    align-items: stretch;
+    border-bottom: 1px solid #121212;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 12px;
+}
+.tab {
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #9a9996;
+    background: #242424;
+    border-right: 1px solid #181818;
+    position: relative;
+}
+.tab.active {
+    background: #300a24;
+    color: #ffffff;
+    font-weight: 500;
+}
+.tab.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: #e95420;
+}
+.term-content {
+    flex: 1;
+    background: #300a24;
+    padding: 10px 14px;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 14.5px;
+    line-height: 1.25;
+    color: #ffffff;
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow: hidden;
+}
+.prompt-user { color: #4af626; font-weight: bold; }
+.prompt-colon { color: #ffffff; }
+.prompt-path { color: #729fcf; font-weight: bold; }
+.prompt-dollar { color: #ffffff; }
+.cmd { color: #ffffff; }
+.dir { color: #729fcf; font-weight: bold; }
+.archive { color: #ef2929; font-weight: bold; }
+.exec { color: #8ae234; font-weight: bold; }
+.dim { color: #d3d7cf; }
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    background-color: #ffffff;
+    vertical-align: text-bottom;
+}
+</style>
+</head>
+<body>
+<div class="top-bar">
+    <div class="top-left">
+        <span class="top-activities">Activities</span>
+        <div class="top-app">
+            <div class="top-app-icon">&gt;_</div>
+            <span>Terminal</span>
+        </div>
+    </div>
+    <div class="top-center">
+        <span>Mar 12 12:17</span>
+    </div>
+    <div class="top-right">
+        <span>&#128266;</span>
+        <span>&#128246;</span>
+        <span>&#128267;</span>
+        <span>&#9662;</span>
+    </div>
+</div>
+
+<div class="dock">
+    <div class="dock-icon dock-files">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#ffffff"><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/></svg>
+    </div>
+    <div class="dock-icon dock-term">
+        <span style="color:#ffffff;font-size:14px;font-weight:bold;font-family:monospace;">&gt;_</span>
+    </div>
+    <div class="dock-icon dock-firefox">
+        <span style="color:#ffffff;font-size:16px;">&#129418;</span>
+    </div>
+    <div class="dock-icon dock-mail">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#ffffff"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+    </div>
+    <div class="dock-icon dock-libre">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#ffffff"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+    </div>
+    <div class="dock-icon dock-software">
+        <span style="color:#ffffff;font-size:16px;font-weight:bold;">A</span>
+    </div>
+    <div class="dock-icon dock-help">
+        <span style="color:#ffffff;font-size:18px;font-weight:bold;">?</span>
+    </div>
+    <div class="dock-icon dock-trash">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#ffffff"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+    </div>
+    <div class="dock-grid">
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+    </div>
+</div>
+
+<div class="main-window">
+    <div class="win-header">
+        <div class="win-header-title">dhruv45@dhruv45-VirtualBox: ~</div>
+        <div class="win-controls">
+            <span>&#128269;</span>
+            <span>&#9776;</span>
+            <span>&#8212;</span>
+            <span>&#9633;</span>
+            <span>&times;</span>
+        </div>
+    </div>
+    <div class="tab-bar">
+        <div class="tab active">dhruv45@dhruv45-VirtualBox: ~</div>
+        <div class="tab ">dhruv45@dhruv45-VirtualBox: ~/hadoop-3.3.6</div>
+    </div>
+    <div class="term-content">export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export PATH=$PATH:/usr/lib/jvm/java-8-openjdk-amd64/bin
+export HADOOP_HOME=~/hadoop-3.3.6/
+export PATH=$PATH:$HADOOP_HOME/bin
+export PATH=$PATH:$HADOOP_HOME/sbin
+export HADOOP_MAPRED_HOME=$HADOOP_HOME
+export YARN_HOME=$HADOOP_HOME
+export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
+export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/native"
+export HADOOP_STREAMING=$HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.3.6.jar
+export HADOOP_LOG_DIR=$HADOOP_HOME/logs
+export PDSH_RCMD_TYPE=ssh
+export HIVE_HOME=/home/dhruv45/apache-hive-3.1.2-bin
+export PATH=$PATH:$HIVE_HOME/bin
+
+<span class="prompt-user">dhruv45@dhruv45-VirtualBox</span><span class="prompt-colon">:</span><span class="prompt-path">~</span><span class="prompt-dollar">$</span> <span class="cmd">source ~/.bashrc</span>
+<span class="prompt-user">dhruv45@dhruv45-VirtualBox</span><span class="prompt-colon">:</span><span class="prompt-path">~</span><span class="prompt-dollar">$</span> <span class="cmd">sudo nano $HIVE_HOME/bin/hive-config.sh</span>
+[sudo] password for dhruv45: <span class="cursor"></span></div>
+</div>
+</body>
+</html>

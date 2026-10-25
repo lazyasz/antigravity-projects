@@ -1,0 +1,62 @@
+[
+  {
+    "id": "dep-01",
+    "repo_id": "repo-core-banking",
+    "package_name": "cryptography",
+    "current_version": "3.4.8",
+    "latest_version": "42.0.5",
+    "age_days": 420,
+    "vulnerabilities_count": 3,
+    "license_risk": 20.0
+  },
+  {
+    "id": "dep-02",
+    "repo_id": "repo-core-banking",
+    "package_name": "fastapi",
+    "current_version": "0.95.1",
+    "latest_version": "0.110.0",
+    "age_days": 210,
+    "vulnerabilities_count": 1,
+    "license_risk": 10.0
+  },
+  {
+    "id": "dep-03",
+    "repo_id": "repo-core-banking",
+    "package_name": "sqlalchemy",
+    "current_version": "1.4.30",
+    "latest_version": "2.0.28",
+    "age_days": 350,
+    "vulnerabilities_count": 2,
+    "license_risk": 15.0
+  },
+  {
+    "id": "dep-04",
+    "repo_id": "repo-auth-gateway",
+    "package_name": "golang-jwt/jwt",
+    "current_version": "v4.4.2",
+    "latest_version": "v5.2.1",
+    "age_days": 280,
+    "vulnerabilities_count": 1,
+    "license_risk": 10.0
+  },
+  {
+    "id": "dep-05",
+    "repo_id": "repo-notification-engine",
+    "package_name": "celery",
+    "current_version": "5.1.0",
+    "latest_version": "5.3.6",
+    "age_days": 310,
+    "vulnerabilities_count": 2,
+    "license_risk": 15.0
+  },
+  {
+    "id": "dep-06",
+    "repo_id": "repo-reporting-analytics",
+    "package_name": "pyspark",
+    "current_version": "3.3.0",
+    "latest_version": "3.5.1",
+    "age_days": 290,
+    "vulnerabilities_count": 1,
+    "license_risk": 10.0
+  }
+]

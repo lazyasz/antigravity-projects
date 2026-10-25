@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Admin dashboard — Agate Esports tournament management.">
+  <title>Admin Dashboard — Agate Esports</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>🎮</text></svg>">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">AGATE<span>ESPORTS</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="tournaments.html">Tournaments</a>
+      <a href="admin.html" class="active">Dashboard</a>
+    </div>
+    <div class="nav-auth"></div>
+    <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <main class="page-content">
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1.5rem;">
+        <div>
+          <h1 class="section-title">Admin <span>Dashboard</span></h1>
+          <p class="section-subtitle" style="margin-bottom:0;">Manage tournament registrations and roster details.</p>
+        </div>
+        <button id="clear-data-btn" class="btn btn-sm btn-danger btn-bracket">Clear All Data</button>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="stats-grid" id="stats-grid">
+        <div class="stat-card stat-total">
+          <div class="stat-number" id="stat-teams-total">0</div>
+          <div class="stat-label">Total Registrations</div>
+        </div>
+        <div class="stat-card stat-approved">
+          <div class="stat-number" id="stat-teams-approved">0</div>
+          <div class="stat-label">Approved</div>
+        </div>
+        <div class="stat-card stat-pending">
+          <div class="stat-number" id="stat-teams-pending">0</div>
+          <div class="stat-label">Pending</div>
+        </div>
+        <div class="stat-card stat-rejected">
+          <div class="stat-number" id="stat-teams-rejected">0</div>
+          <div class="stat-label">Rejected</div>
+        </div>
+      </div>
+
+      <!-- Main Admin Grid: Content + Sidebar -->
+      <div class="admin-grid">
+        <!-- Left: Table -->
+        <div>
+          <div class="filter-bar animate-on-scroll">
+            <div class="search-wrapper">
+              <input type="text" class="search-input" id="admin-search" placeholder="Search teams, players or Reg IDs...">
+            </div>
+            <select class="form-input" id="admin-filter-game" style="max-width:220px;">
+              <option value="">All Tournaments</option>
+            </select>
+            <select class="form-input" id="admin-filter-status" style="max-width:180px;">
+              <option value="">All Statuses</option>
+              <option value="pending">Pending</option>
+              <option value="approved">Approved</option>
+              <option value="rejected">Rejected</option>
+            </select>
+          </div>
+
+          <!-- Teams Table -->
+          <div class="table-wrapper animate-on-scroll" id="teams-table-wrapper" style="display:none;">
+            <table class="data-table" id="teams-table">
+              <thead>
+                <tr>
+                  <th>Team</th>
+                  <th>Tournament</th>
+                  <th>Roster Size</th>
+                  <th>Reg ID</th>
+                  <th>Status</th>
+                  <th style="width: 250px; text-align: right;">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="teams-tbody"></tbody>
+            </table>
+          </div>
+          <p id="no-teams" style="display:none; text-align:center; color:var(--text-secondary); padding:4rem 0; font-family:var(--font-heading); font-size:1.1rem;" class="animate-on-scroll">No team registrations match your criteria.</p>
+        </div>
+
+        <!-- Right: Sidebar (Activity Logs & Progress) -->
+        <div class="admin-sidebar">
+          <!-- Slots Progress Breakdown -->
+          <div class="card animate-on-scroll">
+            <div class="card-body" style="padding: 1.5rem;">
+              <h3 style="font-family:var(--font-heading); font-size:0.85rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:1rem; color:var(--accent);">Tournament Seeding</h3>
+              <div class="breakdown-list" id="tournament-breakdown">
+                <!-- Seeding list populated by JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Audit logs -->
+          <div class="log-panel animate-on-scroll">
+            <div class="log-panel-header">
+              <span>📋 Recent Platform Actions</span>
+            </div>
+            <div class="log-panel-body" id="activity-logs">
+              <!-- Logs populated by JS -->
+            </div>
+          </div>
+
+          <!-- Developer controls -->
+          <div class="dev-controls animate-on-scroll">
+            <h4 class="dev-controls-title">⚙️ Server Simulator Controls</h4>
+            <div class="dev-row">
+              <label class="dev-switch">
+                <input type="checkbox" id="dev-simulate-failure"> Force Network Failures
+              </label>
+            </div>
+            <div class="dev-row">
+              <label class="dev-switch">
+                <input type="checkbox" id="dev-disable-random-fail"> Disable Random failures (5%)
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Team Details Modal -->
+  <div class="modal" id="details-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modal-team-name">Roster & Details</h2>
+        <button class="close-modal-btn" aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <div id="modal-team-info" style="margin-bottom: 1.5rem;">
+          <!-- Metadata details populated by JS -->
+        </div>
+        
+        <h3 style="font-family:var(--font-heading); font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:0.75rem; color:var(--accent-pink);"> Roster Members</h3>
+        <div id="modal-roster-list">
+          <!-- Roster player rows populated by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">© 2026 Agate Esports. Admin Panel.</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/db.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

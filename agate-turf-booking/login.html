@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Login to Agate Esports tournament platform.">
+  <title>Login — Agate Esports</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>🎮</text></svg>">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">AGATE<span>ESPORTS</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="tournaments.html">Tournaments</a>
+      <a href="team-registration.html">Register Team</a>
+    </div>
+    <div class="nav-auth"></div>
+    <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <main class="auth-page">
+    <div class="auth-card fade-in">
+      <h1 class="auth-title">Welcome <span style="color:var(--accent)">Back</span></h1>
+      <p class="auth-subtitle">Login to access your account and tournaments.</p>
+      
+      <form id="login-form" novalidate>
+        <div class="form-group">
+          <label class="form-label" for="email">Email Address</label>
+          <input class="form-input" type="email" id="email" placeholder="player@agate.gg" autocomplete="email">
+          <div class="form-error" id="email-error"></div>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label" for="password">Password</label>
+          <input class="form-input" type="password" id="password" placeholder="••••••••" autocomplete="current-password">
+          <div class="form-error" id="password-error"></div>
+        </div>
+        
+        <div class="form-group" id="login-global-error" style="display:none; margin-top: 1rem;">
+          <div class="form-error visible" id="global-msg" style="text-align: center;"></div>
+        </div>
+        
+        <button type="submit" id="submit-btn" class="btn btn-primary btn-lg btn-bracket" style="width:100%;">Login</button>
+      </form>
+      
+      <div class="auth-footer">
+        Don't have an account? <a href="register.html">Sign Up</a>
+      </div>
+      
+      <div style="text-align:center; margin-top:1.25rem; border-top:1px dashed rgba(255,255,255,0.06); padding-top:1rem;">
+        <span style="font-size:0.75rem; color:var(--text-secondary); display:block; margin-bottom: 0.25rem;">Quick Admin Login:</span>
+        <code style="font-size:0.75rem; color:var(--accent-pink); background:rgba(0,0,0,0.2); padding: 2px 6px; border-radius:3px;">admin@agate.gg / Password123!</code>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/db.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('login-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const submitBtn = document.getElementById('submit-btn');
+      
+      const ok = App.Validation.validate([
+        { input: 'email', error: 'email-error', checks: [App.Validation.V.required('Email'), App.Validation.V.email()] },
+        { input: 'password', error: 'password-error', checks: [App.Validation.V.required('Password')] },
+      ]);
+      
+      if (!ok) return;
+
+      App.Main.setBtnLoading(submitBtn, true, 'Login');
+      document.getElementById('login-global-error').style.display = 'none';
+
+      App.API.login(
+        document.getElementById('email').value.trim(),
+        document.getElementById('password').value
+      )
+      .then(res => {
+        App.Main.toast('Login successful!', 'success');
+        setTimeout(() => {
+          window.location.href = res.user.role === 'admin' ? 'admin.html' : 'tournaments.html';
+        }, 600);
+      })
+      .catch(err => {
+        App.Main.setBtnLoading(submitBtn, false, 'Login');
+        document.getElementById('login-global-error').style.display = 'block';
+        document.getElementById('global-msg').textContent = err.message;
+        App.Main.toast(err.message, 'error');
+      });
+    });
+  </script>
+</body>
+</html>

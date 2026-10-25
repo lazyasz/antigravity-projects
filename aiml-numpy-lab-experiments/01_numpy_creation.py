@@ -1,0 +1,22 @@
+import numpy as np
+
+a = np.array([1, 2, 3])
+b = np.array([(1.5, 2, 3), (4, 5, 6)], dtype=float)
+c = np.array([[(1.5, 2, 3), (4, 5, 6)], [(3, 2, 1), (4, 5, 6)]], dtype=float)
+
+print("np.zeros((3, 4)):")
+print(np.zeros((3, 4)))
+print("\nnp.ones((2, 3, 4), dtype=np.int16):")
+print(np.ones((2, 3, 4), dtype=np.int16))
+print("\nnp.arange(10, 25, 5):")
+print(np.arange(10, 25, 5))
+print("\nnp.linspace(0, 2, 9):")
+print(np.linspace(0, 2, 9))
+print("\nnp.full((2, 2), 7):")
+print(np.full((2, 2), 7))
+print("\nnp.eye(2):")
+print(np.eye(2))
+print("\nnp.random.random((2, 2)):")
+print(np.random.random((2, 2)))
+print("\nnp.empty((3, 2)):")
+print(np.empty((3, 2)))

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@400;500;600;700&family=Segoe+UI:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background: #0b0c10;
+    background-image: radial-gradient(circle at 50% 20%, #171b26 0%, #090a0f 100%);
+    font-family: 'Cascadia Code', 'Ubuntu Mono', 'Consolas', monospace;
+    font-size: 14px;
+    line-height: 1.35;
+    color: #cccccc;
+    width: 1320px;
+    height: 880px;
+    overflow: hidden;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.terminal-window {
+    width: 100%;
+    height: 100%;
+    background: #0c0c0c;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.tab-bar {
+    height: 38px;
+    background: #1f1f1f;
+    border-bottom: 1px solid #2a2a2a;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    user-select: none;
+    font-family: 'Segoe UI', -apple-system, sans-serif;
+}
+.tab-container {
+    display: flex;
+    align-items: flex-end;
+    padding-left: 8px;
+    padding-top: 4px;
+    gap: 4px;
+}
+.tab {
+    background: #0c0c0c;
+    height: 34px;
+    border-radius: 6px 6px 0 0;
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #ffffff;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+.tab-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tab-close {
+    color: #888888;
+    font-size: 14px;
+    line-height: 1;
+    margin-left: 6px;
+    cursor: default;
+}
+.new-tab-btn {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888888;
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+.dropdown-btn {
+    width: 24px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888888;
+    font-size: 11px;
+    margin-bottom: 2px;
+}
+.window-controls {
+    display: flex;
+    align-items: center;
+}
+.win-btn {
+    width: 46px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e0e0e0;
+    font-size: 12px;
+}
+.win-btn.close {
+    font-size: 13px;
+}
+.terminal-body {
+    flex: 1;
+    padding: 16px 20px;
+    overflow: hidden;
+    white-space: pre;
+    color: #cccccc;
+}
+.prompt-user { color: #5af78e; font-weight: 600; }
+.prompt-at { color: #ffffff; }
+.prompt-host { color: #5af78e; font-weight: 600; }
+.prompt-colon { color: #ffffff; }
+.prompt-path { color: #57c7ff; font-weight: 600; }
+.prompt-dollar { color: #ffffff; }
+.cmd { color: #ffffff; font-weight: 600; }
+.hive-prompt { color: #ff9f43; font-weight: 700; }
+.hive-db { color: #54a0ff; }
+.hive-ok { color: #2ecc71; font-weight: bold; }
+.hive-time { color: #888888; }
+.table-border { color: #576574; }
+.table-header { color: #1dd1a1; font-weight: 600; }
+.table-data { color: #f1f2f6; }
+.dim { color: #718093; }
+.success { color: #10ac84; font-weight: bold; }
+.warn { color: #feca57; }
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    background: #ffffff;
+    vertical-align: text-bottom;
+    animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+</style>
+</head>
+<body>
+<div class="terminal-window">
+    <div class="tab-bar">
+        <div class="tab-container">
+            <div class="tab">
+                <div class="tab-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="12" cy="12" r="11" fill="#E95420"/>
+<circle cx="12" cy="12" r="7.5" fill="none" stroke="#fff" stroke-width="2"/>
+<circle cx="5" cy="12" r="2.2" fill="#fff"/>
+<circle cx="15.5" cy="6" r="2.2" fill="#fff"/>
+<circle cx="15.5" cy="18" r="2.2" fill="#fff"/>
+</svg></div>
+                <span>Ubuntu-22.04: hive (collegedb)</span>
+                <span class="tab-close">×</span>
+            </div>
+            <div class="new-tab-btn">+</div>
+            <div class="dropdown-btn">˅</div>
+        </div>
+        <div class="window-controls">
+            <div class="win-btn">―</div>
+            <div class="win-btn">◻</div>
+            <div class="win-btn close">✕</div>
+        </div>
+    </div>
+    <div class="terminal-body"><span class="hive-prompt">hive (<span class="hive-db">mydb</span>)&gt;</span> <span class="cmd">CREATE DATABASE CollegeDB;</span>
+<span class="hive-ok">OK</span>
+<span class="hive-time">Time taken: 0.152 seconds</span>
+
+<span class="hive-prompt">hive (<span class="hive-db">mydb</span>)&gt;</span> <span class="cmd">USE CollegeDB;</span>
+<span class="hive-ok">OK</span>
+<span class="hive-time">Time taken: 0.018 seconds</span>
+
+<span class="hive-prompt">hive (<span class="hive-db">collegedb</span>)&gt;</span> <span class="cmd">CREATE TABLE Student(</span>
+                <span class="hive-prompt">&gt;</span> <span class="cmd">  RollNo INT,</span>
+                <span class="hive-prompt">&gt;</span> <span class="cmd">  Name STRING,</span>
+                <span class="hive-prompt">&gt;</span> <span class="cmd">  Department STRING,</span>
+                <span class="hive-prompt">&gt;</span> <span class="cmd">  Marks INT</span>
+                <span class="hive-prompt">&gt;</span> <span class="cmd">)</span>
+                <span class="hive-prompt">&gt;</span> <span class="cmd">ROW FORMAT DELIMITED</span>
+                <span class="hive-prompt">&gt;</span> <span class="cmd">FIELDS TERMINATED BY ',';</span>
+<span class="hive-ok">OK</span>
+<span class="hive-time">Time taken: 0.088 seconds</span>
+
+<span class="hive-prompt">hive (<span class="hive-db">collegedb</span>)&gt;</span> <span class="cmd">INSERT INTO TABLE Student VALUES</span>
+                <span class="hive-prompt">&gt;</span> <span class="cmd">(1, 'Dhruv', 'IT', 92),</span>
+                <span class="hive-prompt">&gt;</span> <span class="cmd">(2, 'Alan', 'CSE', 78),</span>
+                <span class="hive-prompt">&gt;</span> <span class="cmd">(3, 'Neha', 'AI&DS', 85),</span>
+                <span class="hive-prompt">&gt;</span> <span class="cmd">(4, 'John', 'MECH', 65),</span>
+                <span class="hive-prompt">&gt;</span> <span class="cmd">(5, 'Alice', 'CSE', 70);</span>
+<span class="hive-ok">OK</span>
+<span class="hive-time">Time taken: 5.620 seconds</span>
+
+<span class="hive-prompt">hive (<span class="hive-db">collegedb</span>)&gt;</span> <span class="cmd">SELECT * FROM Student;</span>
+<span class="hive-ok">OK</span>
+1	Dhruv	IT	92
+2	Alan	CSE	78
+3	Neha	AI&DS	85
+4	John	MECH	65
+5	Alice	CSE	70
+<span class="hive-time">Time taken: 0.118 seconds, Fetched: 5 row(s)</span>
+<span class="hive-prompt">hive (<span class="hive-db">collegedb</span>)&gt;</span> <span class="cursor"></span></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+NAVIGATED visual QA (2026-09-05)
+- Desktop overview: dark navy command-center shell renders with supplied locomotive logo, responsive cards, SVG corridor schematic, event stream, and fleet table.
+- Mobile 375px: sidebar collapses, supplied logo remains legible in compact header, stat cards and situation-room content stack cleanly.
+- TypeScript check passed; production build passed with only the standard bundle-size advisory.
+- Core interactions implemented in Home.tsx: overview/passenger/sandbox/diagnostics/API view switching, train selection, scenario injection, simulation speed control, live toggle, toast feedback.

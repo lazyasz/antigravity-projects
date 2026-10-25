@@ -1,0 +1,13 @@
+customer_id,name,age,city,purchase_amount
+101,  John Doe  ,34,New York,1500.50
+102,Jane Smith,,Chicago,4200.00
+103,  Bob Johnson  ,45,Miami,7500.25
+104,Alice Brown,29,Seattle,2800.00
+101,  John Doe  ,34,New York,1500.50
+105,Charlie Green,52,Boston,9100.00
+106, David Miller ,38,San Francisco,3600.75
+107,Eva White,41,Chicago,6200.00
+102,Jane Smith,,Chicago,4200.00
+108,Frank Black,30,Unknown,850.00
+109,  Grace Lee  ,,New York,4900.50
+110,Henry Adams,47,Boston,8200.00

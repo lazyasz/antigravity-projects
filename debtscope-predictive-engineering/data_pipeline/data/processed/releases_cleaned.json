@@ -1,0 +1,44 @@
+[
+  {
+    "id": "rel-01",
+    "repo_id": "repo-core-banking",
+    "version": "v1.0.0",
+    "release_date": "2023-10-15T00:00:00Z",
+    "stability_score": 88.0
+  },
+  {
+    "id": "rel-02",
+    "repo_id": "repo-core-banking",
+    "version": "v1.1.0",
+    "release_date": "2023-12-01T00:00:00Z",
+    "stability_score": 82.0
+  },
+  {
+    "id": "rel-03",
+    "repo_id": "repo-core-banking",
+    "version": "v1.2.0",
+    "release_date": "2024-02-15T00:00:00Z",
+    "stability_score": 79.0
+  },
+  {
+    "id": "rel-04",
+    "repo_id": "repo-auth-gateway",
+    "version": "v2.0.0",
+    "release_date": "2023-11-20T00:00:00Z",
+    "stability_score": 91.0
+  },
+  {
+    "id": "rel-05",
+    "repo_id": "repo-notification-engine",
+    "version": "v0.9.0",
+    "release_date": "2023-12-10T00:00:00Z",
+    "stability_score": 75.0
+  },
+  {
+    "id": "rel-06",
+    "repo_id": "repo-reporting-analytics",
+    "version": "v1.0.0",
+    "release_date": "2024-01-25T00:00:00Z",
+    "stability_score": 85.0
+  }
+]

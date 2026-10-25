@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAVSHAKTI 2026: The Campus Showdown | SOC Navratri Celebration</title>
+    <meta name="description" content="NAVSHAKTI 2026: The Campus Showdown. An interactive campus survey game show for SOC Navratri Celebration at MIT-ADT University, Pune. Featuring 3D rotating tiles, live host controller, projector stage display, and authentic campus questions." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@600;800;900&family=Outfit:wght@400;500;600;700;800;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app" class="navshakti-experience">
+      
+      <!-- Stage Atmosphere: Navratri Festive Rays & Royal Purple Ambient Spots -->
+      <div class="stage-lighting">
+        <div class="spotlight spotlight-left"></div>
+        <div class="spotlight spotlight-center"></div>
+        <div class="spotlight spotlight-right"></div>
+        <div class="mandala-bg-motif"></div>
+      </div>
+
+      <!-- MASTER NAVIGATION & CONTROL HEADER -->
+      <header class="top-nav-bar" id="master-nav-bar">
+        <div class="nav-branding">
+          <div class="navshakti-brand-badge">
+            <span class="diya-icon">🪔</span>
+            <div class="brand-text-col">
+              <span class="logo-title">NAVSHAKTI 2026</span>
+              <span class="logo-sub">THE CAMPUS SHOWDOWN • SOC NAVRATRI • MIT-ADT UNIVERSITY</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- View Switcher -->
+        <div class="view-mode-tabs">
+          <button id="view-tab-stage" class="mode-tab-btn active" title="Stage Projector View (Audience Screen)">
+            📺 Stage Display
+          </button>
+          <button id="view-tab-host" class="mode-tab-btn" title="Host & Operator Cockpit (Separate Controller)">
+            🎙️ Host Controller
+          </button>
+          <button id="view-tab-audience" class="mode-tab-btn" title="Audience Mobile View & Live Standings">
+            📱 Audience View
+          </button>
+        </div>
+
+        <div class="nav-actions">
+          <button id="btn-popout-stage" class="tool-btn-accent" title="Open Stage Display in a separate clean window for projector">
+            🖥️ Pop-out Projector Window
+          </button>
+          <button id="btn-show-qr" class="icon-tool-btn" title="Show Audience QR Code">
+            📲 QR Code
+          </button>
+          <button id="btn-theme-fanfare" class="icon-tool-btn" title="Play Grand Fanfare">
+            🎵 Fanfare
+          </button>
+          <button id="btn-toggle-sound" class="icon-tool-btn" title="Mute / Unmute Sound">
+            🔊 Sound ON
+          </button>
+          <button id="btn-fullscreen" class="icon-tool-btn" title="Toggle Fullscreen">
+            ⛶ Fullscreen
+          </button>
+        </div>
+      </header>
+
+      <!-- ================================================================= -->
+      <!-- VIEW 1: STAGE DISPLAY (AUDIENCE & PROJECTOR PRESENTATION SCREEN) -->
+      <!-- ================================================================= -->
+      <main class="view-panel stage-presentation-view" id="panel-stage-view">
+        
+        <!-- Live Round Badge & Campus Tagline Banner -->
+        <div class="stage-top-meta-bar">
+          <div class="round-indicator-pill" id="stage-round-pill">
+            <span class="round-star">✦</span>
+            <span id="stage-round-name">ROUND 1: SHAKTI & TRADITION</span>
+            <span class="round-star">✦</span>
+          </div>
+          <div class="campus-tagline">
+            ONE CAMPUS • TWO TEAMS • A THOUSAND OPINIONS
+          </div>
+        </div>
+
+        <div class="stage-arena-layout">
+          
+          <!-- TEAM 1 PODIUM (LEFT) -->
+          <aside class="team-podium podium-left" id="stage-podium-team-1">
+            <div class="podium-frame">
+              <div class="podium-aura"></div>
+              <div class="podium-active-halo" id="halo-team-1">ACTIVE TURN</div>
+              <div class="podium-team-title">
+                <span class="diya-bullet">🪔</span>
+                <span class="team-display-name" id="stage-team-1-name">GARBA GLADIATORS</span>
+              </div>
+              <div class="score-display-box">
+                <div class="score-label">TEAM POINTS</div>
+                <div class="score-number" id="stage-team-1-score">0</div>
+              </div>
+              <div class="podium-meta-tag">MIT-ADT SQUAD A</div>
+            </div>
+          </aside>
+
+          <!-- CENTRAL ICONIC MARQUEE BOARD -->
+          <section class="feud-marquee-wrapper" id="stage-marquee-wrapper">
+            
+            <!-- Chasing Marquee Bulb Ring -->
+            <div class="marquee-bulb-ring" id="marquee-bulb-ring"></div>
+
+            <div class="marquee-board-frame">
+              
+              <!-- BOARD HEADER: Multiplier, Question Box, Round Bank -->
+              <div class="board-top-banner">
+                <!-- Multiplier Badge -->
+                <div class="multiplier-badge" id="stage-multiplier-badge" title="Point Multiplier">
+                  <span class="multiplier-val" id="stage-mult-val">1X</span>
+                  <span class="multiplier-text" id="stage-mult-text">SINGLE</span>
+                </div>
+
+                <!-- Current Question Banner -->
+                <div class="question-container" id="stage-question-container">
+                  <div class="question-category" id="stage-question-category">SOC NAVRATRI SPECIAL • SURVEY QUESTION #1</div>
+                  <h1 class="question-text" id="stage-question-text">
+                    If Navratri were a reminder for today's generation, what would it most strongly remind us to do?
+                  </h1>
+                  <div class="provisional-data-tag" id="stage-provisional-tag">
+                    [PROVISIONAL DEMO DATA — 100 Survey Points Total]
+                  </div>
+                </div>
+
+                <!-- Round Bank Counter -->
+                <div class="bank-counter-box" title="Points in Current Round Bank">
+                  <div class="bank-label">ROUND BANK</div>
+                  <div class="bank-score" id="stage-bank-score">000</div>
+                </div>
+              </div>
+
+              <!-- STEAL ALERT BANNER (Only shows when 3 strikes occur and host triggers steal) -->
+              <div class="steal-opportunity-banner" id="stage-steal-banner" style="display: none;">
+                <span class="steal-flame">🔥</span>
+                <span class="steal-text" id="stage-steal-text">STEAL OPPORTUNITY FOR DANDIYA DYNAMOS! ONE GUESS TO TAKE THE BANK!</span>
+                <span class="steal-flame">🔥</span>
+              </div>
+
+              <!-- 3D ROTATING TILES GRID (2 Columns of 4 Tiles) -->
+              <div class="rotating-tiles-grid axis-horizontal" id="stage-tiles-grid">
+                
+                <!-- Left Column (Tiles 1 to 4) -->
+                <div class="tiles-column" id="stage-tiles-col-left">
+                  <!-- Tile 1 -->
+                  <div class="tile-slot" data-index="0" id="tile-slot-0">
+                    <div class="tile-card" id="tile-card-0">
+                      <div class="tile-face tile-front">
+                        <div class="slat-lines"></div>
+                        <div class="gold-rim-bevel"></div>
+                        <div class="tile-number-badge"><span class="num-text">1</span></div>
+                        <div class="tile-specular-glare"></div>
+                      </div>
+                      <div class="tile-face tile-back">
+                        <div class="slat-lines"></div>
+                        <div class="gold-rim-bevel"></div>
+                        <div class="tile-answer-text" id="ans-text-0">---</div>
+                        <div class="tile-score-box"><span class="ans-score-val" id="ans-score-0">0</span></div>
+                        <div class="tile-specular-glare"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Tile 2 -->
+                  <div class="tile-slot" data-index="1" id="tile-slot-1">
+                    <div class="tile-card" id="tile-card-1">
+                      <div class="tile-face tile-front">
+                        <div class="slat-lines"></div>
+                        <div class="gold-rim-bevel"></div>
+                        <div class="tile-number-badge"><span class="num-text">2</span></div>
+                        <div class="tile-specular-glare"></div>
+                      </div>
+                      <div class="tile-face tile-back">
+                        <div class="slat-lines"></div>
+                        <div class="gold-rim-bevel"></div>
+                        <div class="tile-answer-text" id="ans-text-1">---</div>
+                        <div class="tile-score-box"><span class="ans-score-val" id="ans-score-1">0</span></div>
+                        <div class="tile-specular-glare"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Tile 3 -->
+                  <div class="tile-slot" data-index="2" id="tile-slot-2">
+                    <div class="tile-card" id="tile-card-2">
+                      <div class="tile-face tile-front">
+                        <div class="slat-lines"></div>
+                        <div class="gold-rim-bevel"></div>
+                        <div class="tile-number-badge"><span class="num-text">3</span></div>
+                        <div class="tile-specular-glare"></div>
+                      </div>
+                      <div class="tile-face tile-back">
+                        <div class="slat-lines"></div>
+                        <div class="gold-rim-bevel"></div>
+                        <div class="tile-answer-text" id="ans-text-2">---</div>
+                        <div class="tile-score-box"><span class="ans-score-val" id="ans-score-2">0</span></div>
+                        <div class="tile-specular-glare"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Tile 4 -->
+                  <div class="tile-slot" data-index="3" id="tile-slot-3">
+                    <div class="tile-card" id="tile-card-3">
+                      <div class="tile-face tile-front">
+                        <div class="slat-lines"></div>
+                        <div class="gold-rim-bevel"></div>
+                        <div class="tile-number-badge"><span class="num-text">4</span></div>
+                        <div class="tile-specular-glare"></div>
+                      </div>
+                      <div class="tile-face tile-back">
+                        <div class="slat-lines"></div>
+                        <div class="gold-rim-bevel"></div>
+                        <div class="tile-answer-text" id="ans-text-3">---</div>
+                        <div class="tile-score-box"><span class="ans-score-val" id="ans-score-3">0</span></div>
+                        <div class="tile-specular-glare"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Right Column (Tiles 5 to 8) -->
+                <div class="tiles-column" id="stage-tiles-col-right">
+                  <!-- Tile 5 -->
+                  <div class="tile-slot" data-index="4" id="tile-slot-4">
+                    <div class="tile-card" id="tile-card-4">
+                      <div class="tile-face tile-front">
+                        <div class="slat-lines"></div>
+                        <div class="gold-rim-bevel"></div>
+                        <div class="tile-number-badge"><span class="num-text">5</span></div>
+                        <div class="tile-specular-glare"></div>
+                      </div>
+                      <div class="tile-face tile-back">
+                        <div class="slat-lines"></div>
+                        <div class="gold-rim-bevel"></div>
+                        <div class="tile-answer-text" id="ans-text-4">---</div>
+                        <div class="tile-score-box"><span class="ans-score-val" id="ans-score-4">0</span></div>
+                        <div class="tile-specular-glare"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Tile 6 -->
+                  <div class="tile-slot" data-index="5" id="tile-slot-5">
+                    <div class="tile-card" id="tile-card-5">
+                      <div class="tile-face tile-front">
+                        <div class="slat-lines"></div>
+                        <div class="gold-rim-bevel"></div>
+                        <div class="tile-number-badge"><span class="num-text">6</span></div>
+                        <div class="tile-specular-glare"></div>
+                      </div>
+                      <div class="tile-face tile-back">
+                        <div class="slat-lines"></div>
+                        <div class="gold-rim-bevel"></div>
+                        <div class="tile-answer-text" id="ans-text-5">---</div>
+                        <div class="tile-score-box"><span class="ans-score-val" id="ans-score-5">0</span></div>
+                        <div class="tile-specular-glare"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Tile 7 -->
+                  <div class="tile-slot" data-index="6" id="tile-slot-6">
+                    <div class="tile-card" id="tile-card-6">
+                      <div class="tile-face tile-front">
+                        <div class="slat-lines"></div>
+                        <div class="gold-rim-bevel"></div>
+                        <div class="tile-number-badge"><span class="num-text">7</span></div>
+                        <div class="tile-specular-glare"></div>
+                      </div>
+                      <div class="tile-face tile-back">
+                        <div class="slat-lines"></div>
+                        <div class="gold-rim-bevel"></div>
+                        <div class="tile-answer-text" id="ans-text-6">---</div>
+                        <div class="tile-score-box"><span class="ans-score-val" id="ans-score-6">0</span></div>
+                        <div class="tile-specular-glare"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Tile 8 -->
+                  <div class="tile-slot" data-index="7" id="tile-slot-7">
+                    <div class="tile-card" id="tile-card-7">
+                      <div class="tile-face tile-front">
+                        <div class="slat-lines"></div>
+                        <div class="gold-rim-bevel"></div>
+                        <div class="tile-number-badge"><span class="num-text">8</span></div>
+                        <div class="tile-specular-glare"></div>
+                      </div>
+                      <div class="tile-face tile-back">
+                        <div class="slat-lines"></div>
+                        <div class="gold-rim-bevel"></div>
+                        <div class="tile-answer-text" id="ans-text-7">---</div>
+                        <div class="tile-score-box"><span class="ans-score-val" id="ans-score-7">0</span></div>
+                        <div class="tile-specular-glare"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- BOARD BOTTOM: Strikes Bar & Status -->
+              <div class="board-bottom-bar">
+                <div class="strikes-board-indicator" id="stage-strikes-indicator">
+                  <span class="strikes-tag">STRIKES:</span>
+                  <div class="strike-box" id="strike-box-1">✕</div>
+                  <div class="strike-box" id="strike-box-2">✕</div>
+                  <div class="strike-box" id="strike-box-3">✕</div>
+                </div>
+
+                <div class="stage-status-ticker">
+                  <span class="ticker-pulse">●</span>
+                  <span id="stage-ticker-text">SURVEY QUESTION ACTIVE • TEAMS GUESSING</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- TEAM 2 PODIUM (RIGHT) -->
+          <aside class="team-podium podium-right" id="stage-podium-team-2">
+            <div class="podium-frame">
+              <div class="podium-aura"></div>
+              <div class="podium-active-halo" id="halo-team-2">ACTIVE TURN</div>
+              <div class="podium-team-title">
+                <span class="diya-bullet">🪔</span>
+                <span class="team-display-name" id="stage-team-2-name">DANDIYA DYNAMOS</span>
+              </div>
+              <div class="score-display-box">
+                <div class="score-label">TEAM POINTS</div>
+                <div class="score-number" id="stage-team-2-score">0</div>
+              </div>
+              <div class="podium-meta-tag">MIT-ADT SQUAD B</div>
+            </div>
+          </aside>
+        </div>
+      </main>
+
+      <!-- ================================================================= -->
+      <!-- VIEW 2: HOST / OPERATOR CONTROLLER (DEDICATED COCKPIT INTERFACE) -->
+      <!-- ================================================================= -->
+      <main class="view-panel host-controller-view" id="panel-host-view" style="display: none;">
+        
+        <div class="host-cockpit-grid">
+          
+          <!-- Column 1: Round & Question Navigation -->
+          <div class="cockpit-card">
+            <div class="cockpit-card-header">
+              <span class="card-icon">🎯</span>
+              <h3>ROUND & QUESTION CONTROL</h3>
+            </div>
+            
+            <div class="form-row">
+              <label for="host-round-select">Select Round:</label>
+              <select id="host-round-select" class="cockpit-select">
+                <option value="r1">ROUND 1: Shakti & Tradition (5 Questions • 1X)</option>
+                <option value="r2">ROUND 2: Campus Reality Check (5 Questions • 2X)</option>
+                <option value="r3">ROUND 3: The Meme Mindset (5 Questions • 3X)</option>
+                <option value="finale">FINALE: The Showdown (High-Stakes • 3X)</option>
+              </select>
+            </div>
+
+            <div class="form-row" style="margin-top: 10px;">
+              <label for="host-question-select">Select Question:</label>
+              <select id="host-question-select" class="cockpit-select"></select>
+            </div>
+
+            <div class="btn-group-row" style="margin-top: 10px;">
+              <button id="host-btn-prev-q" class="cockpit-btn">◀ Previous Question</button>
+              <button id="host-btn-next-q" class="cockpit-btn">Next Question ▶</button>
+            </div>
+
+            <div class="toggle-switch-row" style="margin-top: 14px;">
+              <button id="host-btn-toggle-q-visible" class="cockpit-btn-highlight">
+                👁️ Hide / Show Question on Projector
+              </button>
+            </div>
+
+            <div class="form-row" style="margin-top: 12px;">
+              <label>Round Point Multiplier:</label>
+              <div class="pill-toggle-group">
+                <button class="host-mult-btn active" data-mult="1">1X Single</button>
+                <button class="host-mult-btn" data-mult="2">2X Double</button>
+                <button class="host-mult-btn" data-mult="3">3X Triple</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Tile Reveal Cheat Sheet (Operator Secret View) -->
+          <div class="cockpit-card" style="grid-column: span 2;">
+            <div class="cockpit-card-header">
+              <span class="card-icon">📋</span>
+              <div style="flex:1;">
+                <h3>TILE REVEAL CHEAT SHEET (UNREVEALED ANSWERS VISIBLE ONLY TO HOST)</h3>
+                <div class="cheat-sheet-sub" id="host-cheat-question-title">Loading Question...</div>
+              </div>
+              <button id="host-btn-reveal-all" class="cockpit-btn-gold" title="Reveal all answers in sequence (Survey Says!)">
+                ✨ Reveal All (Space)
+              </button>
+            </div>
+
+            <div class="host-cheat-tiles-grid" id="host-cheat-tiles-grid">
+              <!-- Dynamically populated 8 answer tiles with reveal toggle and aliases -->
+            </div>
+
+            <!-- Fuzzy Guess Matcher for Fast Operator Actions -->
+            <div class="host-fuzzy-search-bar">
+              <input type="text" id="host-fuzzy-input" placeholder="Type contestant answer guess (e.g. 'courage', 'attendance', 'cooked')..." />
+              <button id="host-fuzzy-submit-btn" class="cockpit-btn-accent">Check Guess & Reveal</button>
+            </div>
+          </div>
+
+          <!-- Column 3: Game Mechanics, Steals & Strikes -->
+          <div class="cockpit-card">
+            <div class="cockpit-card-header">
+              <span class="card-icon">⚡</span>
+              <h3>GAME MECHANICS & SCORING</h3>
+            </div>
+
+            <!-- Active Team Control -->
+            <div class="form-row">
+              <label>Active Turn Team:</label>
+              <div class="turn-selector-group">
+                <button id="btn-turn-t1" class="turn-btn active">GARBA GLADIATORS (T1)</button>
+                <button id="btn-turn-t2" class="turn-btn">DANDIYA DYNAMOS (T2)</button>
+              </div>
+            </div>
+
+            <!-- Strikes Control -->
+            <div class="strikes-operator-panel" style="margin-top: 12px;">
+              <label>Strikes:</label>
+              <div class="strikes-btn-row">
+                <button id="host-btn-add-strike" class="strike-action-btn" title="Add Strike (Press X)">
+                  ❌ ADD STRIKE
+                </button>
+                <button id="host-btn-clear-strikes" class="cockpit-btn" title="Clear Strikes (Press C)">
+                  ↺ Clear Strikes
+                </button>
+              </div>
+            </div>
+
+            <!-- Steal Opportunity Manager -->
+            <div class="steal-operator-panel" style="margin-top: 14px;">
+              <button id="host-btn-trigger-steal" class="steal-fire-btn">
+                🔥 TRIGGER STEAL OPPORTUNITY
+              </button>
+            </div>
+
+            <!-- Award Bank Buttons -->
+            <div class="award-bank-box" style="margin-top: 14px;">
+              <div class="award-bank-label">CURRENT ROUND BANK: <span id="host-bank-display">0</span> PTS</div>
+              <div class="award-btns-row">
+                <button id="host-btn-award-t1" class="award-btn award-t1">
+                  AWARD TO T1
+                </button>
+                <button id="host-btn-award-t2" class="award-btn award-t2">
+                  AWARD TO T2
+                </button>
+              </div>
+            </div>
+
+            <!-- Safe Actions & Undo -->
+            <div class="safety-controls-row" style="margin-top: 16px;">
+              <button id="host-btn-undo" class="cockpit-btn-warn" title="Undo last scoring/reveal action">
+                ↺ Undo Last Action
+              </button>
+              <button id="host-btn-open-winner" class="cockpit-btn-gold">
+                🏆 Declare Winner
+              </button>
+              <button id="host-btn-reset-game" class="cockpit-btn-danger">
+                ⚠️ Safe Reset Game
+              </button>
+            </div>
+          </div>
+
+          <!-- Column 4: Soundboard, Settings & Team Score Corrections -->
+          <div class="cockpit-card">
+            <div class="cockpit-card-header">
+              <span class="card-icon">🎛️</span>
+              <h3>SOUNDBOARD & SCORE EDITS</h3>
+            </div>
+
+            <!-- Audio Cues Soundboard -->
+            <div class="soundboard-grid">
+              <button id="sfx-ding" class="sfx-chip">🔔 Ding</button>
+              <button id="sfx-buzz" class="sfx-chip sfx-buzz">⚡ Buzzer</button>
+              <button id="sfx-steal" class="sfx-chip sfx-steal">🚨 Steal Horn</button>
+              <button id="sfx-flip" class="sfx-chip">🔄 Tile Flip</button>
+              <button id="sfx-fanfare" class="sfx-chip">🎺 Fanfare</button>
+            </div>
+
+            <div class="form-row" style="margin-top: 12px;">
+              <label for="host-vol-slider">Master Volume:</label>
+              <input type="range" id="host-vol-slider" min="0" max="1" step="0.05" value="0.85" />
+            </div>
+
+            <!-- Team Name & Score Nudges -->
+            <div class="team-edit-section" style="margin-top: 14px;">
+              <div class="team-edit-block">
+                <input type="text" id="host-t1-name-input" class="team-name-host-input" value="GARBA GLADIATORS" />
+                <div class="score-edit-row">
+                  <span class="score-val-host" id="host-t1-score-val">0</span>
+                  <button class="score-nudge-btn" id="host-t1-plus">+10</button>
+                  <button class="score-nudge-btn" id="host-t1-minus">-10</button>
+                </div>
+              </div>
+
+              <div class="team-edit-block" style="margin-top: 8px;">
+                <input type="text" id="host-t2-name-input" class="team-name-host-input" value="DANDIYA DYNAMOS" />
+                <div class="score-edit-row">
+                  <span class="score-val-host" id="host-t2-score-val">0</span>
+                  <button class="score-nudge-btn" id="host-t2-plus">+10</button>
+                  <button class="score-nudge-btn" id="host-t2-minus">-10</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tile Mechanics Switch -->
+            <div class="form-row" style="margin-top: 14px;">
+              <label>Tile Flip Mechanics:</label>
+              <div class="pill-toggle-group">
+                <button id="host-btn-axis-horizontal" class="axis-btn active">Trilon Slat (Horizontal)</button>
+                <button id="host-btn-axis-vertical" class="axis-btn">3D Card (Vertical)</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- ================================================================= -->
+      <!-- VIEW 3: AUDIENCE MOBILE PARTICIPATION VIEW & SCOREBOARD -->
+      <!-- ================================================================= -->
+      <main class="view-panel audience-mobile-view" id="panel-audience-view" style="display: none;">
+        <div class="audience-container">
+          <div class="audience-hero-card">
+            <span class="diya-badge">🪔</span>
+            <h2>NAVSHAKTI 2026 AUDIENCE PORTAL</h2>
+            <p class="audience-sub">SOC Navratri Celebration • MIT-ADT University Pune</p>
+          </div>
+
+          <div class="audience-live-scores">
+            <div class="aud-team-card">
+              <div class="aud-team-name" id="aud-t1-name">GARBA GLADIATORS</div>
+              <div class="aud-score" id="aud-t1-score">0</div>
+            </div>
+            <div class="aud-vs">VS</div>
+            <div class="aud-team-card">
+              <div class="aud-team-name" id="aud-t2-name">DANDIYA DYNAMOS</div>
+              <div class="aud-score" id="aud-t2-score">0</div>
+            </div>
+          </div>
+
+          <div class="audience-active-q-box">
+            <div class="aud-q-label">LIVE QUESTION ON STAGE:</div>
+            <h3 id="aud-question-text">Loading question...</h3>
+          </div>
+
+          <div class="audience-guess-box">
+            <h4>WHAT WOULD THE CAMPUS SAY?</h4>
+            <p>Submit your answer or crowd opinion for this question:</p>
+            <div class="aud-input-row">
+              <input type="text" id="aud-guess-input" placeholder="Type your guess here..." />
+              <button id="aud-guess-submit-btn" class="aud-submit-btn">Send Guess</button>
+            </div>
+            <div class="aud-feedback-msg" id="aud-feedback-msg" style="display:none;"></div>
+          </div>
+        </div>
+      </main>
+
+      <!-- ================================================================= -->
+      <!-- FULLSCREEN DRAMATIC STRIKE OVERLAY -->
+      <!-- ================================================================= -->
+      <div class="strike-overlay" id="strike-overlay">
+        <div class="strike-overlay-inner">
+          <div class="big-strike-mark" id="overlay-x-1">X</div>
+          <div class="big-strike-mark" id="overlay-x-2">X</div>
+          <div class="big-strike-mark" id="overlay-x-3">X</div>
+        </div>
+      </div>
+
+      <!-- ================================================================= -->
+      <!-- AUDIENCE QR CODE MODAL -->
+      <!-- ================================================================= -->
+      <div class="modal-backdrop" id="qr-modal" style="display: none;">
+        <div class="modal-card">
+          <div class="modal-card-header">
+            <h3>📲 AUDIENCE SCAN & JOIN</h3>
+            <button class="modal-close-btn" id="btn-close-qr">&times;</button>
+          </div>
+          <div class="modal-card-body qr-body">
+            <div class="qr-box-simulated">
+              <!-- Beautiful SVG QR code graphic -->
+              <svg width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="220" height="220" rx="16" fill="#0c1630"/>
+                <rect x="20" y="20" width="60" height="60" rx="8" fill="#f5c518"/>
+                <rect x="30" y="30" width="40" height="40" rx="4" fill="#0c1630"/>
+                <rect x="40" y="40" width="20" height="20" fill="#f5c518"/>
+                <rect x="140" y="20" width="60" height="60" rx="8" fill="#f5c518"/>
+                <rect x="150" y="30" width="40" height="40" rx="4" fill="#0c1630"/>
+                <rect x="160" y="40" width="20" height="20" fill="#f5c518"/>
+                <rect x="20" y="140" width="60" height="60" rx="8" fill="#f5c518"/>
+                <rect x="30" y="150" width="40" height="40" rx="4" fill="#0c1630"/>
+                <rect x="40" y="160" width="20" height="20" fill="#f5c518"/>
+                <!-- Data pattern -->
+                <rect x="90" y="25" width="15" height="15" fill="#f5c518"/>
+                <rect x="115" y="25" width="15" height="15" fill="#f5c518"/>
+                <rect x="90" y="55" width="15" height="15" fill="#f5c518"/>
+                <rect x="90" y="90" width="40" height="40" rx="4" fill="#e11d48"/>
+                <rect x="140" y="90" width="20" height="20" fill="#f5c518"/>
+                <rect x="170" y="90" width="30" height="15" fill="#f5c518"/>
+                <rect x="140" y="120" width="15" height="30" fill="#f5c518"/>
+                <rect x="165" y="115" width="35" height="15" fill="#f5c518"/>
+                <rect x="90" y="140" width="20" height="20" fill="#f5c518"/>
+                <rect x="115" y="140" width="15" height="40" fill="#f5c518"/>
+                <rect x="90" y="170" width="20" height="25" fill="#f5c518"/>
+                <rect x="140" y="160" width="60" height="35" fill="#f5c518"/>
+              </svg>
+            </div>
+            <p class="qr-instructions">Scan to open the <strong>Audience Live Scoreboard & Participation Portal</strong> on your mobile device!</p>
+            <div class="qr-url-pill" id="qr-direct-link">http://localhost:5173/#audience</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================================================================= -->
+      <!-- GRAND FINALE WINNER CELEBRATION MODAL -->
+      <!-- ================================================================= -->
+      <div class="modal-backdrop" id="winner-modal" style="display: none;">
+        <div class="modal-card winner-card">
+          <div class="winner-confetti-canvas" id="confetti-canvas"></div>
+          <div class="winner-sparkle-crown">👑</div>
+          <h1 class="winner-festive-title">NAVSHAKTI 2026 CHAMPIONS!</h1>
+          <div class="winner-team-name" id="winner-team-name">GARBA GLADIATORS</div>
+          <div class="winner-score-pill" id="winner-score-pill">TOTAL SCORE: 480 POINTS</div>
+          <p class="winner-sub">SOC Navratri Celebration • MIT-ADT University, Pune</p>
+          <div class="winner-actions">
+            <button id="btn-close-winner" class="cockpit-btn-gold">Close & Return to Board</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================================================================= -->
+      <!-- SAFE GAME RESET CONFIRMATION MODAL -->
+      <!-- ================================================================= -->
+      <div class="modal-backdrop" id="reset-confirm-modal" style="display: none;">
+        <div class="modal-card" style="max-width: 480px;">
+          <div class="modal-card-header">
+            <h3>⚠️ CONFIRM GAME RESET</h3>
+            <button class="modal-close-btn" id="btn-cancel-reset">&times;</button>
+          </div>
+          <div class="modal-card-body">
+            <p style="font-size: 1rem; color: #cbd5e1; line-height: 1.5;">
+              Are you sure you want to reset <strong>all scores, round bank, and strikes</strong> back to zero?
+            </p>
+            <p style="font-size: 0.85rem; color: #ef4444; margin-top: 8px;">
+              This cannot be undone. You will start fresh at Round 1 Question 1.
+            </p>
+          </div>
+          <div class="modal-card-footer">
+            <button class="cockpit-btn" id="btn-abort-reset">Cancel</button>
+            <button class="cockpit-btn-danger" id="btn-confirm-reset">Yes, Reset Entire Game</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- MAIN APP SCRIPT -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

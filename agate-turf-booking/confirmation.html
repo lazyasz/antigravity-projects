@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Registration confirmed — Agate Esports">
+  <title>Confirmed — Agate Esports</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>🎮</text></svg>">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">AGATE<span>ESPORTS</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="tournaments.html">Tournaments</a>
+      <a href="team-registration.html">Register Team</a>
+    </div>
+    <div class="nav-auth"></div>
+    <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <main class="confirm-wrapper">
+    <div class="confirm-card fade-in" id="confirm-card">
+      <div class="confirm-icon">✓</div>
+      <h1 class="confirm-title">Registration Complete!</h1>
+      <p class="confirm-subtitle">Your team has been registered successfully and is pending admin approval.</p>
+
+      <div class="confirm-details" id="confirm-details">
+        <!-- Populated by JS -->
+      </div>
+
+      <div id="players-list" style="text-align:left; margin-bottom:2rem;">
+        <h3 style="font-family:var(--font-heading); font-size:0.75rem; letter-spacing:1.5px; color:var(--accent); margin-bottom:0.75rem; text-transform: uppercase;">ROSTER</h3>
+        <div id="roster-chips" style="display: flex; flex-wrap: wrap; gap: 0.5rem;"></div>
+      </div>
+
+      <div class="confirm-actions">
+        <a href="tournaments.html" class="btn btn-outline btn-bracket">Browse Tournaments</a>
+        <a href="index.html" class="btn btn-primary btn-bracket">Back to Home</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/db.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const teamId = params.get('id');
+      const teams = App.DB.getStore('ag_teams');
+      const team = teams.find(t => t.id === teamId);
+
+      if (!team) {
+        document.getElementById('confirm-details').innerHTML = '<p style="color:var(--text-secondary); text-align: center;">No registration data found. <a href="tournaments.html">Browse tournaments</a></p>';
+        document.getElementById('roster-chips').innerHTML = '';
+        return;
+      }
+
+      const tournament = App.DB.getStore('ag_tournaments').find(t => t.id === team.tournamentId);
+
+      document.getElementById('confirm-details').innerHTML = `
+        <div class="confirm-row"><span class="label">Registration ID</span><span class="value" style="color:var(--accent); font-family:var(--font-heading); font-size:0.85rem;">${team.regId}</span></div>
+        <div class="confirm-row"><span class="label">Team Name</span><span class="value">${team.name} [${team.tag}]</span></div>
+        <div class="confirm-row"><span class="label">Tournament</span><span class="value">${tournament ? tournament.title : team.tournamentId}</span></div>
+        <div class="confirm-row"><span class="label">Game</span><span class="value">${tournament ? tournament.game : '—'}</span></div>
+        <div class="confirm-row"><span class="label">Players</span><span class="value">${team.players.length} members</span></div>
+        <div class="confirm-row"><span class="label">Registered Date</span><span class="value">${App.Main.formatDate(team.registeredAt)}</span></div>
+        <div class="confirm-row"><span class="label">Status</span><span class="value"><span class="badge badge-${team.status}">${team.status}</span></span></div>
+      `;
+
+      document.getElementById('roster-chips').innerHTML = team.players.map(p =>
+        `<span class="player-chip">👤 ${p.name} <span style="color:var(--accent-pink); font-size:0.75rem; font-weight:700;">${p.role}</span></span>`
+      ).join('');
+    });
+  </script>
+</body>
+</html>

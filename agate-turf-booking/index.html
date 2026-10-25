@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Agate Esports — Register your team for competitive esports tournaments. Clutch. Locked. Dominate.">
+  <title>Agate Esports — Tournament Registration Platform</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>🎮</text></svg>">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="main-nav">
+    <a href="index.html" class="nav-brand">AGATE<span>ESPORTS</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="tournaments.html">Tournaments</a>
+      <a href="team-registration.html">Register Team</a>
+    </div>
+    <div class="nav-auth"></div>
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <h1 class="hero-title">AGATE <span>ESPORTS</span></h1>
+          <div class="hero-taglines">
+            <div class="hero-tagline glow">CLUTCH.</div>
+            <div class="hero-tagline">LOCKED.</div>
+            <div class="hero-tagline glow">DOMINATE.</div>
+          </div>
+          <p class="hero-desc">
+            Blitzing through international tournament brackets, Agate Esports combines precision gameplay with tactical teamwork. From peak AP sweeps to clutch victories, our roster is forged on relentless practice, cutting-edge strategy, and a community-first mindset. Welcome to the arena where legends are made.
+          </p>
+          <div class="hero-actions">
+            <a href="register.html" class="btn btn-primary btn-lg btn-bracket">Join the Arena</a>
+            <a href="tournaments.html" class="btn btn-outline btn-lg btn-bracket">View Tournaments</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-graphic">
+            <div class="hero-icon">🎮</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Tournaments -->
+  <section class="section" id="featured-tournaments">
+    <div class="container">
+      <h2 class="section-title text-center animate-on-scroll">Featured <span>Tournaments</span></h2>
+      <p class="section-subtitle text-center animate-on-scroll">Compete against the best. Prove your worth.</p>
+      <div class="tournament-grid" id="home-tournaments"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;" class="hero-grid">
+        <div class="animate-on-scroll">
+          <h2 class="section-title">Why <span>Agate</span>?</h2>
+          <p style="color:var(--text-secondary);line-height:1.8;margin-top:1rem;">
+            We're not just an esports org — we're a launchpad for the next generation of competitive gamers. With tournaments spanning multiple titles, transparent bracket systems, and a community of 10,000+ players, Agate Esports is where your competitive journey begins.
+          </p>
+          <div class="stats-grid" style="margin-top:2rem;">
+            <div class="stat-card stat-total"><div class="stat-number">10K+</div><div class="stat-label">Players</div></div>
+            <div class="stat-card stat-approved"><div class="stat-number">50+</div><div class="stat-label">Tournaments</div></div>
+            <div class="stat-card stat-pending"><div class="stat-number">$80K</div><div class="stat-label">Prize Pool</div></div>
+          </div>
+        </div>
+        <div class="animate-on-scroll" style="display:flex;flex-direction:column;gap:1.5rem;">
+          <div class="card" style="border-left:3px solid var(--accent);">
+            <div class="card-body">
+              <h3 style="font-family:var(--font-heading);font-size:0.95rem;margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:1px;">⚡ Fair Competition</h3>
+              <p style="font-size:0.85rem;color:var(--text-secondary);">Anti-cheat monitored matches with professional admins and transparent seeding.</p>
+            </div>
+          </div>
+          <div class="card" style="border-left:3px solid var(--accent-blue);">
+            <div class="card-body">
+              <h3 style="font-family:var(--font-heading);font-size:0.95rem;margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:1px;">🏆 Real Prizes</h3>
+              <p style="font-size:0.85rem;color:var(--text-secondary);">Cash prizes, gaming peripherals, and sponsorship opportunities for top performers.</p>
+            </div>
+          </div>
+          <div class="card" style="border-left:3px solid var(--success);">
+            <div class="card-body">
+              <h3 style="font-family:var(--font-heading);font-size:0.95rem;margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:1px;">🌐 Global Community</h3>
+              <p style="font-size:0.85rem;color:var(--text-secondary);">Connect with players worldwide. Scrims, ranked ladders, and community events year-round.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section text-center">
+    <div class="container animate-on-scroll">
+      <h2 class="section-title">Ready to <span>Compete</span>?</h2>
+      <p class="section-subtitle">Register your team today and step into the arena.</p>
+      <a href="register.html" class="btn btn-primary btn-lg btn-bracket">Create Account</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">AGATE<span>ESPORTS</span></div>
+          <p class="footer-desc">The premier esports tournament platform. Compete, connect, conquer.</p>
+        </div>
+        <div>
+          <div class="footer-heading">Platform</div>
+          <div class="footer-links">
+            <a href="tournaments.html">Tournaments</a>
+            <a href="register.html">Register</a>
+            <a href="login.html">Login</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Contact</div>
+          <div class="footer-links">
+            <a href="#">Discord</a>
+            <a href="#">Twitter</a>
+            <a href="mailto:support@agate.gg">support@agate.gg</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 Agate Esports. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/db.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Render featured tournaments
+      const tournaments = App.DB.getStore('ag_tournaments').slice(0, 3);
+      const grid = document.getElementById('home-tournaments');
+      if (!grid) return;
+      grid.innerHTML = tournaments.map(t => {
+        const badgeClass = t.status === 'open' ? 'open' : t.status === 'closing' ? 'closing' : 'full';
+        return `
+          <div class="card tournament-card animate-on-scroll">
+            <div class="card-banner" style="background:linear-gradient(135deg, ${t.color}33, ${t.color}11);">
+              <span class="game-icon">🎯</span>
+              <span class="game-title">${t.game}</span>
+            </div>
+            <div class="card-body">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;">
+                <h3 style="font-family:var(--font-heading);font-size:0.95rem;font-weight:700;letter-spacing:1px;">${t.title}</h3>
+                <span class="badge badge-${badgeClass}">${t.status}</span>
+              </div>
+              <p style="font-size:0.8rem;color:var(--text-secondary);margin-bottom:0.75rem;">${t.desc}</p>
+              <div class="card-meta">
+                <span class="card-meta-item">📅 ${App.Main.formatDate(t.date).split(',')[0]}</span>
+                <span class="card-meta-item">👥 ${t.registered}/${t.slots}</span>
+              </div>
+              <div class="card-footer">
+                <span class="prize-pool">${t.prize}</span>
+                ${t.status !== 'full' ? `<a href="team-registration.html?t=${t.id}" class="btn btn-sm btn-primary btn-bracket">Register</a>` : '<span class="btn btn-sm btn-outline" style="opacity:0.5;pointer-events:none;">Full</span>'}
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    });
+  </script>
+</body>
+</html>

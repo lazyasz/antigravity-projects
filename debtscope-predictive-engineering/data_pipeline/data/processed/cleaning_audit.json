@@ -1,0 +1,52 @@
+{
+  "cleaned_at": "2026-09-05T17:38:31.927105Z",
+  "duplicates_removed": 2,
+  "nulls_imputed": 3,
+  "anomalies_sanitized": 1,
+  "entity_stats": {
+    "files": {
+      "raw_count": 11,
+      "cleaned_count": 11
+    },
+    "commits": {
+      "raw_count": 429,
+      "cleaned_count": 428
+    },
+    "commit_file_changes": {
+      "raw_count": 429,
+      "cleaned_count": 428
+    },
+    "issues": {
+      "raw_count": 48,
+      "cleaned_count": 48
+    },
+    "defects": {
+      "raw_count": 26,
+      "cleaned_count": 26
+    },
+    "dependencies": {
+      "raw_count": 6,
+      "cleaned_count": 6
+    },
+    "repositories": {
+      "raw_count": 4,
+      "cleaned_count": 4
+    },
+    "developers": {
+      "raw_count": 6,
+      "cleaned_count": 6
+    },
+    "pull_requests": {
+      "raw_count": 68,
+      "cleaned_count": 68
+    },
+    "releases": {
+      "raw_count": 6,
+      "cleaned_count": 6
+    },
+    "business_context": {
+      "raw_count": 8,
+      "cleaned_count": 8
+    }
+  }
+}

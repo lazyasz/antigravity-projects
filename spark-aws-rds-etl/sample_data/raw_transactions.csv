@@ -1,0 +1,29 @@
+Transaction_ID,Customer_ID,Customer_Name,Age,Gender,Annual_Income,Purchase_Amount,Store_Rating,City,Transaction_Date
+TXN1001,CUST201,John Doe,28,Male,$55000,$120.50,4.5,New York,2023-01-15
+TXN1002,CUST202,Jane Smith,,Female,$62000,$89.99,4.2,Los Angeles,2023-01-16
+TXN1003,CUST203,Robert Brown,35,,$48000,$210.00,,Chicago,2023-01-17
+TXN1004,CUST204,Emily Davis,42,female,$75000,$350.75,4.8,Houston,2023-01-18
+TXN1005,CUST205,Michael Wilson,31,Male,,$45.20,3.9,,2023-01-19
+TXN1006,CUST206,Sarah Taylor,,FEMALE,$58000,,4.1,Phoenix,2023-01-20
+TXN1007,CUST207,David Anderson,29,Male,$67000,$180.00,4.6,Philadelphia,
+TXN1008,CUST208,Lisa Thomas,38,Female,$82000,$420.50,4.9,San Antonio,2023-01-22
+TXN1009,CUST209,James Jackson,45,MALE,$51000,$95.00,,San Diego,2023-01-23
+TXN1010,CUST210,Emma White,26,,$60000,$150.25,4.3,Dallas,2023-01-24
+TXN1001,CUST201,John Doe,28,Male,$55000,$120.50,4.5,New York,2023-01-15
+TXN1004,CUST204,Emily Davis,42,female,$75000,$350.75,4.8,Houston,2023-01-18
+TXN1011,CUST211,William Harris,33,Male,$71000,$280.00,4.7,Austin,2023-01-25
+TXN1012,CUST212,Olivia Martin,,Female,,$75.50,3.8,San Jose,2023-01-26
+TXN1013,CUST213,Daniel Clark,39,male,$64000,$310.00,4.4,,2023-01-27
+TXN1014,CUST214,Sophia Rodriguez,30,Female,$53000,$165.75,,Jacksonville,2023-01-28
+TXN1015,CUST215,Matthew Lewis,48,Male,$89000,$510.00,4.9,Fort Worth,2023-01-29
+TXN1016,CUST216,Ava Walker,27,,$57000,,4.0,Columbus,2023-01-30
+TXN1017,CUST217,Alexander Hall,36,MALE,,$225.50,4.5,Charlotte,
+TXN1018,CUST218,Mia Allen,32,Female,$78000,$390.00,4.8,San Francisco,2023-02-01
+TXN1019,CUST219,Ethan Young,41,Male,$69000,$140.00,,Indianapolis,2023-02-02
+TXN1020,CUST220,Isabella King,25,FEMALE,$46000,$85.25,3.9,Seattle,2023-02-03
+TXN1008,CUST208,Lisa Thomas,38,Female,$82000,$420.50,4.9,San Antonio,2023-02-04
+TXN1021,CUST221,James Wright,52,Male,$95000,$620.00,5.0,Denver,2023-02-05
+TXN1022,CUST222,Charlotte Green,,Female,$61000,$195.00,4.2,Washington,2023-02-06
+TXN1023,CUST223,Benjamin Adams,34,male,,$110.50,3.7,,2023-02-07
+TXN1024,CUST224,Amelia Baker,29,Female,$73000,,4.6,Boston,2023-02-08
+TXN1025,CUST225,Lucas Gonzalez,44,Male,$86000,$475.00,4.8,El Paso,2023-02-09

@@ -1,0 +1,62 @@
+-- ==============================================================================
+-- Assignment No. 04 - Cloud Data Engineering Lab
+-- Snowflake Worksheet 04: Snowsight Dashboard Visual Tiles (SQL Configuration)
+-- ==============================================================================
+-- IMPORTANT: Make sure your Dashboard Context (top right) is set to:
+-- Database: STREAMING_ANALYTICS_DB | Schema: PUBLIC | Warehouse: STREAMING_WH
+-- Or use the fully qualified table name STREAMING_ANALYTICS_DB.PUBLIC.V_STREAM_FLATTENED
+
+-- [TILE 1: KPI SCORECARD] Total Events & Ingestion Volume
+SELECT 
+    COUNT(*) AS TOTAL_EVENTS,
+    COUNT(DISTINCT VEHICLE_ID) AS ACTIVE_TRUCKS,
+    COUNT_IF(IS_ANOMALY = TRUE) AS TOTAL_ANOMALIES
+FROM STREAMING_ANALYTICS_DB.PUBLIC.V_STREAM_FLATTENED;
+
+-- [TILE 2: LINE CHART] 1-Minute Tumbling Window Average Speed vs Peak Speed
+SELECT
+    TIME_SLICE(EVENT_TIMESTAMP, 1, 'MINUTE') AS WINDOW_TIME,
+    ROUND(AVG(SPEED_KMH), 2) AS AVG_SPEED,
+    ROUND(MAX(SPEED_KMH), 2) AS MAX_SPEED
+FROM STREAMING_ANALYTICS_DB.PUBLIC.V_STREAM_FLATTENED
+GROUP BY 1
+ORDER BY 1 ASC;
+
+-- [TILE 3: BAR CHART] Total Message Ingestion Count by Vehicle
+SELECT
+    VEHICLE_ID,
+    COUNT(*) AS TOTAL_MESSAGES,
+    COUNT_IF(IS_ANOMALY = TRUE) AS ANOMALY_COUNT
+FROM STREAMING_ANALYTICS_DB.PUBLIC.V_STREAM_FLATTENED
+GROUP BY 1
+ORDER BY TOTAL_MESSAGES DESC;
+
+-- [TILE 4: LINE CHART] Engine Temperature Time-Series Window
+SELECT
+    EVENT_TIMESTAMP,
+    VEHICLE_ID,
+    ENGINE_TEMP_C
+FROM STREAMING_ANALYTICS_DB.PUBLIC.V_STREAM_FLATTENED
+ORDER BY EVENT_TIMESTAMP DESC
+LIMIT 100;
+
+-- [TILE 5: SCATTER PLOT] Speed vs Engine Temperature (Anomaly Clustering)
+SELECT
+    SPEED_KMH,
+    ENGINE_TEMP_C,
+    IS_ANOMALY,
+    STATUS
+FROM STREAMING_ANALYTICS_DB.PUBLIC.V_STREAM_FLATTENED;
+
+-- [TILE 6: CRITICAL ALERTS TABLE] Latest 10 Anomaly Events
+SELECT
+    EVENT_TIMESTAMP,
+    VEHICLE_ID,
+    SPEED_KMH,
+    ENGINE_TEMP_C,
+    STATUS
+FROM STREAMING_ANALYTICS_DB.PUBLIC.V_STREAM_FLATTENED
+WHERE IS_ANOMALY = TRUE
+ORDER BY EVENT_TIMESTAMP DESC
+LIMIT 10;
+

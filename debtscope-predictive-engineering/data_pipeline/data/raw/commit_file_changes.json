@@ -1,0 +1,3863 @@
+[
+  {
+    "id": "cfc-00001",
+    "commit_id": "c-0001",
+    "file_id": "f-led-01",
+    "additions": 96,
+    "deletions": 74,
+    "churn": 170,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00002",
+    "commit_id": "c-0002",
+    "file_id": "f-rep-01",
+    "additions": 87,
+    "deletions": 8,
+    "churn": 95,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00003",
+    "commit_id": "c-0003",
+    "file_id": "f-rep-01",
+    "additions": 107,
+    "deletions": 25,
+    "churn": 132,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00004",
+    "commit_id": "c-0004",
+    "file_id": "f-rep-02",
+    "additions": 23,
+    "deletions": 16,
+    "churn": 39,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00005",
+    "commit_id": "c-0005",
+    "file_id": "f-led-01",
+    "additions": 103,
+    "deletions": 63,
+    "churn": 166,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00006",
+    "commit_id": "c-0006",
+    "file_id": "f-led-02",
+    "additions": 89,
+    "deletions": 51,
+    "churn": 140,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00007",
+    "commit_id": "c-0007",
+    "file_id": "f-aut-03",
+    "additions": 20,
+    "deletions": 34,
+    "churn": 54,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00008",
+    "commit_id": "c-0008",
+    "file_id": "f-led-02",
+    "additions": 30,
+    "deletions": 52,
+    "churn": 82,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00009",
+    "commit_id": "c-0009",
+    "file_id": "f-aut-03",
+    "additions": 87,
+    "deletions": 26,
+    "churn": 113,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00010",
+    "commit_id": "c-0010",
+    "file_id": "f-aut-01",
+    "additions": 98,
+    "deletions": 33,
+    "churn": 131,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00011",
+    "commit_id": "c-0011",
+    "file_id": "f-not-01",
+    "additions": 61,
+    "deletions": 39,
+    "churn": 100,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00012",
+    "commit_id": "c-0012",
+    "file_id": "f-aut-03",
+    "additions": 60,
+    "deletions": 63,
+    "churn": 123,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00013",
+    "commit_id": "c-0013",
+    "file_id": "f-not-01",
+    "additions": 105,
+    "deletions": 59,
+    "churn": 164,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00014",
+    "commit_id": "c-0014",
+    "file_id": "f-rep-02",
+    "additions": 21,
+    "deletions": 11,
+    "churn": 32,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00015",
+    "commit_id": "c-0015",
+    "file_id": "f-aut-03",
+    "additions": 18,
+    "deletions": 54,
+    "churn": 72,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00016",
+    "commit_id": "c-0016",
+    "file_id": "f-rep-02",
+    "additions": 97,
+    "deletions": 73,
+    "churn": 170,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00017",
+    "commit_id": "c-0017",
+    "file_id": "f-not-02",
+    "additions": 10,
+    "deletions": 38,
+    "churn": 48,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00018",
+    "commit_id": "c-0018",
+    "file_id": "f-aut-03",
+    "additions": 74,
+    "deletions": 30,
+    "churn": 104,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00019",
+    "commit_id": "c-0019",
+    "file_id": "f-aut-02",
+    "additions": 86,
+    "deletions": 46,
+    "churn": 132,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00020",
+    "commit_id": "c-0020",
+    "file_id": "f-pay-01",
+    "additions": 117,
+    "deletions": 66,
+    "churn": 183,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00021",
+    "commit_id": "c-0021",
+    "file_id": "f-pay-02",
+    "additions": 43,
+    "deletions": 72,
+    "churn": 115,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00022",
+    "commit_id": "c-0022",
+    "file_id": "f-rep-01",
+    "additions": 49,
+    "deletions": 56,
+    "churn": 105,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00023",
+    "commit_id": "c-0023",
+    "file_id": "f-not-02",
+    "additions": 18,
+    "deletions": 48,
+    "churn": 66,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00024",
+    "commit_id": "c-0024",
+    "file_id": "f-aut-03",
+    "additions": 17,
+    "deletions": 34,
+    "churn": 51,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00025",
+    "commit_id": "c-0025",
+    "file_id": "f-led-01",
+    "additions": 72,
+    "deletions": 32,
+    "churn": 104,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00026",
+    "commit_id": "c-0026",
+    "file_id": "f-rep-01",
+    "additions": 94,
+    "deletions": 60,
+    "churn": 154,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00027",
+    "commit_id": "c-0027",
+    "file_id": "f-not-02",
+    "additions": 93,
+    "deletions": 17,
+    "churn": 110,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00028",
+    "commit_id": "c-0028",
+    "file_id": "f-rep-02",
+    "additions": 78,
+    "deletions": 62,
+    "churn": 140,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00029",
+    "commit_id": "c-0029",
+    "file_id": "f-rep-01",
+    "additions": 66,
+    "deletions": 75,
+    "churn": 141,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00030",
+    "commit_id": "c-0030",
+    "file_id": "f-pay-01",
+    "additions": 61,
+    "deletions": 81,
+    "churn": 142,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00031",
+    "commit_id": "c-0031",
+    "file_id": "f-rep-01",
+    "additions": 59,
+    "deletions": 38,
+    "churn": 97,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00032",
+    "commit_id": "c-0032",
+    "file_id": "f-rep-02",
+    "additions": 94,
+    "deletions": 67,
+    "churn": 161,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00033",
+    "commit_id": "c-0033",
+    "file_id": "f-aut-01",
+    "additions": 79,
+    "deletions": 12,
+    "churn": 91,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00034",
+    "commit_id": "c-0034",
+    "file_id": "f-not-01",
+    "additions": 30,
+    "deletions": 12,
+    "churn": 42,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00035",
+    "commit_id": "c-0035",
+    "file_id": "f-aut-01",
+    "additions": 61,
+    "deletions": 20,
+    "churn": 81,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00036",
+    "commit_id": "c-0036",
+    "file_id": "f-pay-01",
+    "additions": 93,
+    "deletions": 78,
+    "churn": 171,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00037",
+    "commit_id": "c-0037",
+    "file_id": "f-aut-02",
+    "additions": 68,
+    "deletions": 45,
+    "churn": 113,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00038",
+    "commit_id": "c-0038",
+    "file_id": "f-led-02",
+    "additions": 78,
+    "deletions": 32,
+    "churn": 110,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00039",
+    "commit_id": "c-0039",
+    "file_id": "f-aut-02",
+    "additions": 66,
+    "deletions": 74,
+    "churn": 140,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00040",
+    "commit_id": "c-0040",
+    "file_id": "f-not-01",
+    "additions": 23,
+    "deletions": 22,
+    "churn": 45,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00041",
+    "commit_id": "c-0041",
+    "file_id": "f-not-01",
+    "additions": 46,
+    "deletions": 31,
+    "churn": 77,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00042",
+    "commit_id": "c-0042",
+    "file_id": "f-aut-03",
+    "additions": 42,
+    "deletions": 11,
+    "churn": 53,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00043",
+    "commit_id": "c-0043",
+    "file_id": "f-led-02",
+    "additions": 91,
+    "deletions": 38,
+    "churn": 129,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00044",
+    "commit_id": "c-0044",
+    "file_id": "f-aut-03",
+    "additions": 11,
+    "deletions": 19,
+    "churn": 30,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00045",
+    "commit_id": "c-0045",
+    "file_id": "f-aut-03",
+    "additions": 28,
+    "deletions": 60,
+    "churn": 88,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00046",
+    "commit_id": "c-0046",
+    "file_id": "f-led-01",
+    "additions": 36,
+    "deletions": 36,
+    "churn": 72,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00047",
+    "commit_id": "c-0047",
+    "file_id": "f-led-01",
+    "additions": 40,
+    "deletions": 25,
+    "churn": 65,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00048",
+    "commit_id": "c-0048",
+    "file_id": "f-rep-01",
+    "additions": 112,
+    "deletions": 36,
+    "churn": 148,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00049",
+    "commit_id": "c-0049",
+    "file_id": "f-not-01",
+    "additions": 119,
+    "deletions": 65,
+    "churn": 184,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00050",
+    "commit_id": "c-0050",
+    "file_id": "f-aut-02",
+    "additions": 94,
+    "deletions": 29,
+    "churn": 123,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00051",
+    "commit_id": "c-0051",
+    "file_id": "f-rep-02",
+    "additions": 54,
+    "deletions": 70,
+    "churn": 124,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00052",
+    "commit_id": "c-0052",
+    "file_id": "f-not-01",
+    "additions": 43,
+    "deletions": 9,
+    "churn": 52,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00053",
+    "commit_id": "c-0053",
+    "file_id": "f-led-02",
+    "additions": 75,
+    "deletions": 19,
+    "churn": 94,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00054",
+    "commit_id": "c-0054",
+    "file_id": "f-rep-01",
+    "additions": 76,
+    "deletions": 73,
+    "churn": 149,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00055",
+    "commit_id": "c-0055",
+    "file_id": "f-aut-02",
+    "additions": 89,
+    "deletions": 45,
+    "churn": 134,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00056",
+    "commit_id": "c-0056",
+    "file_id": "f-not-02",
+    "additions": 47,
+    "deletions": 75,
+    "churn": 122,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00057",
+    "commit_id": "c-0057",
+    "file_id": "f-aut-02",
+    "additions": 32,
+    "deletions": 43,
+    "churn": 75,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00058",
+    "commit_id": "c-0058",
+    "file_id": "f-rep-01",
+    "additions": 87,
+    "deletions": 46,
+    "churn": 133,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00059",
+    "commit_id": "c-0059",
+    "file_id": "f-rep-02",
+    "additions": 31,
+    "deletions": 15,
+    "churn": 46,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00060",
+    "commit_id": "c-0060",
+    "file_id": "f-not-02",
+    "additions": 38,
+    "deletions": 30,
+    "churn": 68,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00061",
+    "commit_id": "c-0061",
+    "file_id": "f-aut-01",
+    "additions": 68,
+    "deletions": 58,
+    "churn": 126,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00062",
+    "commit_id": "c-0062",
+    "file_id": "f-aut-03",
+    "additions": 28,
+    "deletions": 5,
+    "churn": 33,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00063",
+    "commit_id": "c-0063",
+    "file_id": "f-rep-01",
+    "additions": 16,
+    "deletions": 36,
+    "churn": 52,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00064",
+    "commit_id": "c-0064",
+    "file_id": "f-rep-01",
+    "additions": 50,
+    "deletions": 61,
+    "churn": 111,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00065",
+    "commit_id": "c-0065",
+    "file_id": "f-rep-01",
+    "additions": 117,
+    "deletions": 40,
+    "churn": 157,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00066",
+    "commit_id": "c-0066",
+    "file_id": "f-rep-01",
+    "additions": 40,
+    "deletions": 39,
+    "churn": 79,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00067",
+    "commit_id": "c-0067",
+    "file_id": "f-not-02",
+    "additions": 59,
+    "deletions": 24,
+    "churn": 83,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00068",
+    "commit_id": "c-0068",
+    "file_id": "f-aut-01",
+    "additions": 63,
+    "deletions": 12,
+    "churn": 75,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00069",
+    "commit_id": "c-0069",
+    "file_id": "f-rep-02",
+    "additions": 58,
+    "deletions": 66,
+    "churn": 124,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00070",
+    "commit_id": "c-0070",
+    "file_id": "f-led-01",
+    "additions": 78,
+    "deletions": 74,
+    "churn": 152,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00071",
+    "commit_id": "c-0071",
+    "file_id": "f-rep-01",
+    "additions": 53,
+    "deletions": 56,
+    "churn": 109,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00072",
+    "commit_id": "c-0072",
+    "file_id": "f-aut-02",
+    "additions": 85,
+    "deletions": 8,
+    "churn": 93,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00073",
+    "commit_id": "c-0073",
+    "file_id": "f-rep-01",
+    "additions": 51,
+    "deletions": 32,
+    "churn": 83,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00074",
+    "commit_id": "c-0074",
+    "file_id": "f-not-02",
+    "additions": 42,
+    "deletions": 15,
+    "churn": 57,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00075",
+    "commit_id": "c-0075",
+    "file_id": "f-rep-01",
+    "additions": 18,
+    "deletions": 10,
+    "churn": 28,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00076",
+    "commit_id": "c-0076",
+    "file_id": "f-pay-02",
+    "additions": 40,
+    "deletions": 21,
+    "churn": 61,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00077",
+    "commit_id": "c-0077",
+    "file_id": "f-rep-01",
+    "additions": 42,
+    "deletions": 52,
+    "churn": 94,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00078",
+    "commit_id": "c-0078",
+    "file_id": "f-pay-02",
+    "additions": 83,
+    "deletions": 53,
+    "churn": 136,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00079",
+    "commit_id": "c-0079",
+    "file_id": "f-rep-01",
+    "additions": 41,
+    "deletions": 18,
+    "churn": 59,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00080",
+    "commit_id": "c-0080",
+    "file_id": "f-pay-01",
+    "additions": 89,
+    "deletions": 110,
+    "churn": 199,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00081",
+    "commit_id": "c-0081",
+    "file_id": "f-led-02",
+    "additions": 116,
+    "deletions": 63,
+    "churn": 179,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00082",
+    "commit_id": "c-0082",
+    "file_id": "f-aut-02",
+    "additions": 88,
+    "deletions": 73,
+    "churn": 161,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00083",
+    "commit_id": "c-0083",
+    "file_id": "f-rep-02",
+    "additions": 116,
+    "deletions": 16,
+    "churn": 132,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00084",
+    "commit_id": "c-0084",
+    "file_id": "f-not-02",
+    "additions": 95,
+    "deletions": 53,
+    "churn": 148,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00085",
+    "commit_id": "c-0085",
+    "file_id": "f-not-01",
+    "additions": 37,
+    "deletions": 50,
+    "churn": 87,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00086",
+    "commit_id": "c-0086",
+    "file_id": "f-not-02",
+    "additions": 81,
+    "deletions": 6,
+    "churn": 87,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00087",
+    "commit_id": "c-0087",
+    "file_id": "f-pay-02",
+    "additions": 98,
+    "deletions": 65,
+    "churn": 163,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00088",
+    "commit_id": "c-0088",
+    "file_id": "f-rep-02",
+    "additions": 98,
+    "deletions": 36,
+    "churn": 134,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00089",
+    "commit_id": "c-0089",
+    "file_id": "f-not-02",
+    "additions": 80,
+    "deletions": 47,
+    "churn": 127,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00090",
+    "commit_id": "c-0090",
+    "file_id": "f-not-02",
+    "additions": 102,
+    "deletions": 29,
+    "churn": 131,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00091",
+    "commit_id": "c-0091",
+    "file_id": "f-not-01",
+    "additions": 104,
+    "deletions": 66,
+    "churn": 170,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00092",
+    "commit_id": "c-0092",
+    "file_id": "f-not-01",
+    "additions": 48,
+    "deletions": 6,
+    "churn": 54,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00093",
+    "commit_id": "c-0093",
+    "file_id": "f-aut-02",
+    "additions": 99,
+    "deletions": 21,
+    "churn": 120,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00094",
+    "commit_id": "c-0094",
+    "file_id": "f-rep-01",
+    "additions": 66,
+    "deletions": 48,
+    "churn": 114,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00095",
+    "commit_id": "c-0095",
+    "file_id": "f-led-01",
+    "additions": 61,
+    "deletions": 67,
+    "churn": 128,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00096",
+    "commit_id": "c-0096",
+    "file_id": "f-pay-01",
+    "additions": 106,
+    "deletions": 66,
+    "churn": 172,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00097",
+    "commit_id": "c-0097",
+    "file_id": "f-rep-02",
+    "additions": 82,
+    "deletions": 12,
+    "churn": 94,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00098",
+    "commit_id": "c-0098",
+    "file_id": "f-pay-02",
+    "additions": 30,
+    "deletions": 35,
+    "churn": 65,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00099",
+    "commit_id": "c-0099",
+    "file_id": "f-pay-02",
+    "additions": 70,
+    "deletions": 42,
+    "churn": 112,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00100",
+    "commit_id": "c-0100",
+    "file_id": "f-pay-02",
+    "additions": 19,
+    "deletions": 34,
+    "churn": 53,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00101",
+    "commit_id": "c-0101",
+    "file_id": "f-aut-02",
+    "additions": 44,
+    "deletions": 23,
+    "churn": 67,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00102",
+    "commit_id": "c-0102",
+    "file_id": "f-pay-01",
+    "additions": 173,
+    "deletions": 68,
+    "churn": 241,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00103",
+    "commit_id": "c-0103",
+    "file_id": "f-rep-02",
+    "additions": 73,
+    "deletions": 61,
+    "churn": 134,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00104",
+    "commit_id": "c-0104",
+    "file_id": "f-led-02",
+    "additions": 39,
+    "deletions": 7,
+    "churn": 46,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00105",
+    "commit_id": "c-0105",
+    "file_id": "f-pay-02",
+    "additions": 33,
+    "deletions": 60,
+    "churn": 93,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00106",
+    "commit_id": "c-0106",
+    "file_id": "f-rep-01",
+    "additions": 95,
+    "deletions": 18,
+    "churn": 113,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00107",
+    "commit_id": "c-0107",
+    "file_id": "f-aut-02",
+    "additions": 61,
+    "deletions": 75,
+    "churn": 136,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00108",
+    "commit_id": "c-0108",
+    "file_id": "f-rep-01",
+    "additions": 120,
+    "deletions": 70,
+    "churn": 190,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00109",
+    "commit_id": "c-0109",
+    "file_id": "f-rep-02",
+    "additions": 106,
+    "deletions": 68,
+    "churn": 174,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00110",
+    "commit_id": "c-0110",
+    "file_id": "f-pay-02",
+    "additions": 66,
+    "deletions": 67,
+    "churn": 133,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00111",
+    "commit_id": "c-0111",
+    "file_id": "f-pay-01",
+    "additions": 79,
+    "deletions": 130,
+    "churn": 209,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00112",
+    "commit_id": "c-0112",
+    "file_id": "f-rep-01",
+    "additions": 92,
+    "deletions": 24,
+    "churn": 116,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00113",
+    "commit_id": "c-0113",
+    "file_id": "f-rep-02",
+    "additions": 70,
+    "deletions": 36,
+    "churn": 106,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00114",
+    "commit_id": "c-0114",
+    "file_id": "f-aut-02",
+    "additions": 27,
+    "deletions": 13,
+    "churn": 40,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00115",
+    "commit_id": "c-0115",
+    "file_id": "f-not-02",
+    "additions": 46,
+    "deletions": 43,
+    "churn": 89,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00116",
+    "commit_id": "c-0116",
+    "file_id": "f-rep-01",
+    "additions": 80,
+    "deletions": 74,
+    "churn": 154,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00117",
+    "commit_id": "c-0117",
+    "file_id": "f-rep-02",
+    "additions": 59,
+    "deletions": 34,
+    "churn": 93,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00118",
+    "commit_id": "c-0118",
+    "file_id": "f-led-01",
+    "additions": 111,
+    "deletions": 24,
+    "churn": 135,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00119",
+    "commit_id": "c-0119",
+    "file_id": "f-rep-01",
+    "additions": 118,
+    "deletions": 61,
+    "churn": 179,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00120",
+    "commit_id": "c-0120",
+    "file_id": "f-led-02",
+    "additions": 29,
+    "deletions": 14,
+    "churn": 43,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00121",
+    "commit_id": "c-0121",
+    "file_id": "f-rep-02",
+    "additions": 20,
+    "deletions": 47,
+    "churn": 67,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00122",
+    "commit_id": "c-0122",
+    "file_id": "f-not-02",
+    "additions": 90,
+    "deletions": 41,
+    "churn": 131,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00123",
+    "commit_id": "c-0123",
+    "file_id": "f-aut-03",
+    "additions": 100,
+    "deletions": 17,
+    "churn": 117,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00124",
+    "commit_id": "c-0124",
+    "file_id": "f-rep-01",
+    "additions": 111,
+    "deletions": 12,
+    "churn": 123,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00125",
+    "commit_id": "c-0125",
+    "file_id": "f-not-02",
+    "additions": 62,
+    "deletions": 28,
+    "churn": 90,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00126",
+    "commit_id": "c-0126",
+    "file_id": "f-aut-01",
+    "additions": 40,
+    "deletions": 68,
+    "churn": 108,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00127",
+    "commit_id": "c-0127",
+    "file_id": "f-aut-01",
+    "additions": 95,
+    "deletions": 6,
+    "churn": 101,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00128",
+    "commit_id": "c-0128",
+    "file_id": "f-not-01",
+    "additions": 91,
+    "deletions": 59,
+    "churn": 150,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00129",
+    "commit_id": "c-0129",
+    "file_id": "f-not-02",
+    "additions": 23,
+    "deletions": 35,
+    "churn": 58,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00130",
+    "commit_id": "c-0130",
+    "file_id": "f-rep-02",
+    "additions": 116,
+    "deletions": 55,
+    "churn": 171,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00131",
+    "commit_id": "c-0131",
+    "file_id": "f-not-01",
+    "additions": 16,
+    "deletions": 68,
+    "churn": 84,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00132",
+    "commit_id": "c-0132",
+    "file_id": "f-aut-03",
+    "additions": 42,
+    "deletions": 22,
+    "churn": 64,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00133",
+    "commit_id": "c-0133",
+    "file_id": "f-pay-01",
+    "additions": 91,
+    "deletions": 59,
+    "churn": 150,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00134",
+    "commit_id": "c-0134",
+    "file_id": "f-not-02",
+    "additions": 56,
+    "deletions": 72,
+    "churn": 128,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00135",
+    "commit_id": "c-0135",
+    "file_id": "f-aut-02",
+    "additions": 112,
+    "deletions": 19,
+    "churn": 131,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00136",
+    "commit_id": "c-0136",
+    "file_id": "f-rep-01",
+    "additions": 102,
+    "deletions": 55,
+    "churn": 157,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00137",
+    "commit_id": "c-0137",
+    "file_id": "f-not-01",
+    "additions": 68,
+    "deletions": 52,
+    "churn": 120,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00138",
+    "commit_id": "c-0138",
+    "file_id": "f-rep-02",
+    "additions": 89,
+    "deletions": 46,
+    "churn": 135,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00139",
+    "commit_id": "c-0139",
+    "file_id": "f-aut-03",
+    "additions": 48,
+    "deletions": 57,
+    "churn": 105,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00140",
+    "commit_id": "c-0140",
+    "file_id": "f-pay-02",
+    "additions": 24,
+    "deletions": 17,
+    "churn": 41,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00141",
+    "commit_id": "c-0141",
+    "file_id": "f-aut-02",
+    "additions": 79,
+    "deletions": 58,
+    "churn": 137,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00142",
+    "commit_id": "c-0142",
+    "file_id": "f-aut-02",
+    "additions": 45,
+    "deletions": 9,
+    "churn": 54,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00143",
+    "commit_id": "c-0143",
+    "file_id": "f-aut-02",
+    "additions": 22,
+    "deletions": 52,
+    "churn": 74,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00144",
+    "commit_id": "c-0144",
+    "file_id": "f-not-01",
+    "additions": 21,
+    "deletions": 32,
+    "churn": 53,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00145",
+    "commit_id": "c-0145",
+    "file_id": "f-pay-01",
+    "additions": 114,
+    "deletions": 68,
+    "churn": 182,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00146",
+    "commit_id": "c-0146",
+    "file_id": "f-aut-01",
+    "additions": 10,
+    "deletions": 40,
+    "churn": 50,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00147",
+    "commit_id": "c-0147",
+    "file_id": "f-aut-01",
+    "additions": 120,
+    "deletions": 8,
+    "churn": 128,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00148",
+    "commit_id": "c-0148",
+    "file_id": "f-led-01",
+    "additions": 32,
+    "deletions": 38,
+    "churn": 70,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00149",
+    "commit_id": "c-0149",
+    "file_id": "f-pay-02",
+    "additions": 70,
+    "deletions": 62,
+    "churn": 132,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00150",
+    "commit_id": "c-0150",
+    "file_id": "f-led-02",
+    "additions": 110,
+    "deletions": 71,
+    "churn": 181,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00151",
+    "commit_id": "c-0151",
+    "file_id": "f-not-02",
+    "additions": 118,
+    "deletions": 56,
+    "churn": 174,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00152",
+    "commit_id": "c-0152",
+    "file_id": "f-rep-01",
+    "additions": 51,
+    "deletions": 23,
+    "churn": 74,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00153",
+    "commit_id": "c-0153",
+    "file_id": "f-aut-02",
+    "additions": 51,
+    "deletions": 53,
+    "churn": 104,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00154",
+    "commit_id": "c-0154",
+    "file_id": "f-rep-02",
+    "additions": 93,
+    "deletions": 75,
+    "churn": 168,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00155",
+    "commit_id": "c-0155",
+    "file_id": "f-aut-02",
+    "additions": 115,
+    "deletions": 63,
+    "churn": 178,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00156",
+    "commit_id": "c-0156",
+    "file_id": "f-rep-02",
+    "additions": 42,
+    "deletions": 52,
+    "churn": 94,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00157",
+    "commit_id": "c-0157",
+    "file_id": "f-rep-01",
+    "additions": 22,
+    "deletions": 52,
+    "churn": 74,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00158",
+    "commit_id": "c-0158",
+    "file_id": "f-aut-03",
+    "additions": 95,
+    "deletions": 20,
+    "churn": 115,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00159",
+    "commit_id": "c-0159",
+    "file_id": "f-not-02",
+    "additions": 49,
+    "deletions": 50,
+    "churn": 99,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00160",
+    "commit_id": "c-0160",
+    "file_id": "f-pay-02",
+    "additions": 54,
+    "deletions": 52,
+    "churn": 106,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00161",
+    "commit_id": "c-0161",
+    "file_id": "f-led-01",
+    "additions": 108,
+    "deletions": 8,
+    "churn": 116,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00162",
+    "commit_id": "c-0162",
+    "file_id": "f-not-01",
+    "additions": 53,
+    "deletions": 49,
+    "churn": 102,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00163",
+    "commit_id": "c-0163",
+    "file_id": "f-aut-01",
+    "additions": 104,
+    "deletions": 8,
+    "churn": 112,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00164",
+    "commit_id": "c-0164",
+    "file_id": "f-aut-02",
+    "additions": 49,
+    "deletions": 46,
+    "churn": 95,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00165",
+    "commit_id": "c-0165",
+    "file_id": "f-pay-02",
+    "additions": 20,
+    "deletions": 39,
+    "churn": 59,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00166",
+    "commit_id": "c-0166",
+    "file_id": "f-rep-02",
+    "additions": 106,
+    "deletions": 70,
+    "churn": 176,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00167",
+    "commit_id": "c-0167",
+    "file_id": "f-led-01",
+    "additions": 85,
+    "deletions": 67,
+    "churn": 152,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00168",
+    "commit_id": "c-0168",
+    "file_id": "f-not-01",
+    "additions": 36,
+    "deletions": 43,
+    "churn": 79,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00169",
+    "commit_id": "c-0169",
+    "file_id": "f-aut-01",
+    "additions": 73,
+    "deletions": 60,
+    "churn": 133,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00170",
+    "commit_id": "c-0170",
+    "file_id": "f-aut-02",
+    "additions": 116,
+    "deletions": 50,
+    "churn": 166,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00171",
+    "commit_id": "c-0171",
+    "file_id": "f-led-02",
+    "additions": 19,
+    "deletions": 45,
+    "churn": 64,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00172",
+    "commit_id": "c-0172",
+    "file_id": "f-rep-02",
+    "additions": 31,
+    "deletions": 63,
+    "churn": 94,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00173",
+    "commit_id": "c-0173",
+    "file_id": "f-not-01",
+    "additions": 85,
+    "deletions": 56,
+    "churn": 141,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00174",
+    "commit_id": "c-0174",
+    "file_id": "f-led-02",
+    "additions": 109,
+    "deletions": 26,
+    "churn": 135,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00175",
+    "commit_id": "c-0175",
+    "file_id": "f-pay-01",
+    "additions": 99,
+    "deletions": 49,
+    "churn": 148,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00176",
+    "commit_id": "c-0176",
+    "file_id": "f-not-01",
+    "additions": 19,
+    "deletions": 27,
+    "churn": 46,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00177",
+    "commit_id": "c-0177",
+    "file_id": "f-rep-02",
+    "additions": 92,
+    "deletions": 46,
+    "churn": 138,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00178",
+    "commit_id": "c-0178",
+    "file_id": "f-aut-02",
+    "additions": 111,
+    "deletions": 40,
+    "churn": 151,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00179",
+    "commit_id": "c-0179",
+    "file_id": "f-led-01",
+    "additions": 14,
+    "deletions": 12,
+    "churn": 26,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00180",
+    "commit_id": "c-0180",
+    "file_id": "f-not-02",
+    "additions": 74,
+    "deletions": 54,
+    "churn": 128,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00181",
+    "commit_id": "c-0181",
+    "file_id": "f-led-02",
+    "additions": 87,
+    "deletions": 65,
+    "churn": 152,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00182",
+    "commit_id": "c-0182",
+    "file_id": "f-aut-01",
+    "additions": 74,
+    "deletions": 27,
+    "churn": 101,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00183",
+    "commit_id": "c-0183",
+    "file_id": "f-pay-02",
+    "additions": 30,
+    "deletions": 51,
+    "churn": 81,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00184",
+    "commit_id": "c-0184",
+    "file_id": "f-not-02",
+    "additions": 16,
+    "deletions": 47,
+    "churn": 63,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00185",
+    "commit_id": "c-0185",
+    "file_id": "f-not-01",
+    "additions": 102,
+    "deletions": 24,
+    "churn": 126,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00186",
+    "commit_id": "c-0186",
+    "file_id": "f-pay-02",
+    "additions": 60,
+    "deletions": 21,
+    "churn": 81,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00187",
+    "commit_id": "c-0187",
+    "file_id": "f-led-01",
+    "additions": 114,
+    "deletions": 21,
+    "churn": 135,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00188",
+    "commit_id": "c-0188",
+    "file_id": "f-led-02",
+    "additions": 33,
+    "deletions": 32,
+    "churn": 65,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00189",
+    "commit_id": "c-0189",
+    "file_id": "f-rep-01",
+    "additions": 47,
+    "deletions": 17,
+    "churn": 64,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00190",
+    "commit_id": "c-0190",
+    "file_id": "f-led-01",
+    "additions": 29,
+    "deletions": 25,
+    "churn": 54,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00191",
+    "commit_id": "c-0191",
+    "file_id": "f-aut-03",
+    "additions": 62,
+    "deletions": 51,
+    "churn": 113,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00192",
+    "commit_id": "c-0192",
+    "file_id": "f-rep-02",
+    "additions": 49,
+    "deletions": 65,
+    "churn": 114,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00193",
+    "commit_id": "c-0193",
+    "file_id": "f-aut-02",
+    "additions": 108,
+    "deletions": 41,
+    "churn": 149,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00194",
+    "commit_id": "c-0194",
+    "file_id": "f-rep-01",
+    "additions": 16,
+    "deletions": 66,
+    "churn": 82,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00195",
+    "commit_id": "c-0195",
+    "file_id": "f-not-01",
+    "additions": 107,
+    "deletions": 25,
+    "churn": 132,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00196",
+    "commit_id": "c-0196",
+    "file_id": "f-not-02",
+    "additions": 114,
+    "deletions": 62,
+    "churn": 176,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00197",
+    "commit_id": "c-0197",
+    "file_id": "f-not-01",
+    "additions": 40,
+    "deletions": 54,
+    "churn": 94,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00198",
+    "commit_id": "c-0198",
+    "file_id": "f-not-01",
+    "additions": 93,
+    "deletions": 47,
+    "churn": 140,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00199",
+    "commit_id": "c-0199",
+    "file_id": "f-aut-01",
+    "additions": 107,
+    "deletions": 65,
+    "churn": 172,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00200",
+    "commit_id": "c-0200",
+    "file_id": "f-rep-01",
+    "additions": 80,
+    "deletions": 72,
+    "churn": 152,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00201",
+    "commit_id": "c-0201",
+    "file_id": "f-led-01",
+    "additions": 63,
+    "deletions": 63,
+    "churn": 126,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00202",
+    "commit_id": "c-0202",
+    "file_id": "f-pay-01",
+    "additions": 156,
+    "deletions": 105,
+    "churn": 261,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00203",
+    "commit_id": "c-0203",
+    "file_id": "f-aut-02",
+    "additions": 83,
+    "deletions": 58,
+    "churn": 141,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00204",
+    "commit_id": "c-0204",
+    "file_id": "f-aut-03",
+    "additions": 77,
+    "deletions": 74,
+    "churn": 151,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00205",
+    "commit_id": "c-0205",
+    "file_id": "f-rep-02",
+    "additions": 105,
+    "deletions": 7,
+    "churn": 112,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00206",
+    "commit_id": "c-0206",
+    "file_id": "f-led-01",
+    "additions": 108,
+    "deletions": 47,
+    "churn": 155,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00207",
+    "commit_id": "c-0207",
+    "file_id": "f-aut-01",
+    "additions": 32,
+    "deletions": 64,
+    "churn": 96,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00208",
+    "commit_id": "c-0208",
+    "file_id": "f-rep-01",
+    "additions": 14,
+    "deletions": 42,
+    "churn": 56,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00209",
+    "commit_id": "c-0209",
+    "file_id": "f-pay-02",
+    "additions": 114,
+    "deletions": 74,
+    "churn": 188,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00210",
+    "commit_id": "c-0210",
+    "file_id": "f-rep-02",
+    "additions": 55,
+    "deletions": 11,
+    "churn": 66,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00211",
+    "commit_id": "c-0211",
+    "file_id": "f-not-01",
+    "additions": 59,
+    "deletions": 48,
+    "churn": 107,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00212",
+    "commit_id": "c-0212",
+    "file_id": "f-aut-02",
+    "additions": 44,
+    "deletions": 15,
+    "churn": 59,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00213",
+    "commit_id": "c-0213",
+    "file_id": "f-rep-01",
+    "additions": 51,
+    "deletions": 18,
+    "churn": 69,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00214",
+    "commit_id": "c-0214",
+    "file_id": "f-not-02",
+    "additions": 31,
+    "deletions": 61,
+    "churn": 92,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00215",
+    "commit_id": "c-0215",
+    "file_id": "f-rep-01",
+    "additions": 91,
+    "deletions": 12,
+    "churn": 103,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00216",
+    "commit_id": "c-0216",
+    "file_id": "f-led-02",
+    "additions": 13,
+    "deletions": 23,
+    "churn": 36,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00217",
+    "commit_id": "c-0217",
+    "file_id": "f-rep-01",
+    "additions": 56,
+    "deletions": 51,
+    "churn": 107,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00218",
+    "commit_id": "c-0218",
+    "file_id": "f-pay-02",
+    "additions": 107,
+    "deletions": 14,
+    "churn": 121,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00219",
+    "commit_id": "c-0219",
+    "file_id": "f-aut-03",
+    "additions": 41,
+    "deletions": 19,
+    "churn": 60,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00220",
+    "commit_id": "c-0220",
+    "file_id": "f-pay-02",
+    "additions": 25,
+    "deletions": 38,
+    "churn": 63,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00221",
+    "commit_id": "c-0221",
+    "file_id": "f-not-02",
+    "additions": 72,
+    "deletions": 30,
+    "churn": 102,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00222",
+    "commit_id": "c-0222",
+    "file_id": "f-aut-01",
+    "additions": 113,
+    "deletions": 45,
+    "churn": 158,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00223",
+    "commit_id": "c-0223",
+    "file_id": "f-led-01",
+    "additions": 91,
+    "deletions": 27,
+    "churn": 118,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00224",
+    "commit_id": "c-0224",
+    "file_id": "f-not-01",
+    "additions": 40,
+    "deletions": 68,
+    "churn": 108,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00225",
+    "commit_id": "c-0225",
+    "file_id": "f-led-01",
+    "additions": 26,
+    "deletions": 16,
+    "churn": 42,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00226",
+    "commit_id": "c-0226",
+    "file_id": "f-not-02",
+    "additions": 108,
+    "deletions": 57,
+    "churn": 165,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00227",
+    "commit_id": "c-0227",
+    "file_id": "f-aut-02",
+    "additions": 76,
+    "deletions": 49,
+    "churn": 125,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00228",
+    "commit_id": "c-0228",
+    "file_id": "f-aut-01",
+    "additions": 76,
+    "deletions": 24,
+    "churn": 100,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00229",
+    "commit_id": "c-0229",
+    "file_id": "f-not-01",
+    "additions": 76,
+    "deletions": 41,
+    "churn": 117,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00230",
+    "commit_id": "c-0230",
+    "file_id": "f-not-01",
+    "additions": 90,
+    "deletions": 43,
+    "churn": 133,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00231",
+    "commit_id": "c-0231",
+    "file_id": "f-aut-03",
+    "additions": 102,
+    "deletions": 48,
+    "churn": 150,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00232",
+    "commit_id": "c-0232",
+    "file_id": "f-pay-01",
+    "additions": 122,
+    "deletions": 87,
+    "churn": 209,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00233",
+    "commit_id": "c-0233",
+    "file_id": "f-led-02",
+    "additions": 71,
+    "deletions": 36,
+    "churn": 107,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00234",
+    "commit_id": "c-0234",
+    "file_id": "f-rep-02",
+    "additions": 66,
+    "deletions": 58,
+    "churn": 124,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00235",
+    "commit_id": "c-0235",
+    "file_id": "f-rep-02",
+    "additions": 120,
+    "deletions": 45,
+    "churn": 165,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00236",
+    "commit_id": "c-0236",
+    "file_id": "f-not-02",
+    "additions": 23,
+    "deletions": 45,
+    "churn": 68,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00237",
+    "commit_id": "c-0237",
+    "file_id": "f-rep-01",
+    "additions": 16,
+    "deletions": 42,
+    "churn": 58,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00238",
+    "commit_id": "c-0238",
+    "file_id": "f-rep-02",
+    "additions": 83,
+    "deletions": 45,
+    "churn": 128,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00239",
+    "commit_id": "c-0239",
+    "file_id": "f-aut-02",
+    "additions": 73,
+    "deletions": 7,
+    "churn": 80,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00240",
+    "commit_id": "c-0240",
+    "file_id": "f-led-02",
+    "additions": 55,
+    "deletions": 11,
+    "churn": 66,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00241",
+    "commit_id": "c-0241",
+    "file_id": "f-not-02",
+    "additions": 46,
+    "deletions": 73,
+    "churn": 119,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00242",
+    "commit_id": "c-0242",
+    "file_id": "f-led-02",
+    "additions": 107,
+    "deletions": 56,
+    "churn": 163,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00243",
+    "commit_id": "c-0243",
+    "file_id": "f-led-02",
+    "additions": 80,
+    "deletions": 41,
+    "churn": 121,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00244",
+    "commit_id": "c-0244",
+    "file_id": "f-led-02",
+    "additions": 97,
+    "deletions": 20,
+    "churn": 117,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00245",
+    "commit_id": "c-0245",
+    "file_id": "f-aut-01",
+    "additions": 106,
+    "deletions": 23,
+    "churn": 129,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00246",
+    "commit_id": "c-0246",
+    "file_id": "f-rep-01",
+    "additions": 112,
+    "deletions": 65,
+    "churn": 177,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00247",
+    "commit_id": "c-0247",
+    "file_id": "f-rep-01",
+    "additions": 88,
+    "deletions": 45,
+    "churn": 133,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00248",
+    "commit_id": "c-0248",
+    "file_id": "f-rep-02",
+    "additions": 78,
+    "deletions": 67,
+    "churn": 145,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00249",
+    "commit_id": "c-0249",
+    "file_id": "f-not-02",
+    "additions": 63,
+    "deletions": 44,
+    "churn": 107,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00250",
+    "commit_id": "c-0250",
+    "file_id": "f-rep-02",
+    "additions": 16,
+    "deletions": 66,
+    "churn": 82,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00251",
+    "commit_id": "c-0251",
+    "file_id": "f-rep-01",
+    "additions": 24,
+    "deletions": 29,
+    "churn": 53,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00252",
+    "commit_id": "c-0252",
+    "file_id": "f-led-02",
+    "additions": 36,
+    "deletions": 57,
+    "churn": 93,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00253",
+    "commit_id": "c-0253",
+    "file_id": "f-pay-02",
+    "additions": 71,
+    "deletions": 72,
+    "churn": 143,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00254",
+    "commit_id": "c-0254",
+    "file_id": "f-rep-02",
+    "additions": 55,
+    "deletions": 38,
+    "churn": 93,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00255",
+    "commit_id": "c-0255",
+    "file_id": "f-rep-01",
+    "additions": 48,
+    "deletions": 41,
+    "churn": 89,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00256",
+    "commit_id": "c-0256",
+    "file_id": "f-aut-03",
+    "additions": 111,
+    "deletions": 40,
+    "churn": 151,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00257",
+    "commit_id": "c-0257",
+    "file_id": "f-led-02",
+    "additions": 47,
+    "deletions": 10,
+    "churn": 57,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00258",
+    "commit_id": "c-0258",
+    "file_id": "f-not-01",
+    "additions": 105,
+    "deletions": 66,
+    "churn": 171,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00259",
+    "commit_id": "c-0259",
+    "file_id": "f-aut-01",
+    "additions": 27,
+    "deletions": 18,
+    "churn": 45,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00260",
+    "commit_id": "c-0260",
+    "file_id": "f-aut-01",
+    "additions": 39,
+    "deletions": 11,
+    "churn": 50,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00261",
+    "commit_id": "c-0261",
+    "file_id": "f-led-02",
+    "additions": 108,
+    "deletions": 22,
+    "churn": 130,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00262",
+    "commit_id": "c-0262",
+    "file_id": "f-aut-02",
+    "additions": 35,
+    "deletions": 41,
+    "churn": 76,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00263",
+    "commit_id": "c-0263",
+    "file_id": "f-not-01",
+    "additions": 78,
+    "deletions": 9,
+    "churn": 87,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00264",
+    "commit_id": "c-0264",
+    "file_id": "f-aut-02",
+    "additions": 110,
+    "deletions": 68,
+    "churn": 178,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00265",
+    "commit_id": "c-0265",
+    "file_id": "f-aut-03",
+    "additions": 82,
+    "deletions": 18,
+    "churn": 100,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00266",
+    "commit_id": "c-0266",
+    "file_id": "f-not-02",
+    "additions": 118,
+    "deletions": 69,
+    "churn": 187,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00267",
+    "commit_id": "c-0267",
+    "file_id": "f-rep-02",
+    "additions": 103,
+    "deletions": 63,
+    "churn": 166,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00268",
+    "commit_id": "c-0268",
+    "file_id": "f-not-01",
+    "additions": 82,
+    "deletions": 29,
+    "churn": 111,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00269",
+    "commit_id": "c-0269",
+    "file_id": "f-rep-02",
+    "additions": 22,
+    "deletions": 28,
+    "churn": 50,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00270",
+    "commit_id": "c-0270",
+    "file_id": "f-aut-02",
+    "additions": 59,
+    "deletions": 35,
+    "churn": 94,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00271",
+    "commit_id": "c-0271",
+    "file_id": "f-not-02",
+    "additions": 43,
+    "deletions": 51,
+    "churn": 94,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00272",
+    "commit_id": "c-0272",
+    "file_id": "f-aut-01",
+    "additions": 61,
+    "deletions": 69,
+    "churn": 130,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00273",
+    "commit_id": "c-0273",
+    "file_id": "f-not-01",
+    "additions": 38,
+    "deletions": 33,
+    "churn": 71,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00274",
+    "commit_id": "c-0274",
+    "file_id": "f-aut-02",
+    "additions": 63,
+    "deletions": 75,
+    "churn": 138,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00275",
+    "commit_id": "c-0275",
+    "file_id": "f-aut-01",
+    "additions": 77,
+    "deletions": 62,
+    "churn": 139,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00276",
+    "commit_id": "c-0276",
+    "file_id": "f-not-01",
+    "additions": 74,
+    "deletions": 30,
+    "churn": 104,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00277",
+    "commit_id": "c-0277",
+    "file_id": "f-aut-01",
+    "additions": 97,
+    "deletions": 31,
+    "churn": 128,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00278",
+    "commit_id": "c-0278",
+    "file_id": "f-rep-01",
+    "additions": 75,
+    "deletions": 58,
+    "churn": 133,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00279",
+    "commit_id": "c-0279",
+    "file_id": "f-led-02",
+    "additions": 60,
+    "deletions": 37,
+    "churn": 97,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00280",
+    "commit_id": "c-0280",
+    "file_id": "f-pay-02",
+    "additions": 99,
+    "deletions": 13,
+    "churn": 112,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00281",
+    "commit_id": "c-0281",
+    "file_id": "f-pay-01",
+    "additions": 112,
+    "deletions": 68,
+    "churn": 180,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00282",
+    "commit_id": "c-0282",
+    "file_id": "f-not-02",
+    "additions": 97,
+    "deletions": 74,
+    "churn": 171,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00283",
+    "commit_id": "c-0283",
+    "file_id": "f-not-01",
+    "additions": 26,
+    "deletions": 33,
+    "churn": 59,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00284",
+    "commit_id": "c-0284",
+    "file_id": "f-pay-01",
+    "additions": 118,
+    "deletions": 107,
+    "churn": 225,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00285",
+    "commit_id": "c-0285",
+    "file_id": "f-rep-02",
+    "additions": 107,
+    "deletions": 19,
+    "churn": 126,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00286",
+    "commit_id": "c-0286",
+    "file_id": "f-led-02",
+    "additions": 18,
+    "deletions": 17,
+    "churn": 35,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00287",
+    "commit_id": "c-0287",
+    "file_id": "f-rep-01",
+    "additions": 39,
+    "deletions": 74,
+    "churn": 113,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00288",
+    "commit_id": "c-0288",
+    "file_id": "f-pay-02",
+    "additions": 83,
+    "deletions": 45,
+    "churn": 128,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00289",
+    "commit_id": "c-0289",
+    "file_id": "f-not-01",
+    "additions": 38,
+    "deletions": 57,
+    "churn": 95,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00290",
+    "commit_id": "c-0290",
+    "file_id": "f-not-01",
+    "additions": 32,
+    "deletions": 59,
+    "churn": 91,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00291",
+    "commit_id": "c-0291",
+    "file_id": "f-rep-01",
+    "additions": 50,
+    "deletions": 58,
+    "churn": 108,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00292",
+    "commit_id": "c-0292",
+    "file_id": "f-rep-01",
+    "additions": 70,
+    "deletions": 35,
+    "churn": 105,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00293",
+    "commit_id": "c-0293",
+    "file_id": "f-not-01",
+    "additions": 81,
+    "deletions": 72,
+    "churn": 153,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00294",
+    "commit_id": "c-0294",
+    "file_id": "f-aut-02",
+    "additions": 20,
+    "deletions": 62,
+    "churn": 82,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00295",
+    "commit_id": "c-0295",
+    "file_id": "f-pay-02",
+    "additions": 87,
+    "deletions": 10,
+    "churn": 97,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00296",
+    "commit_id": "c-0296",
+    "file_id": "f-pay-02",
+    "additions": 37,
+    "deletions": 66,
+    "churn": 103,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00297",
+    "commit_id": "c-0297",
+    "file_id": "f-aut-02",
+    "additions": 104,
+    "deletions": 20,
+    "churn": 124,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00298",
+    "commit_id": "c-0298",
+    "file_id": "f-aut-03",
+    "additions": 80,
+    "deletions": 46,
+    "churn": 126,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00299",
+    "commit_id": "c-0299",
+    "file_id": "f-not-02",
+    "additions": 43,
+    "deletions": 51,
+    "churn": 94,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00300",
+    "commit_id": "c-0300",
+    "file_id": "f-rep-02",
+    "additions": 36,
+    "deletions": 52,
+    "churn": 88,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00301",
+    "commit_id": "c-0301",
+    "file_id": "f-not-02",
+    "additions": 12,
+    "deletions": 38,
+    "churn": 50,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00302",
+    "commit_id": "c-0302",
+    "file_id": "f-not-01",
+    "additions": 116,
+    "deletions": 36,
+    "churn": 152,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00303",
+    "commit_id": "c-0303",
+    "file_id": "f-rep-02",
+    "additions": 104,
+    "deletions": 67,
+    "churn": 171,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00304",
+    "commit_id": "c-0304",
+    "file_id": "f-rep-01",
+    "additions": 79,
+    "deletions": 67,
+    "churn": 146,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00305",
+    "commit_id": "c-0305",
+    "file_id": "f-aut-03",
+    "additions": 114,
+    "deletions": 11,
+    "churn": 125,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00306",
+    "commit_id": "c-0306",
+    "file_id": "f-rep-01",
+    "additions": 11,
+    "deletions": 32,
+    "churn": 43,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00307",
+    "commit_id": "c-0307",
+    "file_id": "f-not-01",
+    "additions": 71,
+    "deletions": 67,
+    "churn": 138,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00308",
+    "commit_id": "c-0308",
+    "file_id": "f-pay-01",
+    "additions": 141,
+    "deletions": 78,
+    "churn": 219,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00309",
+    "commit_id": "c-0309",
+    "file_id": "f-led-02",
+    "additions": 77,
+    "deletions": 24,
+    "churn": 101,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00310",
+    "commit_id": "c-0310",
+    "file_id": "f-aut-01",
+    "additions": 44,
+    "deletions": 55,
+    "churn": 99,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00311",
+    "commit_id": "c-0311",
+    "file_id": "f-not-02",
+    "additions": 48,
+    "deletions": 15,
+    "churn": 63,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00312",
+    "commit_id": "c-0312",
+    "file_id": "f-led-02",
+    "additions": 91,
+    "deletions": 6,
+    "churn": 97,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00313",
+    "commit_id": "c-0313",
+    "file_id": "f-led-02",
+    "additions": 77,
+    "deletions": 10,
+    "churn": 87,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00314",
+    "commit_id": "c-0314",
+    "file_id": "f-aut-01",
+    "additions": 15,
+    "deletions": 14,
+    "churn": 29,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00315",
+    "commit_id": "c-0315",
+    "file_id": "f-pay-02",
+    "additions": 28,
+    "deletions": 55,
+    "churn": 83,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00316",
+    "commit_id": "c-0316",
+    "file_id": "f-led-01",
+    "additions": 96,
+    "deletions": 74,
+    "churn": 170,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00317",
+    "commit_id": "c-0317",
+    "file_id": "f-not-02",
+    "additions": 74,
+    "deletions": 49,
+    "churn": 123,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00318",
+    "commit_id": "c-0318",
+    "file_id": "f-led-02",
+    "additions": 108,
+    "deletions": 55,
+    "churn": 163,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00319",
+    "commit_id": "c-0319",
+    "file_id": "f-led-01",
+    "additions": 80,
+    "deletions": 53,
+    "churn": 133,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00320",
+    "commit_id": "c-0320",
+    "file_id": "f-rep-01",
+    "additions": 108,
+    "deletions": 42,
+    "churn": 150,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00321",
+    "commit_id": "c-0321",
+    "file_id": "f-aut-03",
+    "additions": 101,
+    "deletions": 24,
+    "churn": 125,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00322",
+    "commit_id": "c-0322",
+    "file_id": "f-not-02",
+    "additions": 56,
+    "deletions": 39,
+    "churn": 95,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00323",
+    "commit_id": "c-0323",
+    "file_id": "f-pay-02",
+    "additions": 81,
+    "deletions": 70,
+    "churn": 151,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00324",
+    "commit_id": "c-0324",
+    "file_id": "f-rep-01",
+    "additions": 86,
+    "deletions": 46,
+    "churn": 132,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00325",
+    "commit_id": "c-0325",
+    "file_id": "f-rep-01",
+    "additions": 102,
+    "deletions": 36,
+    "churn": 138,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00326",
+    "commit_id": "c-0326",
+    "file_id": "f-rep-01",
+    "additions": 28,
+    "deletions": 13,
+    "churn": 41,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00327",
+    "commit_id": "c-0327",
+    "file_id": "f-aut-02",
+    "additions": 56,
+    "deletions": 37,
+    "churn": 93,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00328",
+    "commit_id": "c-0328",
+    "file_id": "f-rep-01",
+    "additions": 60,
+    "deletions": 47,
+    "churn": 107,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00329",
+    "commit_id": "c-0329",
+    "file_id": "f-rep-02",
+    "additions": 86,
+    "deletions": 22,
+    "churn": 108,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00330",
+    "commit_id": "c-0330",
+    "file_id": "f-not-01",
+    "additions": 47,
+    "deletions": 67,
+    "churn": 114,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00331",
+    "commit_id": "c-0331",
+    "file_id": "f-aut-02",
+    "additions": 82,
+    "deletions": 30,
+    "churn": 112,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00332",
+    "commit_id": "c-0332",
+    "file_id": "f-aut-03",
+    "additions": 36,
+    "deletions": 61,
+    "churn": 97,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00333",
+    "commit_id": "c-0333",
+    "file_id": "f-led-02",
+    "additions": 40,
+    "deletions": 37,
+    "churn": 77,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00334",
+    "commit_id": "c-0334",
+    "file_id": "f-aut-03",
+    "additions": 86,
+    "deletions": 66,
+    "churn": 152,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00335",
+    "commit_id": "c-0335",
+    "file_id": "f-rep-02",
+    "additions": 86,
+    "deletions": 15,
+    "churn": 101,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00336",
+    "commit_id": "c-0336",
+    "file_id": "f-aut-03",
+    "additions": 15,
+    "deletions": 56,
+    "churn": 71,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00337",
+    "commit_id": "c-0337",
+    "file_id": "f-rep-01",
+    "additions": 105,
+    "deletions": 71,
+    "churn": 176,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00338",
+    "commit_id": "c-0338",
+    "file_id": "f-aut-02",
+    "additions": 85,
+    "deletions": 69,
+    "churn": 154,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00339",
+    "commit_id": "c-0339",
+    "file_id": "f-aut-02",
+    "additions": 20,
+    "deletions": 19,
+    "churn": 39,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00340",
+    "commit_id": "c-0340",
+    "file_id": "f-not-02",
+    "additions": 54,
+    "deletions": 65,
+    "churn": 119,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00341",
+    "commit_id": "c-0341",
+    "file_id": "f-led-02",
+    "additions": 15,
+    "deletions": 19,
+    "churn": 34,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00342",
+    "commit_id": "c-0342",
+    "file_id": "f-not-01",
+    "additions": 41,
+    "deletions": 71,
+    "churn": 112,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00343",
+    "commit_id": "c-0343",
+    "file_id": "f-aut-02",
+    "additions": 90,
+    "deletions": 28,
+    "churn": 118,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00344",
+    "commit_id": "c-0344",
+    "file_id": "f-aut-03",
+    "additions": 88,
+    "deletions": 30,
+    "churn": 118,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00345",
+    "commit_id": "c-0345",
+    "file_id": "f-rep-02",
+    "additions": 106,
+    "deletions": 13,
+    "churn": 119,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00346",
+    "commit_id": "c-0346",
+    "file_id": "f-pay-02",
+    "additions": 43,
+    "deletions": 67,
+    "churn": 110,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00347",
+    "commit_id": "c-0347",
+    "file_id": "f-not-02",
+    "additions": 55,
+    "deletions": 63,
+    "churn": 118,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00348",
+    "commit_id": "c-0348",
+    "file_id": "f-aut-03",
+    "additions": 96,
+    "deletions": 22,
+    "churn": 118,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00349",
+    "commit_id": "c-0349",
+    "file_id": "f-pay-02",
+    "additions": 28,
+    "deletions": 70,
+    "churn": 98,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00350",
+    "commit_id": "c-0350",
+    "file_id": "f-rep-02",
+    "additions": 33,
+    "deletions": 67,
+    "churn": 100,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00351",
+    "commit_id": "c-0351",
+    "file_id": "f-aut-03",
+    "additions": 50,
+    "deletions": 62,
+    "churn": 112,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00352",
+    "commit_id": "c-0352",
+    "file_id": "f-not-01",
+    "additions": 81,
+    "deletions": 69,
+    "churn": 150,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00353",
+    "commit_id": "c-0353",
+    "file_id": "f-rep-02",
+    "additions": 20,
+    "deletions": 8,
+    "churn": 28,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00354",
+    "commit_id": "c-0354",
+    "file_id": "f-aut-02",
+    "additions": 31,
+    "deletions": 63,
+    "churn": 94,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00355",
+    "commit_id": "c-0355",
+    "file_id": "f-rep-01",
+    "additions": 115,
+    "deletions": 51,
+    "churn": 166,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00356",
+    "commit_id": "c-0356",
+    "file_id": "f-led-02",
+    "additions": 116,
+    "deletions": 36,
+    "churn": 152,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00357",
+    "commit_id": "c-0357",
+    "file_id": "f-led-02",
+    "additions": 109,
+    "deletions": 35,
+    "churn": 144,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00358",
+    "commit_id": "c-0358",
+    "file_id": "f-aut-03",
+    "additions": 88,
+    "deletions": 59,
+    "churn": 147,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00359",
+    "commit_id": "c-0359",
+    "file_id": "f-aut-03",
+    "additions": 113,
+    "deletions": 12,
+    "churn": 125,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00360",
+    "commit_id": "c-0360",
+    "file_id": "f-not-01",
+    "additions": 83,
+    "deletions": 39,
+    "churn": 122,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00361",
+    "commit_id": "c-0361",
+    "file_id": "f-pay-02",
+    "additions": 26,
+    "deletions": 21,
+    "churn": 47,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00362",
+    "commit_id": "c-0362",
+    "file_id": "f-aut-01",
+    "additions": 28,
+    "deletions": 39,
+    "churn": 67,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00363",
+    "commit_id": "c-0363",
+    "file_id": "f-rep-02",
+    "additions": 105,
+    "deletions": 40,
+    "churn": 145,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00364",
+    "commit_id": "c-0364",
+    "file_id": "f-not-02",
+    "additions": 21,
+    "deletions": 63,
+    "churn": 84,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00365",
+    "commit_id": "c-0365",
+    "file_id": "f-not-01",
+    "additions": 73,
+    "deletions": 39,
+    "churn": 112,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00366",
+    "commit_id": "c-0366",
+    "file_id": "f-not-02",
+    "additions": 119,
+    "deletions": 67,
+    "churn": 186,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00367",
+    "commit_id": "c-0367",
+    "file_id": "f-pay-01",
+    "additions": 177,
+    "deletions": 74,
+    "churn": 251,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00368",
+    "commit_id": "c-0368",
+    "file_id": "f-led-02",
+    "additions": 93,
+    "deletions": 43,
+    "churn": 136,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00369",
+    "commit_id": "c-0369",
+    "file_id": "f-aut-02",
+    "additions": 57,
+    "deletions": 26,
+    "churn": 83,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00370",
+    "commit_id": "c-0370",
+    "file_id": "f-rep-02",
+    "additions": 100,
+    "deletions": 17,
+    "churn": 117,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00371",
+    "commit_id": "c-0371",
+    "file_id": "f-aut-02",
+    "additions": 97,
+    "deletions": 61,
+    "churn": 158,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00372",
+    "commit_id": "c-0372",
+    "file_id": "f-led-01",
+    "additions": 19,
+    "deletions": 34,
+    "churn": 53,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00373",
+    "commit_id": "c-0373",
+    "file_id": "f-pay-01",
+    "additions": 106,
+    "deletions": 81,
+    "churn": 187,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00374",
+    "commit_id": "c-0374",
+    "file_id": "f-aut-01",
+    "additions": 31,
+    "deletions": 61,
+    "churn": 92,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00375",
+    "commit_id": "c-0375",
+    "file_id": "f-not-01",
+    "additions": 88,
+    "deletions": 61,
+    "churn": 149,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00376",
+    "commit_id": "c-0376",
+    "file_id": "f-aut-01",
+    "additions": 59,
+    "deletions": 49,
+    "churn": 108,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00377",
+    "commit_id": "c-0377",
+    "file_id": "f-not-01",
+    "additions": 80,
+    "deletions": 41,
+    "churn": 121,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00378",
+    "commit_id": "c-0378",
+    "file_id": "f-led-01",
+    "additions": 105,
+    "deletions": 55,
+    "churn": 160,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00379",
+    "commit_id": "c-0379",
+    "file_id": "f-not-01",
+    "additions": 40,
+    "deletions": 68,
+    "churn": 108,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00380",
+    "commit_id": "c-0380",
+    "file_id": "f-pay-01",
+    "additions": 127,
+    "deletions": 82,
+    "churn": 209,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00381",
+    "commit_id": "c-0381",
+    "file_id": "f-pay-01",
+    "additions": 95,
+    "deletions": 57,
+    "churn": 152,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00382",
+    "commit_id": "c-0382",
+    "file_id": "f-not-02",
+    "additions": 78,
+    "deletions": 73,
+    "churn": 151,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00383",
+    "commit_id": "c-0383",
+    "file_id": "f-aut-02",
+    "additions": 113,
+    "deletions": 24,
+    "churn": 137,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00384",
+    "commit_id": "c-0384",
+    "file_id": "f-not-02",
+    "additions": 18,
+    "deletions": 44,
+    "churn": 62,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00385",
+    "commit_id": "c-0385",
+    "file_id": "f-aut-01",
+    "additions": 88,
+    "deletions": 12,
+    "churn": 100,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00386",
+    "commit_id": "c-0386",
+    "file_id": "f-not-01",
+    "additions": 11,
+    "deletions": 25,
+    "churn": 36,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00387",
+    "commit_id": "c-0387",
+    "file_id": "f-rep-02",
+    "additions": 57,
+    "deletions": 21,
+    "churn": 78,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00388",
+    "commit_id": "c-0388",
+    "file_id": "f-not-01",
+    "additions": 44,
+    "deletions": 72,
+    "churn": 116,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00389",
+    "commit_id": "c-0389",
+    "file_id": "f-not-01",
+    "additions": 73,
+    "deletions": 26,
+    "churn": 99,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00390",
+    "commit_id": "c-0390",
+    "file_id": "f-aut-02",
+    "additions": 39,
+    "deletions": 70,
+    "churn": 109,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00391",
+    "commit_id": "c-0391",
+    "file_id": "f-pay-01",
+    "additions": 95,
+    "deletions": 85,
+    "churn": 180,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00392",
+    "commit_id": "c-0392",
+    "file_id": "f-led-02",
+    "additions": 50,
+    "deletions": 39,
+    "churn": 89,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00393",
+    "commit_id": "c-0393",
+    "file_id": "f-not-01",
+    "additions": 112,
+    "deletions": 71,
+    "churn": 183,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00394",
+    "commit_id": "c-0394",
+    "file_id": "f-rep-01",
+    "additions": 80,
+    "deletions": 63,
+    "churn": 143,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00395",
+    "commit_id": "c-0395",
+    "file_id": "f-not-01",
+    "additions": 41,
+    "deletions": 64,
+    "churn": 105,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00396",
+    "commit_id": "c-0396",
+    "file_id": "f-rep-01",
+    "additions": 62,
+    "deletions": 8,
+    "churn": 70,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00397",
+    "commit_id": "c-0397",
+    "file_id": "f-aut-03",
+    "additions": 52,
+    "deletions": 5,
+    "churn": 57,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00398",
+    "commit_id": "c-0398",
+    "file_id": "f-rep-02",
+    "additions": 72,
+    "deletions": 12,
+    "churn": 84,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00399",
+    "commit_id": "c-0399",
+    "file_id": "f-not-01",
+    "additions": 62,
+    "deletions": 52,
+    "churn": 114,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00400",
+    "commit_id": "c-0400",
+    "file_id": "f-rep-01",
+    "additions": 114,
+    "deletions": 55,
+    "churn": 169,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00401",
+    "commit_id": "c-0401",
+    "file_id": "f-led-02",
+    "additions": 43,
+    "deletions": 45,
+    "churn": 88,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00402",
+    "commit_id": "c-0402",
+    "file_id": "f-not-02",
+    "additions": 27,
+    "deletions": 18,
+    "churn": 45,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00403",
+    "commit_id": "c-0403",
+    "file_id": "f-aut-01",
+    "additions": 25,
+    "deletions": 73,
+    "churn": 98,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00404",
+    "commit_id": "c-0404",
+    "file_id": "f-not-01",
+    "additions": 21,
+    "deletions": 25,
+    "churn": 46,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00405",
+    "commit_id": "c-0405",
+    "file_id": "f-not-01",
+    "additions": 101,
+    "deletions": 36,
+    "churn": 137,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00406",
+    "commit_id": "c-0406",
+    "file_id": "f-rep-01",
+    "additions": 13,
+    "deletions": 56,
+    "churn": 69,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00407",
+    "commit_id": "c-0407",
+    "file_id": "f-rep-01",
+    "additions": 25,
+    "deletions": 6,
+    "churn": 31,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00408",
+    "commit_id": "c-0408",
+    "file_id": "f-pay-02",
+    "additions": 90,
+    "deletions": 15,
+    "churn": 105,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00409",
+    "commit_id": "c-0409",
+    "file_id": "f-pay-01",
+    "additions": 58,
+    "deletions": 69,
+    "churn": 127,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00410",
+    "commit_id": "c-0410",
+    "file_id": "f-rep-01",
+    "additions": 60,
+    "deletions": 68,
+    "churn": 128,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00411",
+    "commit_id": "c-0411",
+    "file_id": "f-led-02",
+    "additions": 33,
+    "deletions": 40,
+    "churn": 73,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00412",
+    "commit_id": "c-0412",
+    "file_id": "f-rep-01",
+    "additions": 92,
+    "deletions": 42,
+    "churn": 134,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00413",
+    "commit_id": "c-0413",
+    "file_id": "f-rep-02",
+    "additions": 59,
+    "deletions": 22,
+    "churn": 81,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00414",
+    "commit_id": "c-0414",
+    "file_id": "f-rep-01",
+    "additions": 112,
+    "deletions": 74,
+    "churn": 186,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00415",
+    "commit_id": "c-0415",
+    "file_id": "f-rep-02",
+    "additions": 74,
+    "deletions": 46,
+    "churn": 120,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00416",
+    "commit_id": "c-0416",
+    "file_id": "f-not-01",
+    "additions": 113,
+    "deletions": 40,
+    "churn": 153,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00417",
+    "commit_id": "c-0417",
+    "file_id": "f-led-02",
+    "additions": 22,
+    "deletions": 36,
+    "churn": 58,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00418",
+    "commit_id": "c-0418",
+    "file_id": "f-aut-02",
+    "additions": 83,
+    "deletions": 54,
+    "churn": 137,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00419",
+    "commit_id": "c-0419",
+    "file_id": "f-not-01",
+    "additions": 99,
+    "deletions": 50,
+    "churn": 149,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00420",
+    "commit_id": "c-0420",
+    "file_id": "f-not-01",
+    "additions": 79,
+    "deletions": 44,
+    "churn": 123,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00421",
+    "commit_id": "c-0421",
+    "file_id": "f-rep-01",
+    "additions": 12,
+    "deletions": 72,
+    "churn": 84,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00422",
+    "commit_id": "c-0422",
+    "file_id": "f-rep-01",
+    "additions": 53,
+    "deletions": 27,
+    "churn": 80,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00423",
+    "commit_id": "c-0423",
+    "file_id": "f-pay-01",
+    "additions": 172,
+    "deletions": 62,
+    "churn": 234,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00424",
+    "commit_id": "c-0424",
+    "file_id": "f-led-01",
+    "additions": 53,
+    "deletions": 43,
+    "churn": 96,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00425",
+    "commit_id": "c-0425",
+    "file_id": "f-not-01",
+    "additions": 72,
+    "deletions": 45,
+    "churn": 117,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00426",
+    "commit_id": "c-0426",
+    "file_id": "f-not-01",
+    "additions": 103,
+    "deletions": 42,
+    "churn": 145,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00427",
+    "commit_id": "c-0427",
+    "file_id": "f-aut-01",
+    "additions": 14,
+    "deletions": 28,
+    "churn": 42,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-00001",
+    "commit_id": "c-0001",
+    "file_id": "f-led-01",
+    "additions": 96,
+    "deletions": 74,
+    "churn": 170,
+    "change_type": "MODIFY"
+  },
+  {
+    "id": "cfc-dirty-01",
+    "commit_id": "c-dirty-01",
+    "file_id": "f-pay-01",
+    "additions": -10,
+    "deletions": 5,
+    "churn": -5,
+    "change_type": "MODIFY"
+  }
+]

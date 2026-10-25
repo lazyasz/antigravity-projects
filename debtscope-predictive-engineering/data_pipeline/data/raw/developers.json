@@ -1,0 +1,38 @@
+[
+  {
+    "id": "dev-01",
+    "name": "Alex Chen",
+    "experience_level": "Senior",
+    "primary_language": "Python"
+  },
+  {
+    "id": "dev-02",
+    "name": "Elena Rostova",
+    "experience_level": "Lead",
+    "primary_language": "Go"
+  },
+  {
+    "id": "dev-03",
+    "name": "Marcus Vance",
+    "experience_level": "Mid",
+    "primary_language": "Python"
+  },
+  {
+    "id": "dev-04",
+    "name": "Priya Sharma",
+    "experience_level": "Senior",
+    "primary_language": "Go"
+  },
+  {
+    "id": "dev-05",
+    "name": "Liam Davies",
+    "experience_level": "Junior",
+    "primary_language": "Python"
+  },
+  {
+    "id": "dev-06",
+    "name": "Sofia Torres",
+    "experience_level": "Mid",
+    "primary_language": "Python"
+  }
+]

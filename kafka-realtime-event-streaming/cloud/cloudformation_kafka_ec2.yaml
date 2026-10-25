@@ -1,0 +1,138 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Cloud Data Engineering Lab - Assignment 03: Apache Kafka & Streaming Producer on AWS EC2'
+
+Parameters:
+  InstanceType:
+    Type: String
+    Default: t3.small
+    AllowedValues:
+      - t2.micro
+      - t3.micro
+      - t3.small
+      - t3.medium
+    Description: EC2 Instance Type for Kafka Broker
+
+  KeyName:
+    Type: AWS::EC2::KeyPair::KeyName
+    Description: Name of an existing EC2 KeyPair to enable SSH access
+    Default: ''
+
+  LatestAmiId:
+    Type: 'AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>'
+    Default: '/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64'
+    Description: Latest Amazon Linux 2023 AMI ID
+
+Resources:
+  KafkaSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: 'Allow SSH, Kafka Broker (9092), and Kafka UI (9000)'
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
+          Description: 'SSH Access'
+        - IpProtocol: tcp
+          FromPort: 9092
+          ToPort: 9092
+          CidrIp: 0.0.0.0/0
+          Description: 'Kafka Broker External Traffic'
+        - IpProtocol: tcp
+          FromPort: 9000
+          ToPort: 9000
+          CidrIp: 0.0.0.0/0
+          Description: 'Kafka UI Web Dashboard'
+
+  KafkaInstanceRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: ec2.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+
+  KafkaInstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Roles:
+        - !Ref KafkaInstanceRole
+
+  KafkaEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: !Ref InstanceType
+      ImageId: !Ref LatestAmiId
+      KeyName: !If [HasKeyName, !Ref KeyName, !Ref 'AWS::NoValue']
+      IamInstanceProfile: !Ref KafkaInstanceProfile
+      SecurityGroupIds:
+        - !Ref KafkaSecurityGroup
+      BlockDeviceMappings:
+        - DeviceName: /dev/xvda
+          Ebs:
+            VolumeSize: 20
+            VolumeType: gp3
+      UserData:
+        Fn::Base64: |
+          #!/bin/bash
+          dnf update -y
+          dnf install -y docker git python3-pip
+          systemctl enable docker
+          systemctl start docker
+          usermod -a -G docker ec2-user
+
+          mkdir -p /opt/kafka-lab
+          cd /opt/kafka-lab
+
+          cat <<'EOF' > docker-compose.yml
+          version: '3.8'
+          services:
+            kafka:
+              image: apache/kafka:3.7.0
+              container_name: kafka-broker
+              ports:
+                - "9092:9092"
+              environment:
+                KAFKA_NODE_ID: 1
+                KAFKA_PROCESS_ROLES: broker,controller
+                KAFKA_CONTROLLER_QUORUM_VOTERS: 1@localhost:9093
+                KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+                KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,CONTROLLER://0.0.0.0:9093
+                KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+                KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+                KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+                KAFKA_AUTO_CREATE_TOPICS_ENABLE: 'true'
+                CLUSTER_ID: '4L622nShTUiBenVznRAxrA'
+          EOF
+
+          docker compose up -d
+      Tags:
+        - Key: Name
+          Value: Kafka-Streaming-Cloud-Instance
+        - Key: Assignment
+          Value: Assignment-03-Streaming
+
+Conditions:
+  HasKeyName: !Not [!Equals [!Ref KeyName, '']]
+
+Outputs:
+  InstanceId:
+    Description: EC2 Instance ID
+    Value: !Ref KafkaEC2Instance
+
+  PublicDNS:
+    Description: Public DNS Name of Kafka Cloud Instance
+    Value: !GetAtt KafkaEC2Instance.PublicDnsName
+
+  KafkaBrokerEndpoint:
+    Description: Kafka Bootstrap Server Endpoint
+    Value: !Sub '${KafkaEC2Instance.PublicIp}:9092'
+
+  KafkaUIEndpoint:
+    Description: Kafka Web Dashboard URL
+    Value: !Sub 'http://${KafkaEC2Instance.PublicIp}:9000'

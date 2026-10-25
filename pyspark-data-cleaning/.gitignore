@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# Spark / Hadoop / Java logs and DBs
+metastore_db/
+derby.log
+spark-warehouse/
+
+# Local data files (if needed to ignore, but we keep data.csv and cleaned_data.csv for submission)
+# If you want to ignore raw csv files, uncomment the next line:
+# *.csv

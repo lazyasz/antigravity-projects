@@ -1,0 +1,608 @@
+/* NAVIGATED - Authentic SISCOG Enterprise Railway Operations Suite Design System */
+/* Implements CREWS Midnight, Dark, and Light Themes from Gonçalo Martins Figueiredo's Dribbble Reference */
+
+/* ========================================================================== */
+/* 1. THEME VARIABLES                                                         */
+/* ========================================================================== */
+
+/* Default Midnight Theme */
+:root, body.theme-midnight {
+  --bg-app: #121417;
+  --bg-header: #181B20;
+  --bg-sidebar: #15181C;
+  --bg-panel: #1B1E23;
+  --bg-card: #20242A;
+  --bg-card-hover: #262B33;
+  --bg-input: #15181D;
+  --bg-table-stripe: rgba(255, 255, 255, 0.02);
+
+  --border-subtle: #2C323B;
+  --border-medium: #3E4652;
+  --border-bright: #00A3FF;
+
+  --text-main: #F3F4F6;
+  --text-muted: #9CA3AF;
+  --text-dim: #6B7280;
+
+  --accent-primary: #00A3FF;
+  --accent-amber: #FFB800;
+  --accent-emerald: #00C853;
+  --accent-rose: #FF4D4D;
+  --accent-purple: #9D4EDD;
+
+  --banner-bg: #FFF0B3;
+  --banner-text: #1C1917;
+  --banner-border: #F59E0B;
+}
+
+/* Dark Theme */
+body.theme-dark {
+  --bg-app: #070B14;
+  --bg-header: #0C1220;
+  --bg-sidebar: #090E1A;
+  --bg-panel: #0F172A;
+  --bg-card: #131E35;
+  --bg-card-hover: #1A2846;
+  --bg-input: #0A1122;
+  --bg-table-stripe: rgba(255, 255, 255, 0.02);
+
+  --border-subtle: rgba(56, 189, 248, 0.15);
+  --border-medium: rgba(56, 189, 248, 0.3);
+  --border-bright: #00F2FE;
+
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+  --text-dim: #64748B;
+
+  --accent-primary: #00F2FE;
+  --accent-amber: #F59E0B;
+  --accent-emerald: #10B981;
+  --accent-rose: #EF4444;
+  --accent-purple: #A855F7;
+
+  --banner-bg: #FEF3C7;
+  --banner-text: #78350F;
+  --banner-border: #F59E0B;
+}
+
+/* Light Theme */
+body.theme-light {
+  --bg-app: #F4F6F9;
+  --bg-header: #FFFFFF;
+  --bg-sidebar: #FAFAFC;
+  --bg-panel: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F1F5F9;
+  --bg-input: #FFFFFF;
+  --bg-table-stripe: #F8FAFC;
+
+  --border-subtle: #E2E8F0;
+  --border-medium: #CBD5E1;
+  --border-bright: #0284C7;
+
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-dim: #94A3B8;
+
+  --accent-primary: #0284C7;
+  --accent-amber: #D97706;
+  --accent-emerald: #059669;
+  --accent-rose: #DC2626;
+  --accent-purple: #7C3AED;
+
+  --banner-bg: #FEF3C7;
+  --banner-text: #78350F;
+  --banner-border: #D97706;
+}
+
+/* ========================================================================== */
+/* 2. BASE STYLES & TYPOGRAPHY                                                */
+/* ========================================================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+  line-height: 1.45;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Glass & Panel Utilities */
+.siscog-panel {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* ========================================================================== */
+/* 3. TOP DESKTOP SYSTEM MENUBAR & APP HEADER                                 */
+/* ========================================================================== */
+
+.siscog-desktop-header {
+  background: var(--bg-header);
+  border-bottom: 1px solid var(--border-subtle);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Classic Desktop Menu Bar (File, View, Operations, etc.) */
+.siscog-menubar {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px 16px;
+  background: rgba(0, 0, 0, 0.12);
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 12px;
+}
+
+.siscog-menubar-item {
+  position: relative;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: var(--text-muted);
+  cursor: pointer;
+  user-select: none;
+  font-weight: 500;
+}
+
+.siscog-menubar-item:hover, .siscog-menubar-item.active {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-main);
+}
+
+.siscog-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-medium);
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  padding: 4px 0;
+  z-index: 1100;
+}
+
+.siscog-menu-action {
+  padding: 6px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-main);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.siscog-menu-action:hover {
+  background: var(--accent-primary);
+  color: #FFFFFF;
+}
+
+.siscog-menu-divider {
+  height: 1px;
+  background: var(--border-subtle);
+  margin: 4px 0;
+}
+
+/* Secondary Header: Product Family Selector & Actions */
+.siscog-sub-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 16px;
+}
+
+.siscog-brand-area {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-badge-siscog {
+  height: 38px;
+  width: auto;
+  cursor: pointer;
+}
+
+/* Sub-product pills (ONTIME, FLEET, CREWS, RAILWAY, WORKSHOP) */
+.siscog-product-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-input);
+  padding: 3px;
+  border-radius: 6px;
+  border: 1px solid var(--border-subtle);
+}
+
+.siscog-product-pill {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 11.5px;
+  letter-spacing: 0.5px;
+  padding: 5px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+}
+
+.siscog-product-pill:hover {
+  color: var(--text-main);
+}
+
+.siscog-product-pill.active {
+  background: var(--bg-panel);
+  color: var(--accent-primary);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border-subtle);
+}
+
+/* Theme Switcher Segmented Control */
+.siscog-theme-switcher {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: var(--bg-input);
+  padding: 2px;
+  border-radius: 6px;
+  border: 1px solid var(--border-subtle);
+}
+
+.btn-theme-opt {
+  background: transparent;
+  border: none;
+  padding: 4px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-theme-opt.active {
+  background: var(--accent-primary);
+  color: #FFFFFF;
+}
+
+/* ========================================================================== */
+/* 4. VALIDATION WARNING BANNER                                               */
+/* ========================================================================== */
+
+.siscog-alert-banner {
+  background: var(--banner-bg);
+  color: var(--banner-text);
+  border-bottom: 1px solid var(--banner-border);
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.btn-validate-banner {
+  background: var(--banner-text);
+  color: #FFFFFF;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-validate-banner:hover {
+  opacity: 0.9;
+}
+
+/* ========================================================================== */
+/* 5. APP WORKSPACE LAYOUT & SIDEBAR                                          */
+/* ========================================================================== */
+
+.siscog-app-layout {
+  display: flex;
+  min-height: calc(100vh - 82px);
+}
+
+.siscog-sidebar {
+  width: 260px;
+  background: var(--bg-sidebar);
+  border-right: 1px solid var(--border-subtle);
+  padding: 14px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.siscog-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 12.5px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.15s ease;
+}
+
+.siscog-nav-item:hover {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-main);
+}
+
+.siscog-nav-item.active {
+  background: var(--bg-panel);
+  border-color: var(--border-subtle);
+  color: var(--accent-primary);
+  border-left: 3px solid var(--accent-primary);
+}
+
+.siscog-workspace {
+  flex: 1;
+  padding: 16px 20px;
+  min-width: 0;
+  overflow-y: auto;
+}
+
+/* Tab Panes */
+.tab-pane {
+  display: none;
+  animation: siscogFadeIn 0.2s ease;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+@keyframes siscogFadeIn {
+  from { opacity: 0; transform: translateY(3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========================================================================== */
+/* 6. FILTER RULE BUILDER & HIGH-DENSITY CONTROLS                             */
+/* ========================================================================== */
+
+.siscog-rule-builder {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.siscog-filter-select {
+  background: var(--bg-input);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  outline: none;
+}
+
+.siscog-filter-select:focus {
+  border-color: var(--accent-primary);
+}
+
+/* ========================================================================== */
+/* 7. HIGH-DENSITY ENTERPRISE TABLE                                           */
+/* ========================================================================== */
+
+.siscog-table-container {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.siscog-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.siscog-table th {
+  background: var(--bg-header);
+  padding: 6px 10px;
+  color: var(--text-muted);
+  font-weight: 700;
+  text-align: left;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.siscog-table td {
+  padding: 7px 10px;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-main);
+}
+
+.siscog-table tr:hover {
+  background: var(--bg-card-hover);
+}
+
+/* ========================================================================== */
+/* 8. 28-COLOR SWATCH MODAL                                                   */
+/* ========================================================================== */
+
+.siscog-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
+
+.siscog-modal {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-medium);
+  border-radius: 8px;
+  width: 380px;
+  padding: 18px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.siscog-color-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  margin: 14px 0;
+}
+
+.siscog-color-chip {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.15s ease;
+}
+
+.siscog-color-chip:hover {
+  transform: scale(1.15);
+}
+
+.siscog-color-chip.selected {
+  border-color: #FFFFFF;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+/* ========================================================================== */
+/* 9. PASSENGER & TIMELINE COMPONENTS                                         */
+/* ========================================================================== */
+
+.passenger-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr 280px;
+  gap: 16px;
+}
+
+@media (max-width: 1200px) {
+  .passenger-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.train-card-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 8px 10px;
+  cursor: pointer;
+  margin-bottom: 6px;
+  transition: all 0.15s ease;
+}
+
+.train-card-item:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-medium);
+}
+
+.train-card-item.selected {
+  border-color: var(--accent-primary);
+  background: rgba(0, 163, 255, 0.08);
+}
+
+.hero-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.metric-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+
+.metric-label {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metric-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--accent-primary);
+  color: #FFFFFF;
+  border: none;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 11.5px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: var(--bg-card-hover);
+}
+
+.btn-secondary.active {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  background: rgba(0, 163, 255, 0.1);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-app); }
+::-webkit-scrollbar-thumb { background: var(--border-medium); border-radius: 3px; }
